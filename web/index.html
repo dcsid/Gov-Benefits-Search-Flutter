@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Benefits Digger — find the public benefits you may qualify for.">
+  <meta name="theme-color" content="#1B3B2F">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Benefits Digger">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <title>Benefits Digger</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!--
+    Preload the Flutter bootstrap JS and the canvaskit chunk so the browser
+    starts fetching them in parallel with index.html parsing instead of
+    waiting until the bootstrap script tag is reached. Saves ~100-300 ms
+    on cold start over a typical broadband connection.
+  -->
+  <link rel="preload" href="flutter_bootstrap.js" as="script">
+  <link rel="preload" href="main.dart.js" as="script">
+  <link rel="preload"
+        href="canvaskit/canvaskit.js"
+        as="script"
+        crossorigin="anonymous">
+  <link rel="preload"
+        href="canvaskit/canvaskit.wasm"
+        as="fetch"
+        type="application/wasm"
+        crossorigin="anonymous">
+
+  <!--
+    Preload the bundled Inter font weights used on first paint (Regular for body
+    text, Bold for hero/section headings). The `crossorigin` attribute is
+    required for `as=font` preloads even on same-origin so the response is
+    treated as the same resource that Flutter's font loader will fetch.
+    Other Inter weights (Medium, SemiBold) load on demand as content scrolls
+    in — preloading all four would steal bandwidth from main.dart.js.
+  -->
+  <link rel="preload"
+        href="assets/assets/fonts/Inter/Inter-Regular.ttf"
+        as="font"
+        type="font/ttf"
+        crossorigin="anonymous">
+  <link rel="preload"
+        href="assets/assets/fonts/Inter/Inter-Bold.ttf"
+        as="font"
+        type="font/ttf"
+        crossorigin="anonymous">
+
+  <!--
+    Warm the connection to the backend so the first /api/v1 fetch from app
+    bootstrap doesn't pay the DNS + TLS round-trip serially. The local-dev
+    backend host is hardcoded; in production, swap or remove via your build
+    pipeline if the API is hosted elsewhere.
+  -->
+  <link rel="dns-prefetch" href="https://127.0.0.1:8000">
+  <link rel="preconnect" href="https://127.0.0.1:8000" crossorigin>
+
+  <!--
+    Inline boot skeleton â gives users something to look at during the
+    ~1-3 s of JS-eval before Flutter draws its first frame. The spinner sits
+    inside `#bd-boot`; on browsers where Flutter mounts beside our DOM
+    instead of replacing it, the `flutter-first-frame` event handler below
+    removes the skeleton explicitly.
+  -->
+  <style>
+    html, body { height: 100%; margin: 0; background: #FAF8F4; }
+    #bd-boot {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FAF8F4;
+      color: #14201A;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      z-index: 0;
+    }
+    #bd-boot .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid rgba(20, 32, 26, 0.12);
+      border-top-color: #1B3B2F;
+      border-radius: 50%;
+      animation: bd-spin 900ms linear infinite;
+    }
+    @keyframes bd-spin { to { transform: rotate(360deg); } }
+    @media (prefers-color-scheme: dark) {
+      html, body, #bd-boot { background: #0E1411; color: #ECE7DA; }
+      #bd-boot .spinner { border-color: rgba(236, 231, 218, 0.12); border-top-color: #6FAA8E; }
+    }
+  </style>
+</head>
+<body>
+  <div id="bd-boot" aria-label="Loading Benefits Digger" role="status">
+    <div class="spinner"></div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var el = document.getElementById('bd-boot');
+      if (el && el.parentNode) el.parentNode.removeChild(el);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
