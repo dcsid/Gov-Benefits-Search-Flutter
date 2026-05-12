@@ -1,0 +1,9 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          # Recurse into nested freezed/JsonSerializable types when emitting
+          # toJson() so List<NestedType> serializes to List<Map<String,dynamic>>
+          # (without this, round-trip via toJson()/fromJson() fails).
+          explicit_to_json: true

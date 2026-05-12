@@ -1,0 +1,2287 @@
+{
+  "@@locale": "en",
+  "nav_home": "Home",
+  "@nav_home": {
+    "description": "nav.home"
+  },
+  "nav_dashboard": "Dashboard",
+  "@nav_dashboard": {
+    "description": "nav.dashboard"
+  },
+  "nav_results": "Results",
+  "@nav_results": {
+    "description": "nav.results"
+  },
+  "nav_whatif": "What-If Lab",
+  "@nav_whatif": {
+    "description": "nav.whatif"
+  },
+  "nav_explorer": "Explorer",
+  "@nav_explorer": {
+    "description": "nav.explorer"
+  },
+  "page_homeTitle": "Benefits Digger",
+  "@page_homeTitle": {
+    "description": "page.homeTitle"
+  },
+  "page_dashboardTitle": "Planning Dashboard - Benefits Digger",
+  "@page_dashboardTitle": {
+    "description": "page.dashboardTitle"
+  },
+  "page_resultsTitle": "Results - Benefits Digger",
+  "@page_resultsTitle": {
+    "description": "page.resultsTitle"
+  },
+  "page_whatifTitle": "What-If Lab - Benefits Digger",
+  "@page_whatifTitle": {
+    "description": "page.whatifTitle"
+  },
+  "page_explorerTitle": "Program Explorer - Benefits Digger",
+  "@page_explorerTitle": {
+    "description": "page.explorerTitle"
+  },
+  "app_eyebrow": "Benefits Digger",
+  "@app_eyebrow": {
+    "description": "app.eyebrow"
+  },
+  "app_headline": "Plan, compare, and pursue benefits with official government evidence.",
+  "@app_headline": {
+    "description": "app.headline"
+  },
+  "app_lede": "Screen benefits, compare what-if scenarios, browse the official catalog, and leave with a clearer action plan grounded in government sources.",
+  "@app_lede": {
+    "description": "app.lede"
+  },
+  "home_startScreening": "Start Screening",
+  "@home_startScreening": {
+    "description": "home.startScreening"
+  },
+  "home_trustPrivate": "Your data is private and never stored.",
+  "@home_trustPrivate": {
+    "description": "home.trustPrivate"
+  },
+  "home_trustSources": "Data sourced directly from official government programs.",
+  "@home_trustSources": {
+    "description": "home.trustSources"
+  },
+  "home_scope": "Scope",
+  "@home_scope": {
+    "description": "home.scope"
+  },
+  "home_scopeBoth": "Federal and state",
+  "@home_scopeBoth": {
+    "description": "home.scopeBoth"
+  },
+  "home_scopeFederal": "Federal only",
+  "@home_scopeFederal": {
+    "description": "home.scopeFederal"
+  },
+  "home_scopeState": "State only",
+  "@home_scopeState": {
+    "description": "home.scopeState"
+  },
+  "home_state": "State",
+  "@home_state": {
+    "description": "home.state"
+  },
+  "home_chooseState": "Choose a state",
+  "@home_chooseState": {
+    "description": "home.chooseState"
+  },
+  "home_breadth": "Breadth",
+  "@home_breadth": {
+    "description": "home.breadth"
+  },
+  "home_breadthFocused": "Focused",
+  "@home_breadthFocused": {
+    "description": "home.breadthFocused"
+  },
+  "home_breadthBalanced": "Balanced",
+  "@home_breadthBalanced": {
+    "description": "home.breadthBalanced"
+  },
+  "home_breadthBroad": "Broad",
+  "@home_breadthBroad": {
+    "description": "home.breadthBroad"
+  },
+  "home_depth": "Depth",
+  "@home_depth": {
+    "description": "home.depth"
+  },
+  "home_depthLight": "High-level",
+  "@home_depthLight": {
+    "description": "home.depthLight"
+  },
+  "home_depthStandard": "Standard",
+  "@home_depthStandard": {
+    "description": "home.depthStandard"
+  },
+  "home_depthDetailed": "Detailed",
+  "@home_depthDetailed": {
+    "description": "home.depthDetailed"
+  },
+  "home_categories": "Benefit categories",
+  "@home_categories": {
+    "description": "home.categories"
+  },
+  "home_categoriesHint": "Select at least one category to find benefits you may qualify for and information on how to apply.",
+  "@home_categoriesHint": {
+    "description": "home.categoriesHint"
+  },
+  "home_selectAll": "Select all",
+  "@home_selectAll": {
+    "description": "home.selectAll"
+  },
+  "home_clear": "Clear",
+  "@home_clear": {
+    "description": "home.clear"
+  },
+  "home_apply": "Apply selections",
+  "@home_apply": {
+    "description": "home.apply"
+  },
+  "home_reset": "Reset",
+  "@home_reset": {
+    "description": "home.reset"
+  },
+  "home_refreshSources": "Refresh Official Sources",
+  "@home_refreshSources": {
+    "description": "home.refreshSources"
+  },
+  "home_questionFlow": "Question Flow",
+  "@home_questionFlow": {
+    "description": "home.questionFlow"
+  },
+  "home_questionEmpty": "Start a session to begin the screener.",
+  "@home_questionEmpty": {
+    "description": "home.questionEmpty"
+  },
+  "home_saveAnswer": "Save Answer",
+  "@home_saveAnswer": {
+    "description": "home.saveAnswer"
+  },
+  "home_backQuestion": "Back to previous question",
+  "@home_backQuestion": {
+    "description": "home.backQuestion"
+  },
+  "home_showResults": "Show Results Now",
+  "@home_showResults": {
+    "description": "home.showResults"
+  },
+  "home_reviewQueue": "Review Queue",
+  "@home_reviewQueue": {
+    "description": "home.reviewQueue"
+  },
+  "home_refreshQueue": "Refresh Queue",
+  "@home_refreshQueue": {
+    "description": "home.refreshQueue"
+  },
+  "home_noReviewTasks": "No review tasks yet.",
+  "@home_noReviewTasks": {
+    "description": "home.noReviewTasks"
+  },
+  "home_breadthApprox": "{description} (~{count} questions)",
+  "@home_breadthApprox": {
+    "description": "home.breadthApprox",
+    "placeholders": {
+      "description": {
+        "type": "String"
+      },
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "home_depthApprox": "{description}",
+  "@home_depthApprox": {
+    "description": "home.depthApprox",
+    "placeholders": {
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "home_noMoreQuestions": "No more questions queued. Results are ready.",
+  "@home_noMoreQuestions": {
+    "description": "home.noMoreQuestions"
+  },
+  "home_noProgramsFound": "We couldn't find any benefit programs matching your selection. Try broadening your categories or selecting a different state.",
+  "@home_noProgramsFound": {
+    "description": "home.noProgramsFound"
+  },
+  "home_selectCategory": "Select at least one category before applying your selections.",
+  "@home_selectCategory": {
+    "description": "home.selectCategory"
+  },
+  "home_chooseScope": "Choose a screening scope before starting your session.",
+  "@home_chooseScope": {
+    "description": "home.chooseScope"
+  },
+  "home_chooseStateMsg": "Please choose a state before starting state or combined screening.",
+  "@home_chooseStateMsg": {
+    "description": "home.chooseStateMsg"
+  },
+  "home_chooseOne": "Choose one",
+  "@home_chooseOne": {
+    "description": "home.chooseOne"
+  },
+  "home_searching": "Searching...",
+  "@home_searching": {
+    "description": "home.searching"
+  },
+  "home_creatingSession": "Creating session...",
+  "@home_creatingSession": {
+    "description": "home.creatingSession"
+  },
+  "home_creatingSessionState": "Creating session and loading state benefits...",
+  "@home_creatingSessionState": {
+    "description": "home.creatingSessionState"
+  },
+  "home_sessionLive": "Session {sessionId} is live.",
+  "@home_sessionLive": {
+    "description": "home.sessionLive",
+    "placeholders": {
+      "sessionId": {
+        "type": "String"
+      }
+    }
+  },
+  "home_sessionError": "Could not start session: {error}",
+  "@home_sessionError": {
+    "description": "home.sessionError",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "home_answerRequired": "Please choose an answer before continuing.",
+  "@home_answerRequired": {
+    "description": "home.answerRequired"
+  },
+  "home_answerSaved": "Answer saved.",
+  "@home_answerSaved": {
+    "description": "home.answerSaved"
+  },
+  "home_answerError": "Could not save answer: {error}",
+  "@home_answerError": {
+    "description": "home.answerError",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "home_resultsRefreshed": "Results refreshed.",
+  "@home_resultsRefreshed": {
+    "description": "home.resultsRefreshed"
+  },
+  "home_refreshingOfficialSources": "Refreshing official sources...",
+  "@home_refreshingOfficialSources": {
+    "description": "home.refreshingOfficialSources"
+  },
+  "home_officialSourcesRefreshed": "Official sources refreshed.",
+  "@home_officialSourcesRefreshed": {
+    "description": "home.officialSourcesRefreshed"
+  },
+  "home_syncSummary": "Official sources refreshed. Crawled {crawled} program sites and added {added} direct government page sources.",
+  "@home_syncSummary": {
+    "description": "home.syncSummary",
+    "placeholders": {
+      "added": {
+        "type": "String"
+      },
+      "crawled": {
+        "type": "String"
+      }
+    }
+  },
+  "home_syncFailed": "Sync failed: {error}",
+  "@home_syncFailed": {
+    "description": "home.syncFailed",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "home_sensitivity": "{level} sensitivity",
+  "@home_sensitivity": {
+    "description": "home.sensitivity",
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "home_sourceLabel": "Source",
+  "@home_sourceLabel": {
+    "description": "home.sourceLabel"
+  },
+  "home_reviewTaskMeta": "{diffType} · materiality {score}",
+  "@home_reviewTaskMeta": {
+    "description": "home.reviewTaskMeta",
+    "placeholders": {
+      "score": {
+        "type": "String"
+      },
+      "diffType": {
+        "type": "String"
+      }
+    }
+  },
+  "home_adminKey": "Admin access key",
+  "@home_adminKey": {
+    "description": "home.adminKey"
+  },
+  "home_adminPlaceholder": "Only needed when admin protection is enabled",
+  "@home_adminPlaceholder": {
+    "description": "home.adminPlaceholder"
+  },
+  "home_adminHelp": "Used only for review queue and source refresh actions. Stored in this browser tab until you clear it.",
+  "@home_adminHelp": {
+    "description": "home.adminHelp"
+  },
+  "home_saveKey": "Save key",
+  "@home_saveKey": {
+    "description": "home.saveKey"
+  },
+  "home_clearKey": "Clear key",
+  "@home_clearKey": {
+    "description": "home.clearKey"
+  },
+  "home_adminSaved": "Admin key saved for this browser tab.",
+  "@home_adminSaved": {
+    "description": "home.adminSaved"
+  },
+  "home_adminCleared": "Admin key cleared.",
+  "@home_adminCleared": {
+    "description": "home.adminCleared"
+  },
+  "home_lifeIntakePill": "Life-event intake",
+  "@home_lifeIntakePill": {
+    "description": "home.lifeIntakePill"
+  },
+  "home_lifeIntakeTitle": "Describe what is going on",
+  "@home_lifeIntakeTitle": {
+    "description": "home.lifeIntakeTitle"
+  },
+  "home_lifeIntakeLabel": "Tell us about the struggle in your own words",
+  "@home_lifeIntakeLabel": {
+    "description": "home.lifeIntakeLabel"
+  },
+  "home_lifeIntakePlaceholder": "Example: I lost my job, I’m behind on rent, and I’m trying to figure out whether there is help for food and medical coverage.",
+  "@home_lifeIntakePlaceholder": {
+    "description": "home.lifeIntakePlaceholder"
+  },
+  "home_lifeIntakeHint": "You do not need to classify the problem first. We will turn your description into suggested categories, likely facts, and the next questions that matter most.",
+  "@home_lifeIntakeHint": {
+    "description": "home.lifeIntakeHint"
+  },
+  "home_lifeIntakeAnalyze": "Analyze my situation",
+  "@home_lifeIntakeAnalyze": {
+    "description": "home.lifeIntakeAnalyze"
+  },
+  "home_lifeIntakeClear": "Clear intake",
+  "@home_lifeIntakeClear": {
+    "description": "home.lifeIntakeClear"
+  },
+  "home_lifeSummaryTitle": "What I heard",
+  "@home_lifeSummaryTitle": {
+    "description": "home.lifeSummaryTitle"
+  },
+  "home_lifeSuggestedScope": "Suggested scope",
+  "@home_lifeSuggestedScope": {
+    "description": "home.lifeSuggestedScope"
+  },
+  "home_lifeSuggestedState": "Suggested state",
+  "@home_lifeSuggestedState": {
+    "description": "home.lifeSuggestedState"
+  },
+  "home_lifeCategoriesTitle": "Suggested benefit areas",
+  "@home_lifeCategoriesTitle": {
+    "description": "home.lifeCategoriesTitle"
+  },
+  "home_lifeFactsTitle": "Structured facts so far",
+  "@home_lifeFactsTitle": {
+    "description": "home.lifeFactsTitle"
+  },
+  "home_lifeMissingTitle": "Still useful to ask",
+  "@home_lifeMissingTitle": {
+    "description": "home.lifeMissingTitle"
+  },
+  "home_lifeApply": "Use these suggestions in the screener",
+  "@home_lifeApply": {
+    "description": "home.lifeApply"
+  },
+  "home_lifeStart": "Start screening from chat",
+  "@home_lifeStart": {
+    "description": "home.lifeStart"
+  },
+  "home_lifeChatTitle": "Benefits assistant",
+  "@home_lifeChatTitle": {
+    "description": "home.lifeChatTitle"
+  },
+  "home_lifeAssistantName": "Zobo",
+  "@home_lifeAssistantName": {
+    "description": "home.lifeAssistantName"
+  },
+  "home_lifeChatLauncherLabel": "Open Zobo assistant",
+  "@home_lifeChatLauncherLabel": {
+    "description": "home.lifeChatLauncherLabel"
+  },
+  "home_lifeChatClose": "Minimize assistant",
+  "@home_lifeChatClose": {
+    "description": "home.lifeChatClose"
+  },
+  "home_lifeChatMinimize": "Minimize",
+  "@home_lifeChatMinimize": {
+    "description": "home.lifeChatMinimize"
+  },
+  "home_lifeChatHint": "Tell me what is going on, and I will ask one short follow-up at a time.",
+  "@home_lifeChatHint": {
+    "description": "home.lifeChatHint"
+  },
+  "home_lifeChatEmpty": "Start by describing what you are dealing with, and I will translate it into benefit areas and next questions.",
+  "@home_lifeChatEmpty": {
+    "description": "home.lifeChatEmpty"
+  },
+  "home_lifeChatInputLabel": "Reply to the assistant",
+  "@home_lifeChatInputLabel": {
+    "description": "home.lifeChatInputLabel"
+  },
+  "home_lifeChatWelcome": "Hi. I’m Zobo. Tell me a little about what’s going on, and I’ll help you sort through the next steps.",
+  "@home_lifeChatWelcome": {
+    "description": "home.lifeChatWelcome"
+  },
+  "home_lifeChatWelcomeSession": "Hi. I’m Zobo. I can stay with you while you review this session. Ask me to explain a result, a missing fact, or what to do next.",
+  "@home_lifeChatWelcomeSession": {
+    "description": "home.lifeChatWelcomeSession"
+  },
+  "home_lifeChatPlaceholder": "Try: I lost my job, I am behind on rent, and I need help with food.",
+  "@home_lifeChatPlaceholder": {
+    "description": "home.lifeChatPlaceholder"
+  },
+  "home_lifeChatPlaceholderYesNo": "A short yes or no is enough here.",
+  "@home_lifeChatPlaceholderYesNo": {
+    "description": "home.lifeChatPlaceholderYesNo"
+  },
+  "home_lifeChatPlaceholderState": "Reply with a state like CA, California, or New York.",
+  "@home_lifeChatPlaceholderState": {
+    "description": "home.lifeChatPlaceholderState"
+  },
+  "home_lifeChatSend": "Reply",
+  "@home_lifeChatSend": {
+    "description": "home.lifeChatSend"
+  },
+  "home_lifeChatSending": "Sending...",
+  "@home_lifeChatSending": {
+    "description": "home.lifeChatSending"
+  },
+  "home_lifeChatQuickReplies": "Quick replies",
+  "@home_lifeChatQuickReplies": {
+    "description": "home.lifeChatQuickReplies"
+  },
+  "home_lifeChatNavigate": "You may also want to go to",
+  "@home_lifeChatNavigate": {
+    "description": "home.lifeChatNavigate"
+  },
+  "home_navAction_use_screener": "Use the screener",
+  "@home_navAction_use_screener": {
+    "description": "home.navAction.use_screener"
+  },
+  "home_navAction_start_screening": "Start screening",
+  "@home_navAction_start_screening": {
+    "description": "home.navAction.start_screening"
+  },
+  "home_navAction_open_explorer": "Open Program Explorer",
+  "@home_navAction_open_explorer": {
+    "description": "home.navAction.open_explorer"
+  },
+  "home_navAction_open_results": "Open Results",
+  "@home_navAction_open_results": {
+    "description": "home.navAction.open_results"
+  },
+  "home_navAction_open_dashboard": "Open Dashboard",
+  "@home_navAction_open_dashboard": {
+    "description": "home.navAction.open_dashboard"
+  },
+  "home_lifeChatUserLabel": "You",
+  "@home_lifeChatUserLabel": {
+    "description": "home.lifeChatUserLabel"
+  },
+  "home_lifeChatStatusEmpty": "Tell me what is going on to get started.",
+  "@home_lifeChatStatusEmpty": {
+    "description": "home.lifeChatStatusEmpty"
+  },
+  "home_lifeChatStatusWaitingDetails": "Tell me a little more so I can point you in the right direction.",
+  "@home_lifeChatStatusWaitingDetails": {
+    "description": "home.lifeChatStatusWaitingDetails"
+  },
+  "home_lifeChatStatusThinking": "Thinking through your update...",
+  "@home_lifeChatStatusThinking": {
+    "description": "home.lifeChatStatusThinking"
+  },
+  "home_lifeChatStatusReady": "I have one quick follow-up ready.",
+  "@home_lifeChatStatusReady": {
+    "description": "home.lifeChatStatusReady"
+  },
+  "home_lifeChatStatusDone": "I have enough to move forward.",
+  "@home_lifeChatStatusDone": {
+    "description": "home.lifeChatStatusDone"
+  },
+  "home_lifeNoCategories": "No benefit areas inferred yet.",
+  "@home_lifeNoCategories": {
+    "description": "home.lifeNoCategories"
+  },
+  "home_lifeNoFacts": "No structured facts captured yet.",
+  "@home_lifeNoFacts": {
+    "description": "home.lifeNoFacts"
+  },
+  "home_lifeNoMissing": "No critical follow-up questions are missing right now.",
+  "@home_lifeNoMissing": {
+    "description": "home.lifeNoMissing"
+  },
+  "home_lifeApplyDone": "Assistant suggestions copied into the screener controls.",
+  "@home_lifeApplyDone": {
+    "description": "home.lifeApplyDone"
+  },
+  "home_lifeStarted": "Started screening from the assistant's suggestions.",
+  "@home_lifeStarted": {
+    "description": "home.lifeStarted"
+  },
+  "home_lifeDescriptionRequired": "Tell me what is going on so I can help.",
+  "@home_lifeDescriptionRequired": {
+    "description": "home.lifeDescriptionRequired"
+  },
+  "home_lifeAnalyzing": "Analyzing your situation...",
+  "@home_lifeAnalyzing": {
+    "description": "home.lifeAnalyzing"
+  },
+  "home_lifeAnalyzed": "Life-event intake updated.",
+  "@home_lifeAnalyzed": {
+    "description": "home.lifeAnalyzed"
+  },
+  "home_lifeInterpretError": "Could not analyze the intake: {error}",
+  "@home_lifeInterpretError": {
+    "description": "home.lifeInterpretError",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "home_lifeProbeUpdated": "Follow-up details added.",
+  "@home_lifeProbeUpdated": {
+    "description": "home.lifeProbeUpdated"
+  },
+  "home_lifeProbeError": "Could not process that follow-up: {error}",
+  "@home_lifeProbeError": {
+    "description": "home.lifeProbeError",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "results_title": "Results",
+  "@results_title": {
+    "description": "results.title"
+  },
+  "results_liveMatches": "{count} live matches",
+  "@results_liveMatches": {
+    "description": "results.liveMatches",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "results_print": "Print",
+  "@results_print": {
+    "description": "results.print"
+  },
+  "results_redoScreening": "Redo Screening",
+  "@results_redoScreening": {
+    "description": "results.redoScreening"
+  },
+  "results_downloadPdf": "Download PDF",
+  "@results_downloadPdf": {
+    "description": "results.downloadPdf"
+  },
+  "results_scrollUp": "Scroll up",
+  "@results_scrollUp": {
+    "description": "results.scrollUp"
+  },
+  "results_scrollDown": "Scroll down",
+  "@results_scrollDown": {
+    "description": "results.scrollDown"
+  },
+  "results_generatingPdf": "Generating...",
+  "@results_generatingPdf": {
+    "description": "results.generatingPdf"
+  },
+  "results_noSession": "No active session. <a href=\"/\">Start a screening</a> first.",
+  "@results_noSession": {
+    "description": "results.noSession"
+  },
+  "results_federalTitle": "Federal Results",
+  "@results_federalTitle": {
+    "description": "results.federalTitle"
+  },
+  "results_stateTitle": "State Results",
+  "@results_stateTitle": {
+    "description": "results.stateTitle"
+  },
+  "results_noFederal": "No federal results yet. Answer more questions to improve matches.",
+  "@results_noFederal": {
+    "description": "results.noFederal"
+  },
+  "results_noState": "No state results yet. Answer more questions to improve matches.",
+  "@results_noState": {
+    "description": "results.noState"
+  },
+  "results_federalOnlyFinished": "This is a federal-only session, so no state results are shown.",
+  "@results_federalOnlyFinished": {
+    "description": "results.federalOnlyFinished"
+  },
+  "results_federalOnlyHidden": "State results are hidden while Federal only scope is selected.",
+  "@results_federalOnlyHidden": {
+    "description": "results.federalOnlyHidden"
+  },
+  "results_loadError": "Could not load results: {error}",
+  "@results_loadError": {
+    "description": "results.loadError",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboard_title": "Planning Dashboard",
+  "@dashboard_title": {
+    "description": "dashboard.title"
+  },
+  "dashboard_noSession": "No active session",
+  "@dashboard_noSession": {
+    "description": "dashboard.noSession"
+  },
+  "dashboard_empty": "No active session yet. Start a session to unlock planning summary, action steps, and missing-fact analysis.",
+  "@dashboard_empty": {
+    "description": "dashboard.empty"
+  },
+  "dashboard_goHome": "Go to Home to start a session",
+  "@dashboard_goHome": {
+    "description": "dashboard.goHome"
+  },
+  "dashboard_downloadPdf": "Download PDF",
+  "@dashboard_downloadPdf": {
+    "description": "dashboard.downloadPdf"
+  },
+  "dashboard_generatingPdf": "Generating...",
+  "@dashboard_generatingPdf": {
+    "description": "dashboard.generatingPdf"
+  },
+  "dashboard_benefitStack": "Benefit stack",
+  "@dashboard_benefitStack": {
+    "description": "dashboard.benefitStack"
+  },
+  "dashboard_missingFacts": "Top missing facts",
+  "@dashboard_missingFacts": {
+    "description": "dashboard.missingFacts"
+  },
+  "dashboard_actions": "Recommended next actions",
+  "@dashboard_actions": {
+    "description": "dashboard.actions"
+  },
+  "dashboard_sourceHub": "Official source hub",
+  "@dashboard_sourceHub": {
+    "description": "dashboard.sourceHub"
+  },
+  "dashboard_docChecklist": "Document checklist",
+  "@dashboard_docChecklist": {
+    "description": "dashboard.docChecklist"
+  },
+  "dashboard_planningNotes": "Planning notes",
+  "@dashboard_planningNotes": {
+    "description": "dashboard.planningNotes"
+  },
+  "dashboard_likelyPrograms": "Likely programs",
+  "@dashboard_likelyPrograms": {
+    "description": "dashboard.likelyPrograms"
+  },
+  "dashboard_possiblePrograms": "Possible programs",
+  "@dashboard_possiblePrograms": {
+    "description": "dashboard.possiblePrograms"
+  },
+  "dashboard_answeredQuestions": "Answered questions",
+  "@dashboard_answeredQuestions": {
+    "description": "dashboard.answeredQuestions"
+  },
+  "dashboard_avgRuleCoverage": "Average rule coverage",
+  "@dashboard_avgRuleCoverage": {
+    "description": "dashboard.avgRuleCoverage"
+  },
+  "dashboard_estMonthly": "Est. monthly benefits",
+  "@dashboard_estMonthly": {
+    "description": "dashboard.estMonthly"
+  },
+  "dashboard_noBenefitStack": "No benefit stack yet.",
+  "@dashboard_noBenefitStack": {
+    "description": "dashboard.noBenefitStack"
+  },
+  "dashboard_noMissingFacts": "No missing-fact hotspots right now.",
+  "@dashboard_noMissingFacts": {
+    "description": "dashboard.noMissingFacts"
+  },
+  "dashboard_noActions": "No action steps yet.",
+  "@dashboard_noActions": {
+    "description": "dashboard.noActions"
+  },
+  "dashboard_noSourceHub": "No official source hub yet.",
+  "@dashboard_noSourceHub": {
+    "description": "dashboard.noSourceHub"
+  },
+  "dashboard_noDocuments": "No documents required yet. Complete screening to see what you need.",
+  "@dashboard_noDocuments": {
+    "description": "dashboard.noDocuments"
+  },
+  "dashboard_noPlanningNotes": "Planning notes will appear after your session has results.",
+  "@dashboard_noPlanningNotes": {
+    "description": "dashboard.noPlanningNotes"
+  },
+  "dashboard_loadError": "Could not load plan: {error}",
+  "@dashboard_loadError": {
+    "description": "dashboard.loadError",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboard_noSessionLink": "No active session. <a href=\"/\">Start a screening</a> first.",
+  "@dashboard_noSessionLink": {
+    "description": "dashboard.noSessionLink"
+  },
+  "dashboard_controlsPill": "Breadth {breadthLabel} ({breadthPercent}%) · Depth {depthLabel} ({depthPercent}%)",
+  "@dashboard_controlsPill": {
+    "description": "dashboard.controlsPill",
+    "placeholders": {
+      "breadthPercent": {
+        "type": "String"
+      },
+      "depthLabel": {
+        "type": "String"
+      },
+      "breadthLabel": {
+        "type": "String"
+      },
+      "depthPercent": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboard_likely": "likely",
+  "@dashboard_likely": {
+    "description": "dashboard.likely"
+  },
+  "dashboard_possible": "possible",
+  "@dashboard_possible": {
+    "description": "dashboard.possible"
+  },
+  "dashboard_noTopPrograms": "No top programs yet.",
+  "@dashboard_noTopPrograms": {
+    "description": "dashboard.noTopPrograms"
+  },
+  "dashboard_confidence": "confidence {value}/100",
+  "@dashboard_confidence": {
+    "description": "dashboard.confidence",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboard_affects": "Affects {count} program matches.",
+  "@dashboard_affects": {
+    "description": "dashboard.affects",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboard_neededFor": "Needed for: {programs}",
+  "@dashboard_neededFor": {
+    "description": "dashboard.neededFor",
+    "placeholders": {
+      "programs": {
+        "type": "String"
+      }
+    }
+  },
+  "whatif_title": "What-If Lab",
+  "@whatif_title": {
+    "description": "whatif.title"
+  },
+  "whatif_pill": "Scenario compare",
+  "@whatif_pill": {
+    "description": "whatif.pill"
+  },
+  "whatif_noSession": "No active session. <a href=\"/\">Start a screening</a> first.",
+  "@whatif_noSession": {
+    "description": "whatif.noSession"
+  },
+  "whatif_quickStartIntro": "No active session. Start one here to run scenarios:",
+  "@whatif_quickStartIntro": {
+    "description": "whatif.quickStartIntro"
+  },
+  "whatif_scopeLabel": "Scope",
+  "@whatif_scopeLabel": {
+    "description": "whatif.scopeLabel"
+  },
+  "whatif_stateLabel": "State",
+  "@whatif_stateLabel": {
+    "description": "whatif.stateLabel"
+  },
+  "whatif_categoriesLabel": "Benefit categories",
+  "@whatif_categoriesLabel": {
+    "description": "whatif.categoriesLabel"
+  },
+  "whatif_startSession": "Start Session",
+  "@whatif_startSession": {
+    "description": "whatif.startSession"
+  },
+  "whatif_description": "Run scenario comparisons without changing your saved answers. These presets show how the result set changes if a life fact shifts.",
+  "@whatif_description": {
+    "description": "whatif.description"
+  },
+  "whatif_startThenRun": "Start a session, then run a scenario.",
+  "@whatif_startThenRun": {
+    "description": "whatif.startThenRun"
+  },
+  "whatif_noResult": "No scenario result returned.",
+  "@whatif_noResult": {
+    "description": "whatif.noResult"
+  },
+  "whatif_scenarioCompare": "Scenario comparison",
+  "@whatif_scenarioCompare": {
+    "description": "whatif.scenarioCompare"
+  },
+  "whatif_likelyDelta": "Likely delta",
+  "@whatif_likelyDelta": {
+    "description": "whatif.likelyDelta"
+  },
+  "whatif_possibleDelta": "Possible delta",
+  "@whatif_possibleDelta": {
+    "description": "whatif.possibleDelta"
+  },
+  "whatif_federalDelta": "Federal delta",
+  "@whatif_federalDelta": {
+    "description": "whatif.federalDelta"
+  },
+  "whatif_stateDelta": "State delta",
+  "@whatif_stateDelta": {
+    "description": "whatif.stateDelta"
+  },
+  "whatif_newPrograms": "New or unlocked programs",
+  "@whatif_newPrograms": {
+    "description": "whatif.newPrograms"
+  },
+  "whatif_improvedPrograms": "Improved programs",
+  "@whatif_improvedPrograms": {
+    "description": "whatif.improvedPrograms"
+  },
+  "whatif_noNewMatches": "No new positive matches in this scenario.",
+  "@whatif_noNewMatches": {
+    "description": "whatif.noNewMatches"
+  },
+  "whatif_noImprovements": "No status improvements in this scenario.",
+  "@whatif_noImprovements": {
+    "description": "whatif.noImprovements"
+  },
+  "whatif_toStatus": "to",
+  "@whatif_toStatus": {
+    "description": "whatif.toStatus"
+  },
+  "whatif_startFirst": "Start a session before running scenarios.",
+  "@whatif_startFirst": {
+    "description": "whatif.startFirst"
+  },
+  "whatif_updated": "Scenario comparison updated.",
+  "@whatif_updated": {
+    "description": "whatif.updated"
+  },
+  "whatif_failed": "Scenario compare failed: {error}",
+  "@whatif_failed": {
+    "description": "whatif.failed",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "explorer_title": "Program Explorer",
+  "@explorer_title": {
+    "description": "explorer.title"
+  },
+  "explorer_refresh": "Refresh Explorer",
+  "@explorer_refresh": {
+    "description": "explorer.refresh"
+  },
+  "explorer_description": "Hybrid Explorer combines plain-English need descriptions with the official catalog. It may use Gemini for interpretation when configured, and always falls back to grounded local matching.",
+  "@explorer_description": {
+    "description": "explorer.description"
+  },
+  "explorer_scope": "Scope",
+  "@explorer_scope": {
+    "description": "explorer.scope"
+  },
+  "explorer_state": "State",
+  "@explorer_state": {
+    "description": "explorer.state"
+  },
+  "explorer_describe": "Describe what you need",
+  "@explorer_describe": {
+    "description": "explorer.describe"
+  },
+  "explorer_describePlaceholder": "Example: I lost a family member in California and need help with funeral costs and survivor benefits.",
+  "@explorer_describePlaceholder": {
+    "description": "explorer.describePlaceholder"
+  },
+  "explorer_search": "Exact keyword search",
+  "@explorer_search": {
+    "description": "explorer.search"
+  },
+  "explorer_placeholder": "Try retirement, disability, funeral, veterans...",
+  "@explorer_placeholder": {
+    "description": "explorer.placeholder"
+  },
+  "explorer_submit": "Run hybrid search",
+  "@explorer_submit": {
+    "description": "explorer.submit"
+  },
+  "explorer_empty": "Use the explorer to browse the current official program catalog.",
+  "@explorer_empty": {
+    "description": "explorer.empty"
+  },
+  "explorer_noMatch": "No programs matched this search. Try a broader description or remove a filter.",
+  "@explorer_noMatch": {
+    "description": "explorer.noMatch"
+  },
+  "explorer_minChars": "Enter at least 2 characters for exact keyword search.",
+  "@explorer_minChars": {
+    "description": "explorer.minChars"
+  },
+  "explorer_openOfficial": "Open official government page",
+  "@explorer_openOfficial": {
+    "description": "explorer.openOfficial"
+  },
+  "explorer_failed": "Explorer failed: {error}",
+  "@explorer_failed": {
+    "description": "explorer.failed",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "explorer_methodGemini": "Gemini + grounded catalog",
+  "@explorer_methodGemini": {
+    "description": "explorer.methodGemini"
+  },
+  "explorer_methodHeuristic": "Grounded catalog + local interpretation",
+  "@explorer_methodHeuristic": {
+    "description": "explorer.methodHeuristic"
+  },
+  "explorer_interpretationTitle": "Search Interpretation",
+  "@explorer_interpretationTitle": {
+    "description": "explorer.interpretationTitle"
+  },
+  "explorer_needAreas": "Need areas",
+  "@explorer_needAreas": {
+    "description": "explorer.needAreas"
+  },
+  "explorer_stateLabel": "State:",
+  "@explorer_stateLabel": {
+    "description": "explorer.stateLabel"
+  },
+  "explorer_searchTerms": "Search terms:",
+  "@explorer_searchTerms": {
+    "description": "explorer.searchTerms"
+  },
+  "explorer_score": "Score {score}",
+  "@explorer_score": {
+    "description": "explorer.score",
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "explorer_browseSummary": "Browsing the official program catalog.",
+  "@explorer_browseSummary": {
+    "description": "explorer.browseSummary"
+  },
+  "explorer_localizedSummary": "Showing how your need was interpreted from the local grounded catalog.",
+  "@explorer_localizedSummary": {
+    "description": "explorer.localizedSummary"
+  },
+  "card_confidence": "Confidence",
+  "@card_confidence": {
+    "description": "card.confidence"
+  },
+  "card_clickExpand": "(click to expand)",
+  "@card_clickExpand": {
+    "description": "card.clickExpand"
+  },
+  "card_eligibilityCriteria": "Eligibility Criteria",
+  "@card_eligibilityCriteria": {
+    "description": "card.eligibilityCriteria"
+  },
+  "card_criteriaMet": "met",
+  "@card_criteriaMet": {
+    "description": "card.criteriaMet"
+  },
+  "card_met": "met",
+  "@card_met": {
+    "description": "card.met"
+  },
+  "card_notMet": "not met",
+  "@card_notMet": {
+    "description": "card.notMet"
+  },
+  "card_unanswered": "unanswered",
+  "@card_unanswered": {
+    "description": "card.unanswered"
+  },
+  "card_amount": "Amount",
+  "@card_amount": {
+    "description": "card.amount"
+  },
+  "card_amountEstimated": " (estimated)",
+  "@card_amountEstimated": {
+    "description": "card.amountEstimated"
+  },
+  "card_whyMatched": "Why it matched",
+  "@card_whyMatched": {
+    "description": "card.whyMatched"
+  },
+  "card_noMatchedReasons": "No matched reasons yet.",
+  "@card_noMatchedReasons": {
+    "description": "card.noMatchedReasons"
+  },
+  "card_missingFacts": "What is still missing",
+  "@card_missingFacts": {
+    "description": "card.missingFacts"
+  },
+  "card_noMissingFacts": "No missing facts for this current pass.",
+  "@card_noMissingFacts": {
+    "description": "card.noMissingFacts"
+  },
+  "card_documentsNeeded": "Documents needed",
+  "@card_documentsNeeded": {
+    "description": "card.documentsNeeded"
+  },
+  "card_noDocuments": "No document checklist available for this program.",
+  "@card_noDocuments": {
+    "description": "card.noDocuments"
+  },
+  "card_dataGathered": "Data gathered from official government websites",
+  "@card_dataGathered": {
+    "description": "card.dataGathered"
+  },
+  "card_noSources": "No official government sources attached.",
+  "@card_noSources": {
+    "description": "card.noSources"
+  },
+  "card_howToGet": "How to get this benefit",
+  "@card_howToGet": {
+    "description": "card.howToGet"
+  },
+  "card_noApplicationPath": "No official application path is available for this result yet.",
+  "@card_noApplicationPath": {
+    "description": "card.noApplicationPath"
+  },
+  "card_openOfficial": "Open official government page",
+  "@card_openOfficial": {
+    "description": "card.openOfficial"
+  },
+  "card_useSourcesBelow": "Use the official sources below.",
+  "@card_useSourcesBelow": {
+    "description": "card.useSourcesBelow"
+  },
+  "card_notAvailable": "Not available",
+  "@card_notAvailable": {
+    "description": "card.notAvailable"
+  },
+  "card_unknownAgency": "Unknown agency",
+  "@card_unknownAgency": {
+    "description": "card.unknownAgency"
+  },
+  "card_noSummary": "No summary available.",
+  "@card_noSummary": {
+    "description": "card.noSummary"
+  },
+  "card_noBreakdown": "No breakdown available.",
+  "@card_noBreakdown": {
+    "description": "card.noBreakdown"
+  },
+  "card_verified": "verified {date}",
+  "@card_verified": {
+    "description": "card.verified",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "category_children_families": "Children and families",
+  "@category_children_families": {
+    "description": "category.children_families"
+  },
+  "category_death": "Death",
+  "@category_death": {
+    "description": "category.death"
+  },
+  "category_disabilities": "Disabilities",
+  "@category_disabilities": {
+    "description": "category.disabilities"
+  },
+  "category_disasters": "Disasters",
+  "@category_disasters": {
+    "description": "category.disasters"
+  },
+  "category_education": "Education",
+  "@category_education": {
+    "description": "category.education"
+  },
+  "category_food": "Food",
+  "@category_food": {
+    "description": "category.food"
+  },
+  "category_general": "General",
+  "@category_general": {
+    "description": "category.general"
+  },
+  "category_health": "Health",
+  "@category_health": {
+    "description": "category.health"
+  },
+  "category_housing_utilities": "Housing and utilities",
+  "@category_housing_utilities": {
+    "description": "category.housing_utilities"
+  },
+  "category_jobs_unemployment": "Jobs and unemployment",
+  "@category_jobs_unemployment": {
+    "description": "category.jobs_unemployment"
+  },
+  "category_military_veterans": "Military and veterans",
+  "@category_military_veterans": {
+    "description": "category.military_veterans"
+  },
+  "category_retirement_seniors": "Retirement and seniors",
+  "@category_retirement_seniors": {
+    "description": "category.retirement_seniors"
+  },
+  "category_welfare_cash_assistance": "Welfare and cash assistance",
+  "@category_welfare_cash_assistance": {
+    "description": "category.welfare_cash_assistance"
+  },
+  "breadth_focused": "Focused keeps the screen short and concentrates on the strongest program signals.",
+  "@breadth_focused": {
+    "description": "breadth.focused"
+  },
+  "breadth_balanced": "Balanced explores a moderate number of possible programs before stopping.",
+  "@breadth_balanced": {
+    "description": "breadth.balanced"
+  },
+  "breadth_broad": "Broad keeps exploring longer so the screener can cover more possible programs.",
+  "@breadth_broad": {
+    "description": "breadth.broad"
+  },
+  "depth_light": "High-level keeps questions broad, usually yes/no or simple category prompts.",
+  "@depth_light": {
+    "description": "depth.light"
+  },
+  "depth_standard": "Standard mixes broad screeners with some more specific follow-ups.",
+  "@depth_standard": {
+    "description": "depth.standard"
+  },
+  "depth_detailed": "Detailed asks for exact amounts, dates, durations, and other precise facts when available.",
+  "@depth_detailed": {
+    "description": "depth.detailed"
+  },
+  "scenario_limitedIncome": "If I had limited income and resources",
+  "@scenario_limitedIncome": {
+    "description": "scenario.limitedIncome"
+  },
+  "scenario_limitedIncomeDesc": "Useful for cash-assistance or SSI-style planning.",
+  "@scenario_limitedIncomeDesc": {
+    "description": "scenario.limitedIncomeDesc"
+  },
+  "scenario_disability": "If I had a qualifying disability",
+  "@scenario_disability": {
+    "description": "scenario.disability"
+  },
+  "scenario_disabilityDesc": "Tests disability-related pathways and work-limitation rules.",
+  "@scenario_disabilityDesc": {
+    "description": "scenario.disabilityDesc"
+  },
+  "scenario_military": "If I had active-duty military service",
+  "@scenario_military": {
+    "description": "scenario.military"
+  },
+  "scenario_militaryDesc": "Checks whether service history opens veteran benefits.",
+  "@scenario_militaryDesc": {
+    "description": "scenario.militaryDesc"
+  },
+  "scenario_familyDeath": "If I had a recent family death event",
+  "@scenario_familyDeath": {
+    "description": "scenario.familyDeath"
+  },
+  "scenario_familyDeathDesc": "Explores survivor and funeral assistance pathways.",
+  "@scenario_familyDeathDesc": {
+    "description": "scenario.familyDeathDesc"
+  },
+  "status_likely_eligible": "likely eligible",
+  "@status_likely_eligible": {
+    "description": "status.likely_eligible"
+  },
+  "status_possibly_eligible": "possibly eligible",
+  "@status_possibly_eligible": {
+    "description": "status.possibly_eligible"
+  },
+  "status_unclear": "unclear",
+  "@status_unclear": {
+    "description": "status.unclear"
+  },
+  "status_likely_ineligible": "likely ineligible",
+  "@status_likely_ineligible": {
+    "description": "status.likely_ineligible"
+  },
+  "sensitivity_low": "low",
+  "@sensitivity_low": {
+    "description": "sensitivity.low"
+  },
+  "sensitivity_medium": "medium",
+  "@sensitivity_medium": {
+    "description": "sensitivity.medium"
+  },
+  "sensitivity_high": "high",
+  "@sensitivity_high": {
+    "description": "sensitivity.high"
+  },
+  "certainty_rule_coverage": "rule coverage",
+  "@certainty_rule_coverage": {
+    "description": "certainty.rule_coverage"
+  },
+  "certainty_source_authority": "source authority",
+  "@certainty_source_authority": {
+    "description": "certainty.source_authority"
+  },
+  "certainty_source_freshness": "source freshness",
+  "@certainty_source_freshness": {
+    "description": "certainty.source_freshness"
+  },
+  "certainty_program_determinism": "program determinism",
+  "@certainty_program_determinism": {
+    "description": "certainty.program_determinism"
+  },
+  "certainty_amount_determinism": "amount determinism",
+  "@certainty_amount_determinism": {
+    "description": "certainty.amount_determinism"
+  },
+  "intake_scope_federal": "Federal only for now",
+  "@intake_scope_federal": {
+    "description": "intake.scope.federal"
+  },
+  "intake_scope_state": "State-specific screening",
+  "@intake_scope_state": {
+    "description": "intake.scope.state"
+  },
+  "intake_scope_both": "Federal and state screening",
+  "@intake_scope_both": {
+    "description": "intake.scope.both"
+  },
+  "intake_fact_state_code": "State selected",
+  "@intake_fact_state_code": {
+    "description": "intake.fact.state_code"
+  },
+  "intake_fact_applicant_income": "Limited income and resources",
+  "@intake_fact_applicant_income": {
+    "description": "intake.fact.applicant_income"
+  },
+  "intake_fact_applicant_disability": "Disability or qualifying illness",
+  "@intake_fact_applicant_disability": {
+    "description": "intake.fact.applicant_disability"
+  },
+  "intake_fact_applicant_ability_to_work": "Unable to work for a year or more",
+  "@intake_fact_applicant_ability_to_work": {
+    "description": "intake.fact.applicant_ability_to_work"
+  },
+  "intake_fact_applicant_served_in_active_military": "Active-duty military service",
+  "@intake_fact_applicant_served_in_active_military": {
+    "description": "intake.fact.applicant_served_in_active_military"
+  },
+  "intake_fact_applicant_service_disability": "Service-connected disability",
+  "@intake_fact_applicant_service_disability": {
+    "description": "intake.fact.applicant_service_disability"
+  },
+  "intake_fact_applicant_dolo": "Recent family death",
+  "@intake_fact_applicant_dolo": {
+    "description": "intake.fact.applicant_dolo"
+  },
+  "intake_fact_deceased_died_of_COVID": "COVID-related death",
+  "@intake_fact_deceased_died_of_COVID": {
+    "description": "intake.fact.deceased_died_of_COVID"
+  },
+  "intake_fact_deceased_death_location_is_US": "Death occurred in the U.S.",
+  "@intake_fact_deceased_death_location_is_US": {
+    "description": "intake.fact.deceased_death_location_is_US"
+  },
+  "intake_fact_applicant_paid_into_SS": "Worked and paid Social Security taxes",
+  "@intake_fact_applicant_paid_into_SS": {
+    "description": "intake.fact.applicant_paid_into_SS"
+  },
+  "intake_fact_recent_job_loss": "Recent job loss or reduced hours",
+  "@intake_fact_recent_job_loss": {
+    "description": "intake.fact.recent_job_loss"
+  },
+  "intake_fact_housing_urgency": "Urgent housing or utility pressure",
+  "@intake_fact_housing_urgency": {
+    "description": "intake.fact.housing_urgency"
+  },
+  "intake_fact_food_insecurity": "Food or grocery hardship",
+  "@intake_fact_food_insecurity": {
+    "description": "intake.fact.food_insecurity"
+  },
+  "intake_fact_current_student": "Currently in school or job training",
+  "@intake_fact_current_student": {
+    "description": "intake.fact.current_student"
+  },
+  "intake_fact_has_children": "Children or dependents in household",
+  "@intake_fact_has_children": {
+    "description": "intake.fact.has_children"
+  },
+  "intake_fact_is_62_or_older": "Age 62 or older",
+  "@intake_fact_is_62_or_older": {
+    "description": "intake.fact.is_62_or_older"
+  },
+  "intake_fact_recent_disaster_impact": "Recent disaster impact",
+  "@intake_fact_recent_disaster_impact": {
+    "description": "intake.fact.recent_disaster_impact"
+  },
+  "intake_fact_needs_health_coverage": "Needs health coverage or medical help",
+  "@intake_fact_needs_health_coverage": {
+    "description": "intake.fact.needs_health_coverage"
+  },
+  "intake_fact_annual_income_amount": "Approximate annual income",
+  "@intake_fact_annual_income_amount": {
+    "description": "intake.fact.annual_income_amount"
+  },
+  "docType_required": "required",
+  "@docType_required": {
+    "description": "docType.required"
+  },
+  "docType_recommended": "recommended",
+  "@docType_recommended": {
+    "description": "docType.recommended"
+  },
+  "reviewStatus_open": "open",
+  "@reviewStatus_open": {
+    "description": "reviewStatus.open"
+  },
+  "reviewDiff_eligibility": "eligibility",
+  "@reviewDiff_eligibility": {
+    "description": "reviewDiff.eligibility"
+  },
+  "reviewDiff_structural": "structural",
+  "@reviewDiff_structural": {
+    "description": "reviewDiff.structural"
+  },
+  "reviewDiff_content": "content",
+  "@reviewDiff_content": {
+    "description": "reviewDiff.content"
+  },
+  "server_step_startState": "Start on the official state social services website.",
+  "@server_step_startState": {
+    "description": "server.step.startState"
+  },
+  "server_step_useStateTools": "Use the state's official benefit tools or program pages to choose the benefit you need.",
+  "@server_step_useStateTools": {
+    "description": "server.step.useStateTools"
+  },
+  "server_step_followStateInstructions": "Follow the state's official instructions for documents, local office contact, or online submission.",
+  "@server_step_followStateInstructions": {
+    "description": "server.step.followStateInstructions"
+  },
+  "server_step_reviewEligibility": "Review the official government eligibility source used for this match.",
+  "@server_step_reviewEligibility": {
+    "description": "server.step.reviewEligibility"
+  },
+  "server_step_openOfficial": "Open the official government page to start or continue the application.",
+  "@server_step_openOfficial": {
+    "description": "server.step.openOfficial"
+  },
+  "server_step_useSamePage": "Use the same official page for required documents, status checks, or agency contact details.",
+  "@server_step_useSamePage": {
+    "description": "server.step.useSamePage"
+  },
+  "server_note_strongMatches": "You already have {count} strong match{plural} to pursue on official government sites.",
+  "@server_note_strongMatches": {
+    "description": "server.note.strongMatches",
+    "placeholders": {
+      "plural": {
+        "type": "String"
+      },
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "server_note_possibleMatches": "You have {count} possible match{plural}; answering a few more questions should tighten these.",
+  "@server_note_possibleMatches": {
+    "description": "server.note.possibleMatches",
+    "placeholders": {
+      "plural": {
+        "type": "String"
+      },
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "server_note_biggestGap": "The biggest information gap right now is: {label}.",
+  "@server_note_biggestGap": {
+    "description": "server.note.biggestGap",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "server_note_chooseState": "Choose a state to unlock official state benefit pathways.",
+  "@server_note_chooseState": {
+    "description": "server.note.chooseState"
+  },
+  "admin_invalidKey": "The saved admin key was rejected. Update it and try again.",
+  "@admin_invalidKey": {
+    "description": "admin.invalidKey"
+  },
+  "admin_requiredKey": "Admin key required. Enter it in the Admin access field to use review and sync actions.",
+  "@admin_requiredKey": {
+    "description": "admin.requiredKey"
+  },
+  "errors_requestFailed": "Request failed with status {status}.",
+  "@errors_requestFailed": {
+    "description": "errors.requestFailed",
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "errors_genericTitle": "Something went wrong",
+  "@errors_genericTitle": {
+    "description": "errors.genericTitle"
+  },
+  "errors_generic": "Something went wrong. Please try again.",
+  "@errors_generic": {
+    "description": "errors.generic"
+  },
+  "errors_validation": "Couldn't process that request — please refresh and try again.",
+  "@errors_validation": {
+    "description": "errors.validation"
+  },
+  "errors_rateLimited": "Too many requests. Please wait a minute and try again.",
+  "@errors_rateLimited": {
+    "description": "errors.rateLimited"
+  },
+  "errors_server": "Our service is having trouble. Please try again later.",
+  "@errors_server": {
+    "description": "errors.server"
+  },
+  "errors_network": "Couldn't reach the server. Check your connection.",
+  "@errors_network": {
+    "description": "errors.network"
+  },
+  "errors_timeout": "The request timed out. Please try again.",
+  "@errors_timeout": {
+    "description": "errors.timeout"
+  },
+  "errors_auth": "You need to sign in to do that.",
+  "@errors_auth": {
+    "description": "errors.auth"
+  },
+  "errors_notFound": "We couldn't find what you were looking for.",
+  "@errors_notFound": {
+    "description": "errors.notFound"
+  },
+  "errors_tryAgain": "Try again",
+  "@errors_tryAgain": {
+    "description": "errors.tryAgain"
+  },
+  "results_federalSection": "Federal programs ({count})",
+  "@results_federalSection": {
+    "description": "results.federalSection",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "results_stateSection": "State programs ({count})",
+  "@results_stateSection": {
+    "description": "results.stateSection",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "results_emptyFederal": "No federal programs matched. Try answering more questions or broadening your screening.",
+  "@results_emptyFederal": {
+    "description": "results.emptyFederal"
+  },
+  "results_emptyState": "No state programs matched yet. Add your state in the screening to see local programs.",
+  "@results_emptyState": {
+    "description": "results.emptyState"
+  },
+  "results_viewActionPlan": "View action plan",
+  "@results_viewActionPlan": {
+    "description": "results.viewActionPlan"
+  },
+  "results_couldNotLoad": "We couldn't load your results.",
+  "@results_couldNotLoad": {
+    "description": "results.couldNotLoad"
+  },
+  "dashboard_couldNotLoad": "We couldn't load your action plan.",
+  "@dashboard_couldNotLoad": {
+    "description": "dashboard.couldNotLoad"
+  },
+  "dashboard_applyLinkUnavailable": "Application link unavailable — contact your local agency.",
+  "@dashboard_applyLinkUnavailable": {
+    "description": "dashboard.applyLinkUnavailable"
+  },
+  "dashboard_apply": "Apply",
+  "@dashboard_apply": {
+    "description": "dashboard.apply"
+  },
+  "dashboard_step": "Step {n}",
+  "@dashboard_step": {
+    "description": "dashboard.step",
+    "placeholders": {
+      "n": {"type": "int"}
+    }
+  },
+  "dashboard_emptyStack": "We don't have a benefit stack for you yet. Finish your screening to populate it.",
+  "@dashboard_emptyStack": {
+    "description": "dashboard.emptyStack"
+  },
+  "dashboard_emptyActions": "No next actions yet — answer a few more questions to get a tailored plan.",
+  "@dashboard_emptyActions": {
+    "description": "dashboard.emptyActions"
+  },
+  "dashboard_emptyDocuments": "No documents to gather yet.",
+  "@dashboard_emptyDocuments": {
+    "description": "dashboard.emptyDocuments"
+  },
+  "dashboard_emptyNotes": "No additional notes for your situation.",
+  "@dashboard_emptyNotes": {
+    "description": "dashboard.emptyNotes"
+  },
+  "dashboard_emptySources": "No source links available.",
+  "@dashboard_emptySources": {
+    "description": "dashboard.emptySources"
+  },
+  "dashboard_helpNarrowDown": "Help us narrow this down",
+  "@dashboard_helpNarrowDown": {
+    "description": "dashboard.helpNarrowDown"
+  },
+  "dashboard_missingFactsHint": "Answering these unlocks more accurate matches.",
+  "@dashboard_missingFactsHint": {
+    "description": "dashboard.missingFactsHint"
+  },
+  "dashboard_resumeScreening": "Resume screening",
+  "@dashboard_resumeScreening": {
+    "description": "dashboard.resumeScreening"
+  },
+  "dashboard_documentsTitle": "Documents to gather",
+  "@dashboard_documentsTitle": {
+    "description": "dashboard.documentsTitle"
+  },
+  "dashboard_notesTitle": "Planning notes",
+  "@dashboard_notesTitle": {
+    "description": "dashboard.notesTitle"
+  },
+  "dashboard_sourceHubTitle": "Official source hub",
+  "@dashboard_sourceHubTitle": {
+    "description": "dashboard.sourceHubTitle"
+  },
+  "dashboard_stackTitle": "Your benefit stack",
+  "@dashboard_stackTitle": {
+    "description": "dashboard.stackTitle"
+  },
+  "dashboard_actionsTitle": "Next actions",
+  "@dashboard_actionsTitle": {
+    "description": "dashboard.actionsTitle"
+  },
+  "status_likelyEligible": "Likely eligible",
+  "@status_likelyEligible": {
+    "description": "status.likelyEligible"
+  },
+  "status_possiblyEligible": "Possibly eligible",
+  "@status_possiblyEligible": {
+    "description": "status.possiblyEligible"
+  },
+  "status_unclear": "Unclear",
+  "@status_unclear": {
+    "description": "status.unclear"
+  },
+  "status_likelyIneligible": "Probably not",
+  "@status_likelyIneligible": {
+    "description": "status.likelyIneligible"
+  },
+  "dynamic_question_dob": "What is your date of birth?",
+  "@dynamic_question_dob": {
+    "description": "dynamic.question.dob"
+  },
+  "dynamic_hint_dobExample": "For example: 1990-01-20",
+  "@dynamic_hint_dobExample": {
+    "description": "dynamic.hint.dobExample"
+  },
+  "dynamic_question_paidIntoSS": "Did you ever work and pay U.S. Social Security taxes?",
+  "@dynamic_question_paidIntoSS": {
+    "description": "dynamic.question.paidIntoSS"
+  },
+  "dynamic_question_limitedIncome": "Do you have limited income and resources?",
+  "@dynamic_question_limitedIncome": {
+    "description": "dynamic.question.limitedIncome"
+  },
+  "dynamic_hint_limitedIncome": "This is a broad screening question, not a final determination.",
+  "@dynamic_hint_limitedIncome": {
+    "description": "dynamic.hint.limitedIncome"
+  },
+  "dynamic_question_disability": "Do you have a disability or qualifying illness?",
+  "@dynamic_question_disability": {
+    "description": "dynamic.question.disability"
+  },
+  "dynamic_question_unableToWork": "Are you unable to work for a year or more because of your disability?",
+  "@dynamic_question_unableToWork": {
+    "description": "dynamic.question.unableToWork"
+  },
+  "dynamic_question_activeMilitary": "Did you serve in the active military, naval, or air service?",
+  "@dynamic_question_activeMilitary": {
+    "description": "dynamic.question.activeMilitary"
+  },
+  "dynamic_question_serviceDisabilityDetailed": "Was your disability caused or made worse by your active-duty military service?",
+  "@dynamic_question_serviceDisabilityDetailed": {
+    "description": "dynamic.question.serviceDisabilityDetailed"
+  },
+  "dynamic_question_familyDeathDetailed": "Did you recently experience the death of an immediate family member?",
+  "@dynamic_question_familyDeathDetailed": {
+    "description": "dynamic.question.familyDeathDetailed"
+  },
+  "dynamic_question_dateOfDeath": "What was the date of death?",
+  "@dynamic_question_dateOfDeath": {
+    "description": "dynamic.question.dateOfDeath"
+  },
+  "dynamic_hint_dateOfDeath": "If you do not know the exact date, enter an approximate one.",
+  "@dynamic_hint_dateOfDeath": {
+    "description": "dynamic.hint.dateOfDeath"
+  },
+  "dynamic_question_covidDeath": "Was the person's death COVID-19 related?",
+  "@dynamic_question_covidDeath": {
+    "description": "dynamic.question.covidDeath"
+  },
+  "dynamic_question_deathInUs": "Did the person die in the U.S.?",
+  "@dynamic_question_deathInUs": {
+    "description": "dynamic.question.deathInUs"
+  },
+  "dynamic_hint_deathInUs": "Including Puerto Rico and U.S. territories.",
+  "@dynamic_hint_deathInUs": {
+    "description": "dynamic.hint.deathInUs"
+  },
+  "dynamic_question_householdIncome": "What is your approximate annual household income?",
+  "@dynamic_question_householdIncome": {
+    "description": "dynamic.question.householdIncome"
+  },
+  "dynamic_hint_householdIncome": "For reference, the 2024 federal poverty level is $15,060/year for a single-person household. Many programs use 130–200% of this threshold.",
+  "@dynamic_hint_householdIncome": {
+    "description": "dynamic.hint.householdIncome"
+  },
+  "dynamic_question_disabilityType": "What type of disability or condition do you have?",
+  "@dynamic_question_disabilityType": {
+    "description": "dynamic.question.disabilityType"
+  },
+  "dynamic_hint_disabilityType": "Select all that apply. Under SSA rules, a qualifying disability must significantly limit your ability to perform basic work activities.",
+  "@dynamic_hint_disabilityType": {
+    "description": "dynamic.hint.disabilityType"
+  },
+  "dynamic_question_monthsUnableToWork": "How many months has your condition prevented you from working?",
+  "@dynamic_question_monthsUnableToWork": {
+    "description": "dynamic.question.monthsUnableToWork"
+  },
+  "dynamic_hint_monthsUnableToWork": "SSDI requires inability to engage in substantial gainful activity for at least 12 consecutive months (42 U.S.C. § 423(d)(1)(A)).",
+  "@dynamic_hint_monthsUnableToWork": {
+    "description": "dynamic.hint.monthsUnableToWork"
+  },
+  "dynamic_question_approxAge": "What is your approximate age?",
+  "@dynamic_question_approxAge": {
+    "description": "dynamic.question.approxAge"
+  },
+  "dynamic_hint_approxAge": "A rough age is enough for a quick check.",
+  "@dynamic_hint_approxAge": {
+    "description": "dynamic.hint.approxAge"
+  },
+  "dynamic_question_exactDob": "What is your exact date of birth?",
+  "@dynamic_question_exactDob": {
+    "description": "dynamic.question.exactDob"
+  },
+  "dynamic_hint_exactDob": "Full retirement age varies: 66 for those born 1943–1954, increasing to 67 for those born 1960 or later (42 U.S.C. § 416(l)).",
+  "@dynamic_hint_exactDob": {
+    "description": "dynamic.hint.exactDob"
+  },
+  "dynamic_question_militaryVeteran": "Are you a military veteran?",
+  "@dynamic_question_militaryVeteran": {
+    "description": "dynamic.question.militaryVeteran"
+  },
+  "dynamic_hint_activeMilitary": "VA benefits require active duty service. Reserve/National Guard service may qualify if activated under federal orders (38 U.S.C. § 101(2)).",
+  "@dynamic_hint_activeMilitary": {
+    "description": "dynamic.hint.activeMilitary"
+  },
+  "dynamic_question_serviceDisabilitySimple": "Was your disability related to military service?",
+  "@dynamic_question_serviceDisabilitySimple": {
+    "description": "dynamic.question.serviceDisabilitySimple"
+  },
+  "dynamic_hint_serviceDisabilityDetailed": "VA disability compensation requires a service-connected condition with a disability rating of at least 10% (38 U.S.C. § 1110).",
+  "@dynamic_hint_serviceDisabilityDetailed": {
+    "description": "dynamic.hint.serviceDisabilityDetailed"
+  },
+  "dynamic_question_familyDeathSimple": "Did you recently lose a family member?",
+  "@dynamic_question_familyDeathSimple": {
+    "description": "dynamic.question.familyDeathSimple"
+  },
+  "dynamic_hint_familyDeathDetailed": "Survivor benefits eligibility depends on your relationship to the deceased and their work history (42 U.S.C. § 402).",
+  "@dynamic_hint_familyDeathDetailed": {
+    "description": "dynamic.hint.familyDeathDetailed"
+  },
+  "dynamic_question_stateCode": "Which state or territory do you want state benefits for?",
+  "@dynamic_question_stateCode": {
+    "description": "dynamic.question.stateCode"
+  },
+  "dynamic_hint_stateCode": "State benefits vary by state and are kept separate from federal matches.",
+  "@dynamic_hint_stateCode": {
+    "description": "dynamic.hint.stateCode"
+  },
+  "dynamic_option_yes": "Yes",
+  "@dynamic_option_yes": {
+    "description": "dynamic.option.yes"
+  },
+  "dynamic_option_no": "No",
+  "@dynamic_option_no": {
+    "description": "dynamic.option.no"
+  },
+  "dynamic_option_physicalDisability": "Physical disability",
+  "@dynamic_option_physicalDisability": {
+    "description": "dynamic.option.physicalDisability"
+  },
+  "dynamic_option_cognitiveDisability": "Cognitive or intellectual disability",
+  "@dynamic_option_cognitiveDisability": {
+    "description": "dynamic.option.cognitiveDisability"
+  },
+  "dynamic_option_sensoryDisability": "Sensory disability (vision/hearing)",
+  "@dynamic_option_sensoryDisability": {
+    "description": "dynamic.option.sensoryDisability"
+  },
+  "dynamic_option_mentalHealth": "Mental health condition",
+  "@dynamic_option_mentalHealth": {
+    "description": "dynamic.option.mentalHealth"
+  },
+  "dynamic_option_chronicIllness": "Chronic illness",
+  "@dynamic_option_chronicIllness": {
+    "description": "dynamic.option.chronicIllness"
+  },
+  "dynamic_option_noneOfTheAbove": "None of the above",
+  "@dynamic_option_noneOfTheAbove": {
+    "description": "dynamic.option.noneOfTheAbove"
+  },
+  "dynamic_summary_retirement": "Monthly retirement income for people who worked and paid Social Security taxes.",
+  "@dynamic_summary_retirement": {
+    "description": "dynamic.summary.retirement"
+  },
+  "dynamic_summary_ssdi": "Monthly disability benefits for people who paid into Social Security and cannot work due to disability.",
+  "@dynamic_summary_ssdi": {
+    "description": "dynamic.summary.ssdi"
+  },
+  "dynamic_summary_ssi": "Monthly support for older adults and people with disabilities who have limited income and resources.",
+  "@dynamic_summary_ssi": {
+    "description": "dynamic.summary.ssi"
+  },
+  "dynamic_summary_vaDisability": "Tax-free monthly payments for veterans whose disability was caused or worsened by active-duty service.",
+  "@dynamic_summary_vaDisability": {
+    "description": "dynamic.summary.vaDisability"
+  },
+  "dynamic_summary_survivor": "Monthly Social Security payments for eligible family members after a worker dies.",
+  "@dynamic_summary_survivor": {
+    "description": "dynamic.summary.survivor"
+  },
+  "dynamic_summary_funeral": "Financial help for funeral or burial costs for someone who died of COVID-19 in the U.S.",
+  "@dynamic_summary_funeral": {
+    "description": "dynamic.summary.funeral"
+  },
+  "dynamic_reason_paidIntoSS": "You worked and paid Social Security taxes.",
+  "@dynamic_reason_paidIntoSS": {
+    "description": "dynamic.reason.paidIntoSS"
+  },
+  "dynamic_reason_retirementAge": "You are at least retirement age.",
+  "@dynamic_reason_retirementAge": {
+    "description": "dynamic.reason.retirementAge"
+  },
+  "dynamic_reason_limitedIncome": "You have limited income and resources.",
+  "@dynamic_reason_limitedIncome": {
+    "description": "dynamic.reason.limitedIncome"
+  },
+  "dynamic_reason_disability": "You have a disability or qualifying illness.",
+  "@dynamic_reason_disability": {
+    "description": "dynamic.reason.disability"
+  },
+  "dynamic_reason_unableToWork": "You cannot work for a year or more because of your disability.",
+  "@dynamic_reason_unableToWork": {
+    "description": "dynamic.reason.unableToWork"
+  },
+  "dynamic_reason_activeMilitary": "You served in the active military.",
+  "@dynamic_reason_activeMilitary": {
+    "description": "dynamic.reason.activeMilitary"
+  },
+  "dynamic_reason_serviceDisability": "Your disability was caused or worsened by active-duty service.",
+  "@dynamic_reason_serviceDisability": {
+    "description": "dynamic.reason.serviceDisability"
+  },
+  "dynamic_reason_familyDeath": "You recently experienced the death of a family member.",
+  "@dynamic_reason_familyDeath": {
+    "description": "dynamic.reason.familyDeath"
+  },
+  "dynamic_reason_covidDeath": "The deceased's death was COVID-19 related.",
+  "@dynamic_reason_covidDeath": {
+    "description": "dynamic.reason.covidDeath"
+  },
+  "dynamic_reason_diedInUs": "The deceased died in the U.S.",
+  "@dynamic_reason_diedInUs": {
+    "description": "dynamic.reason.diedInUs"
+  },
+  "dynamic_reason_afterDate": "The deceased died after May 20, 2020.",
+  "@dynamic_reason_afterDate": {
+    "description": "dynamic.reason.afterDate"
+  },
+  "dynamic_amount_ssi": "Up to $943/month for individuals, $1,415/month for couples (2024 rates).",
+  "@dynamic_amount_ssi": {
+    "description": "dynamic.amount.ssi"
+  },
+  "dynamic_amount_retirement": "Monthly amount depends on work history and claiming age.",
+  "@dynamic_amount_retirement": {
+    "description": "dynamic.amount.retirement"
+  },
+  "dynamic_amount_ssdi": "Monthly amount depends on work history.",
+  "@dynamic_amount_ssdi": {
+    "description": "dynamic.amount.ssdi"
+  },
+  "dynamic_amount_vaDisability": "Amount depends on disability rating and dependents.",
+  "@dynamic_amount_vaDisability": {
+    "description": "dynamic.amount.vaDisability"
+  },
+  "dynamic_amount_survivor": "Monthly amount depends on the worker's record and your relationship.",
+  "@dynamic_amount_survivor": {
+    "description": "dynamic.amount.survivor"
+  },
+  "dynamic_amount_funeral": "Reimbursement amount depends on eligible funeral expenses.",
+  "@dynamic_amount_funeral": {
+    "description": "dynamic.amount.funeral"
+  },
+  "dynamic_document_ssnCard": "Social Security card or number",
+  "@dynamic_document_ssnCard": {
+    "description": "dynamic.document.ssnCard"
+  },
+  "dynamic_document_ssnCardDesc": "Your 9-digit SSN",
+  "@dynamic_document_ssnCardDesc": {
+    "description": "dynamic.document.ssnCardDesc"
+  },
+  "dynamic_document_proofOfAge": "Proof of age",
+  "@dynamic_document_proofOfAge": {
+    "description": "dynamic.document.proofOfAge"
+  },
+  "dynamic_document_proofOfAgeDesc": "Birth certificate or passport",
+  "@dynamic_document_proofOfAgeDesc": {
+    "description": "dynamic.document.proofOfAgeDesc"
+  },
+  "dynamic_document_w2": "W-2 forms or self-employment tax returns",
+  "@dynamic_document_w2": {
+    "description": "dynamic.document.w2"
+  },
+  "dynamic_document_w2RecentDesc": "Most recent year's earnings records",
+  "@dynamic_document_w2RecentDesc": {
+    "description": "dynamic.document.w2RecentDesc"
+  },
+  "dynamic_document_w2CurrentPriorDesc": "Earnings records for the current and prior year",
+  "@dynamic_document_w2CurrentPriorDesc": {
+    "description": "dynamic.document.w2CurrentPriorDesc"
+  },
+  "dynamic_document_bankInfo": "Bank account information",
+  "@dynamic_document_bankInfo": {
+    "description": "dynamic.document.bankInfo"
+  },
+  "dynamic_document_bankInfoDesc": "For direct deposit of benefits",
+  "@dynamic_document_bankInfoDesc": {
+    "description": "dynamic.document.bankInfoDesc"
+  },
+  "dynamic_document_medicalRecords": "Medical records",
+  "@dynamic_document_medicalRecords": {
+    "description": "dynamic.document.medicalRecords"
+  },
+  "dynamic_document_medicalRecordsDesc": "Documentation of your disability from doctors, hospitals, or clinics",
+  "@dynamic_document_medicalRecordsDesc": {
+    "description": "dynamic.document.medicalRecordsDesc"
+  },
+  "dynamic_document_incomeResources": "Proof of income and resources",
+  "@dynamic_document_incomeResources": {
+    "description": "dynamic.document.incomeResources"
+  },
+  "dynamic_document_incomeResourcesDesc": "Pay stubs, bank statements, or benefit award letters",
+  "@dynamic_document_incomeResourcesDesc": {
+    "description": "dynamic.document.incomeResourcesDesc"
+  },
+  "dynamic_document_disabilityDocsDesc": "Documentation of your disability",
+  "@dynamic_document_disabilityDocsDesc": {
+    "description": "dynamic.document.disabilityDocsDesc"
+  },
+  "dynamic_document_livingArrangement": "Proof of living arrangement",
+  "@dynamic_document_livingArrangement": {
+    "description": "dynamic.document.livingArrangement"
+  },
+  "dynamic_document_livingArrangementDesc": "Lease, mortgage statement, or letter from landlord",
+  "@dynamic_document_livingArrangementDesc": {
+    "description": "dynamic.document.livingArrangementDesc"
+  },
+  "dynamic_document_citizenship": "Proof of citizenship or immigration status",
+  "@dynamic_document_citizenship": {
+    "description": "dynamic.document.citizenship"
+  },
+  "dynamic_document_citizenshipDesc": "Birth certificate, passport, or immigration documents",
+  "@dynamic_document_citizenshipDesc": {
+    "description": "dynamic.document.citizenshipDesc"
+  },
+  "dynamic_document_dd214": "DD-214 (discharge papers)",
+  "@dynamic_document_dd214": {
+    "description": "dynamic.document.dd214"
+  },
+  "dynamic_document_dd214Desc": "Certificate of Release or Discharge from Active Duty",
+  "@dynamic_document_dd214Desc": {
+    "description": "dynamic.document.dd214Desc"
+  },
+  "dynamic_document_serviceEvidenceDesc": "Evidence linking your disability to military service",
+  "@dynamic_document_serviceEvidenceDesc": {
+    "description": "dynamic.document.serviceEvidenceDesc"
+  },
+  "dynamic_document_vaForm": "VA Form 21-526EZ",
+  "@dynamic_document_vaForm": {
+    "description": "dynamic.document.vaForm"
+  },
+  "dynamic_document_vaFormDesc": "Application for Disability Compensation",
+  "@dynamic_document_vaFormDesc": {
+    "description": "dynamic.document.vaFormDesc"
+  },
+  "dynamic_document_deceasedSsn": "Deceased's Social Security number",
+  "@dynamic_document_deceasedSsn": {
+    "description": "dynamic.document.deceasedSsn"
+  },
+  "dynamic_document_deceasedSsnDesc": "The worker's SSN",
+  "@dynamic_document_deceasedSsnDesc": {
+    "description": "dynamic.document.deceasedSsnDesc"
+  },
+  "dynamic_document_deathCertificate": "Death certificate",
+  "@dynamic_document_deathCertificate": {
+    "description": "dynamic.document.deathCertificate"
+  },
+  "dynamic_document_deathCertificateDesc": "Certified copy of the death certificate",
+  "@dynamic_document_deathCertificateDesc": {
+    "description": "dynamic.document.deathCertificateDesc"
+  },
+  "dynamic_document_relationshipProof": "Proof of relationship",
+  "@dynamic_document_relationshipProof": {
+    "description": "dynamic.document.relationshipProof"
+  },
+  "dynamic_document_relationshipProofDesc": "Marriage certificate, birth certificate, or adoption papers",
+  "@dynamic_document_relationshipProofDesc": {
+    "description": "dynamic.document.relationshipProofDesc"
+  },
+  "dynamic_document_covidDeathCertificateDesc": "Must attribute the death to COVID-19",
+  "@dynamic_document_covidDeathCertificateDesc": {
+    "description": "dynamic.document.covidDeathCertificateDesc"
+  },
+  "dynamic_document_funeralReceipts": "Funeral expense receipts",
+  "@dynamic_document_funeralReceipts": {
+    "description": "dynamic.document.funeralReceipts"
+  },
+  "dynamic_document_funeralReceiptsDesc": "Itemized receipts or contracts from funeral providers",
+  "@dynamic_document_funeralReceiptsDesc": {
+    "description": "dynamic.document.funeralReceiptsDesc"
+  },
+  "dynamic_document_usResidency": "Proof of U.S. residency",
+  "@dynamic_document_usResidency": {
+    "description": "dynamic.document.usResidency"
+  },
+  "dynamic_document_usResidencyDesc": "For the person who incurred the funeral expenses",
+  "@dynamic_document_usResidencyDesc": {
+    "description": "dynamic.document.usResidencyDesc"
+  },
+  "dynamic_document_femaAppNumber": "FEMA application number",
+  "@dynamic_document_femaAppNumber": {
+    "description": "dynamic.document.femaAppNumber"
+  },
+  "dynamic_document_femaAppNumberDesc": "If you previously applied for other FEMA assistance",
+  "@dynamic_document_femaAppNumberDesc": {
+    "description": "dynamic.document.femaAppNumberDesc"
+  },
+  "lang_en": "English",
+  "@lang_en": {
+    "description": "lang.en"
+  },
+  "lang_es": "Español",
+  "@lang_es": {
+    "description": "lang.es"
+  },
+  "brand_name": "Benefits Digger",
+  "@brand_name": {
+    "description": "brand.name"
+  },
+  "brand_tagline": "Find every benefit you may qualify for. Backed by official sources.",
+  "@brand_tagline": {
+    "description": "brand.tagline"
+  },
+  "nav_screen": "Screen",
+  "@nav_screen": {
+    "description": "nav.screen"
+  },
+  "nav_chat": "Assistant",
+  "@nav_chat": {
+    "description": "nav.chat"
+  },
+  "nav_programs": "Programs",
+  "@nav_programs": {
+    "description": "nav.programs"
+  },
+  "nav_skipToContent": "Skip to main content",
+  "@nav_skipToContent": {
+    "description": "nav.skipToContent"
+  },
+  "nav_openMenu": "Open menu",
+  "@nav_openMenu": {
+    "description": "nav.openMenu"
+  },
+  "nav_closeMenu": "Close menu",
+  "@nav_closeMenu": {
+    "description": "nav.closeMenu"
+  },
+  "theme_toggle": "Toggle theme",
+  "@theme_toggle": {
+    "description": "theme.toggle"
+  },
+  "theme_light": "Light",
+  "@theme_light": {
+    "description": "theme.light"
+  },
+  "theme_dark": "Dark",
+  "@theme_dark": {
+    "description": "theme.dark"
+  },
+  "theme_system": "System",
+  "@theme_system": {
+    "description": "theme.system"
+  },
+  "language_switcher": "Language",
+  "@language_switcher": {
+    "description": "language.switcher"
+  },
+  "landing_eyebrow": "Plan with confidence",
+  "@landing_eyebrow": {
+    "description": "landing.eyebrow"
+  },
+  "landing_heroTitle": "See every government benefit you may qualify for.",
+  "@landing_heroTitle": {
+    "description": "landing.heroTitle"
+  },
+  "landing_heroLede": "Benefits Digger walks you through a short conversation, screens you against federal and state programs, and grounds every match in an official source.",
+  "@landing_heroLede": {
+    "description": "landing.heroLede"
+  },
+  "landing_startScreening": "Start screening",
+  "@landing_startScreening": {
+    "description": "landing.startScreening"
+  },
+  "landing_startScreeningHint": "Five-minute walkthrough. Private. No account required.",
+  "@landing_startScreeningHint": {
+    "description": "landing.startScreeningHint"
+  },
+  "landing_askAssistant": "Ask the assistant",
+  "@landing_askAssistant": {
+    "description": "landing.askAssistant"
+  },
+  "landing_askAssistantHint": "Describe your situation in your own words.",
+  "@landing_askAssistantHint": {
+    "description": "landing.askAssistantHint"
+  },
+  "landing_browsePrograms": "Browse programs",
+  "@landing_browsePrograms": {
+    "description": "landing.browsePrograms"
+  },
+  "landing_browseProgramsHint": "Search the official program catalog.",
+  "@landing_browseProgramsHint": {
+    "description": "landing.browseProgramsHint"
+  },
+  "landing_howItWorksTitle": "How it works",
+  "@landing_howItWorksTitle": {
+    "description": "landing.howItWorksTitle"
+  },
+  "landing_howItWorksLede": "Three steps that respect your time and your situation.",
+  "@landing_howItWorksLede": {
+    "description": "landing.howItWorksLede"
+  },
+  "landing_step1Title": "Tell us what is going on",
+  "@landing_step1Title": {
+    "description": "landing.step1Title"
+  },
+  "landing_step1Body": "Type a sentence about your situation, or answer a few short yes-or-no questions. We translate your story into a structured screen.",
+  "@landing_step1Body": {
+    "description": "landing.step1Body"
+  },
+  "landing_step2Title": "We match against official rules",
+  "@landing_step2Title": {
+    "description": "landing.step2Title"
+  },
+  "landing_step2Body": "Each program is scored against the latest federal or state eligibility rules. Where data is missing, we say so plainly.",
+  "@landing_step2Body": {
+    "description": "landing.step2Body"
+  },
+  "landing_step3Title": "Walk away with a plan",
+  "@landing_step3Title": {
+    "description": "landing.step3Title"
+  },
+  "landing_step3Body": "Get a checklist of next steps, the documents you will need, and direct links to the official application pages.",
+  "@landing_step3Body": {
+    "description": "landing.step3Body"
+  },
+  "landing_trustTitle": "Why people trust the results",
+  "@landing_trustTitle": {
+    "description": "landing.trustTitle"
+  },
+  "landing_trustOfficial": "Sourced from official .gov documents",
+  "@landing_trustOfficial": {
+    "description": "landing.trustOfficial"
+  },
+  "landing_trustOfficialBody": "Every match is grounded in published agency rules and links back to the original page.",
+  "@landing_trustOfficialBody": {
+    "description": "landing.trustOfficialBody"
+  },
+  "landing_trustPrivate": "Private by default",
+  "@landing_trustPrivate": {
+    "description": "landing.trustPrivate"
+  },
+  "landing_trustPrivateBody": "Your answers stay in your browser session. We never sell, share, or sign you in.",
+  "@landing_trustPrivateBody": {
+    "description": "landing.trustPrivateBody"
+  },
+  "landing_trustExplainable": "Explainable confidence",
+  "@landing_trustExplainable": {
+    "description": "landing.trustExplainable"
+  },
+  "landing_trustExplainableBody": "We show why each program matched, what is missing, and how confident the screen is.",
+  "@landing_trustExplainableBody": {
+    "description": "landing.trustExplainableBody"
+  },
+  "landing_comingSoon": "Coming soon",
+  "@landing_comingSoon": {
+    "description": "landing.comingSoon"
+  },
+  "landing_comingSoonBody": "This part of Benefits Digger is being built right now. Check back shortly.",
+  "@landing_comingSoonBody": {
+    "description": "landing.comingSoonBody"
+  },
+  "landing_notFoundTitle": "We could not find that page",
+  "@landing_notFoundTitle": {
+    "description": "landing.notFoundTitle"
+  },
+  "landing_notFoundBody": "The page you are looking for has moved or does not exist.",
+  "@landing_notFoundBody": {
+    "description": "landing.notFoundBody"
+  },
+  "landing_notFoundCta": "Back to home",
+  "@landing_notFoundCta": {
+    "description": "landing.notFoundCta"
+  },
+  "landing_errorTitle": "Something went wrong",
+  "@landing_errorTitle": {
+    "description": "landing.errorTitle"
+  },
+  "landing_errorBody": "An unexpected error happened while loading this page. Try again, and if it keeps happening, the team has been notified.",
+  "@landing_errorBody": {
+    "description": "landing.errorBody"
+  },
+  "landing_errorRetry": "Try again",
+  "@landing_errorRetry": {
+    "description": "landing.errorRetry"
+  },
+  "landing_loading": "Loading...",
+  "@landing_loading": {
+    "description": "landing.loading"
+  },
+  "footer_disclaimer": "Benefits Digger is an independent screening tool. It is not affiliated with, endorsed by, or operated by the U.S. federal government or any state agency. Final eligibility is determined by the agency that runs the benefit.",
+  "@footer_disclaimer": {
+    "description": "footer.disclaimer"
+  },
+  "footer_privacy": "Privacy",
+  "@footer_privacy": {
+    "description": "footer.privacy"
+  },
+  "footer_sources": "Official sources",
+  "@footer_sources": {
+    "description": "footer.sources"
+  },
+  "footer_about": "About",
+  "@footer_about": {
+    "description": "footer.about"
+  },
+  "footer_copyright": "{year} Benefits Digger",
+  "@footer_copyright": {
+    "description": "footer.copyright",
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "helpBot_title": "Help with this app",
+  "@helpBot_title": {
+    "description": "helpBot.title — header of the floating help panel"
+  },
+  "helpBot_placeholder": "Ask how to use the app…",
+  "@helpBot_placeholder": {
+    "description": "helpBot.placeholder — input bar hint inside the help panel"
+  },
+  "helpBot_openLabel": "Get help with this app",
+  "@helpBot_openLabel": {
+    "description": "helpBot.openLabel — accessible label on the closed FAB"
+  },
+  "helpBot_emptyState": "Ask how to use a feature, navigate to a page, or understand a screening question. (For benefits questions, use the main chat.)",
+  "@helpBot_emptyState": {
+    "description": "helpBot.emptyState — copy shown when there are no messages"
+  },
+  "helpBot_streaming": "Thinking…",
+  "@helpBot_streaming": {
+    "description": "helpBot.streaming — status while waiting on the assistant"
+  },
+  "helpBot_error": "Couldn't reach the help assistant. Try again in a moment.",
+  "@helpBot_error": {
+    "description": "helpBot.error — shown when the help service fails"
+  },
+  "helpBot_close": "Close help",
+  "@helpBot_close": {
+    "description": "helpBot.close — accessible label on the close button"
+  }
+}
