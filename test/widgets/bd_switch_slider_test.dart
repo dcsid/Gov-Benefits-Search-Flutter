@@ -10,10 +10,9 @@ import '_helpers.dart';
 void main() {
   testWidgets('switch toggles', (tester) async {
     bool? last;
-    await tester.pumpWidget(bdHarness(BdSwitch(
-      value: false,
-      onChanged: (v) => last = v,
-    )));
+    await tester.pumpWidget(
+      bdHarness(BdSwitch(value: false, onChanged: (v) => last = v)),
+    );
     await tester.tap(find.byType(Switch));
     await tester.pump();
     expect(last, true);
@@ -21,15 +20,19 @@ void main() {
 
   testWidgets('slider fires onChanged', (tester) async {
     double? last;
-    await tester.pumpWidget(bdHarness(SizedBox(
-      width: 200,
-      child: BdSlider(
-        value: 30,
-        min: 0,
-        max: 100,
-        onChanged: (v) => last = v,
+    await tester.pumpWidget(
+      bdHarness(
+        SizedBox(
+          width: 200,
+          child: BdSlider(
+            value: 30,
+            min: 0,
+            max: 100,
+            onChanged: (v) => last = v,
+          ),
+        ),
       ),
-    )));
+    );
     await tester.drag(find.byType(Slider), const Offset(50, 0));
     expect(last, isNotNull);
   });

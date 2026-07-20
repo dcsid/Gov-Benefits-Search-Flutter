@@ -64,8 +64,7 @@ class BdHeader extends StatelessWidget {
                   BdLogo(compact: isCompact),
                   if (!isCompact && isWide) ...[
                     const SizedBox(width: 24),
-                    for (final item in navItems)
-                      _NavLink(item: item),
+                    for (final item in navItems) _NavLink(item: item),
                   ],
                   const Spacer(),
                   const BdLanguageSwitcher(),
@@ -112,10 +111,16 @@ class BdHeader extends StatelessWidget {
                   GoRouter.of(context).go(i.href);
                 },
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 14,
+                  ),
                   child: Text(
                     i.label,
-                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),

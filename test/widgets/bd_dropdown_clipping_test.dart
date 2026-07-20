@@ -45,7 +45,9 @@ void main() {
     },
   );
 
-  testWidgets('dropdown caps height and scrolls long item lists', (tester) async {
+  testWidgets('dropdown caps height and scrolls long item lists', (
+    tester,
+  ) async {
     tester.view.physicalSize = const Size(800, 240);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);

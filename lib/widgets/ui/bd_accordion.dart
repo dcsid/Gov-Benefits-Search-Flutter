@@ -61,7 +61,11 @@ class _BdAccordionState extends State<BdAccordion> {
 }
 
 class _AccordionRow extends StatelessWidget {
-  const _AccordionRow({required this.item, required this.open, required this.onTap});
+  const _AccordionRow({
+    required this.item,
+    required this.open,
+    required this.onTap,
+  });
   final BdAccordionItem item;
   final bool open;
   final VoidCallback onTap;
@@ -79,14 +83,21 @@ class _AccordionRow extends StatelessWidget {
               children: [
                 Expanded(
                   child: DefaultTextStyle.merge(
-                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
                     child: item.title,
                   ),
                 ),
                 // Instant flip — no AnimatedRotation, no 200ms tween.
                 Transform.rotate(
                   angle: open ? 3.14159 : 0,
-                  child: Icon(Icons.expand_more, size: 18, color: scheme.onSurfaceVariant),
+                  child: Icon(
+                    Icons.expand_more,
+                    size: 18,
+                    color: scheme.onSurfaceVariant,
+                  ),
                 ),
               ],
             ),

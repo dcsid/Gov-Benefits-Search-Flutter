@@ -24,8 +24,7 @@ class _BdChatWindowState extends State<BdChatWindow> {
   @override
   void didUpdateWidget(covariant BdChatWindow old) {
     super.didUpdateWidget(old);
-    final lastNew =
-        widget.messages.isEmpty ? '' : widget.messages.last.content;
+    final lastNew = widget.messages.isEmpty ? '' : widget.messages.last.content;
     final lastOld = old.messages.isEmpty ? '' : old.messages.last.content;
     if (old.messages.length != widget.messages.length || lastNew != lastOld) {
       WidgetsBinding.instance.addPostFrameCallback((_) {

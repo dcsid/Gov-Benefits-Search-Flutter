@@ -32,18 +32,15 @@ class ChatContextToggle extends StatelessWidget {
               value
                   ? 'Using your screening context'
                   : hasSession
-                      ? 'Not using your screening yet'
-                      : 'No active screening — general questions only',
+                  ? 'Not using your screening yet'
+                  : 'No active screening — general questions only',
               style: TextStyle(
                 color: scheme.onSurfaceVariant,
                 fontWeight: FontWeight.w500,
               ),
             ),
           ),
-          BdSwitch(
-            value: value,
-            onChanged: hasSession ? onChanged : (_) {},
-          ),
+          BdSwitch(value: value, onChanged: hasSession ? onChanged : (_) {}),
         ],
       ),
     );

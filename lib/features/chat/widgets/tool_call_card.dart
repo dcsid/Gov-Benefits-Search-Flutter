@@ -20,7 +20,9 @@ class _ToolCallCardState extends State<ToolCallCard> {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final argsJson = const JsonEncoder.withIndent('  ').convert(widget.call.args);
+    final argsJson = const JsonEncoder.withIndent(
+      '  ',
+    ).convert(widget.call.args);
     final resultJson = widget.call.result == null
         ? '(no result yet)'
         : const JsonEncoder.withIndent('  ').convert(widget.call.result);
@@ -42,10 +44,7 @@ class _ToolCallCardState extends State<ToolCallCard> {
                     style: const TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
-                Icon(
-                  _open ? Icons.expand_less : Icons.expand_more,
-                  size: 18,
-                ),
+                Icon(_open ? Icons.expand_less : Icons.expand_more, size: 18),
               ],
             ),
           ),

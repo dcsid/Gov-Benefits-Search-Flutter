@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../theme/extensions/bd_colors.dart';
 
-enum BdButtonVariant { primary, secondary, outline, ghost, link, destructive, accent }
+enum BdButtonVariant {
+  primary,
+  secondary,
+  outline,
+  ghost,
+  link,
+  destructive,
+  accent,
+}
 
 enum BdButtonSize { sm, md, lg, xl, icon }
 
@@ -47,7 +55,8 @@ class BdButton extends StatelessWidget {
     final height = _height();
     final textStyle = _textStyle(t.textTheme, fg);
 
-    final content = child ??
+    final content =
+        child ??
         DefaultTextStyle.merge(
           style: textStyle,
           child: _row(textStyle.color ?? fg),
@@ -82,10 +91,7 @@ class BdButton extends StatelessWidget {
       ),
     );
 
-    final result = Opacity(
-      opacity: onPressed == null ? 0.5 : 1,
-      child: core,
-    );
+    final result = Opacity(opacity: onPressed == null ? 0.5 : 1, child: core);
 
     return Semantics(
       button: true,
@@ -98,17 +104,21 @@ class BdButton extends StatelessWidget {
   Widget _row(Color color) {
     final children = <Widget>[];
     if (leading != null) {
-      children.add(IconTheme.merge(
-        data: IconThemeData(size: 16, color: color),
-        child: leading!,
-      ));
+      children.add(
+        IconTheme.merge(
+          data: IconThemeData(size: 16, color: color),
+          child: leading!,
+        ),
+      );
     }
     if (label != null) children.add(Text(label!));
     if (trailing != null) {
-      children.add(IconTheme.merge(
-        data: IconThemeData(size: 16, color: color),
-        child: trailing!,
-      ));
+      children.add(
+        IconTheme.merge(
+          data: IconThemeData(size: 16, color: color),
+          child: trailing!,
+        ),
+      );
     }
     return Row(
       mainAxisSize: MainAxisSize.min,
@@ -203,13 +213,25 @@ class BdButton extends StatelessWidget {
     final base = textTheme.bodyMedium ?? const TextStyle();
     switch (size) {
       case BdButtonSize.sm:
-        return base.copyWith(fontSize: 13, fontWeight: FontWeight.w500, color: fg);
+        return base.copyWith(
+          fontSize: 13,
+          fontWeight: FontWeight.w500,
+          color: fg,
+        );
       case BdButtonSize.lg:
       case BdButtonSize.xl:
-        return base.copyWith(fontSize: 16, fontWeight: FontWeight.w500, color: fg);
+        return base.copyWith(
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+          color: fg,
+        );
       case BdButtonSize.md:
       case BdButtonSize.icon:
-        return base.copyWith(fontSize: 14, fontWeight: FontWeight.w500, color: fg);
+        return base.copyWith(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          color: fg,
+        );
     }
   }
 }
@@ -219,7 +241,7 @@ class _Underlined extends StatelessWidget {
   final Widget child;
   @override
   Widget build(BuildContext context) => DefaultTextStyle.merge(
-        style: const TextStyle(decoration: TextDecoration.underline),
-        child: child,
-      );
+    style: const TextStyle(decoration: TextDecoration.underline),
+    child: child,
+  );
 }

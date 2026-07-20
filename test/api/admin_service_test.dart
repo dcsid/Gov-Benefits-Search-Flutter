@@ -14,8 +14,12 @@ void main() {
 
   test('listReviewTasks sends X-Admin-Key when provided', () async {
     final dio = _MockDio();
-    when(() => dio.get<Object?>('/admin/review-tasks',
-        options: any(named: 'options'))).thenAnswer(
+    when(
+      () => dio.get<Object?>(
+        '/admin/review-tasks',
+        options: any(named: 'options'),
+      ),
+    ).thenAnswer(
       (_) async => Response<Object?>(
         requestOptions: RequestOptions(path: '/admin/review-tasks'),
         statusCode: 200,
@@ -32,17 +36,22 @@ void main() {
     );
     final out = await AdminService(dio).listReviewTasks(adminKey: 'secret');
     expect(out.single.id, 't1');
-    final opts = verify(() => dio.get<Object?>('/admin/review-tasks',
-            options: captureAny(named: 'options')))
-        .captured
-        .single as Options;
+    final opts =
+        verify(
+              () => dio.get<Object?>(
+                '/admin/review-tasks',
+                options: captureAny(named: 'options'),
+              ),
+            ).captured.single
+            as Options;
     expect(opts.headers?['X-Admin-Key'], 'secret');
   });
 
   test('triggerSync posts /admin/sync and parses report', () async {
     final dio = _MockDio();
-    when(() => dio.post<Object?>('/admin/sync',
-        options: any(named: 'options'))).thenAnswer(
+    when(
+      () => dio.post<Object?>('/admin/sync', options: any(named: 'options')),
+    ).thenAnswer(
       (_) async => Response<Object?>(
         requestOptions: RequestOptions(path: '/admin/sync'),
         statusCode: 200,

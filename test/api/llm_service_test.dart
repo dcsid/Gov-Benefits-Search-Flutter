@@ -10,8 +10,9 @@ class _MockDio extends Mock implements Dio {}
 void main() {
   test('complete posts to /llm/complete and parses response', () async {
     final dio = _MockDio();
-    when(() => dio.post<Object?>('/llm/complete', data: any(named: 'data')))
-        .thenAnswer(
+    when(
+      () => dio.post<Object?>('/llm/complete', data: any(named: 'data')),
+    ).thenAnswer(
       (_) async => Response<Object?>(
         requestOptions: RequestOptions(path: '/llm/complete'),
         statusCode: 200,

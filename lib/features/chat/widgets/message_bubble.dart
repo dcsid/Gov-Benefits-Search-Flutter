@@ -19,20 +19,21 @@ class MessageBubble extends StatelessWidget {
     final bubbleBg = isUser
         ? scheme.primary
         : isError
-            ? scheme.errorContainer
-            : scheme.surfaceContainerHigh;
+        ? scheme.errorContainer
+        : scheme.surfaceContainerHigh;
     final fg = isUser
         ? scheme.onPrimary
         : isError
-            ? scheme.onErrorContainer
-            : scheme.onSurface;
+        ? scheme.onErrorContainer
+        : scheme.onSurface;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment:
-            isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
+        mainAxisAlignment: isUser
+            ? MainAxisAlignment.end
+            : MainAxisAlignment.start,
         children: <Widget>[
           if (!isUser) ...<Widget>[
             CircleAvatar(
@@ -48,8 +49,9 @@ class MessageBubble extends StatelessWidget {
           ],
           Flexible(
             child: Column(
-              crossAxisAlignment:
-                  isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+              crossAxisAlignment: isUser
+                  ? CrossAxisAlignment.end
+                  : CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                   isUser ? 'You' : 'Benefits assistant',

@@ -43,23 +43,26 @@ class BdDialog extends StatelessWidget {
                   if (title != null) ...[
                     Text(
                       title!,
-                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                     const SizedBox(height: 6),
                   ],
                   if (description != null) ...[
                     Text(
                       description!,
-                      style: TextStyle(fontSize: 14, color: scheme.onSurfaceVariant),
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: scheme.onSurfaceVariant,
+                      ),
                     ),
                     const SizedBox(height: 16),
                   ] else if (title != null)
                     const SizedBox(height: 12),
                   child,
-                  if (footer != null) ...[
-                    const SizedBox(height: 20),
-                    footer!,
-                  ],
+                  if (footer != null) ...[const SizedBox(height: 20), footer!],
                 ],
               ),
               if (showCloseButton)

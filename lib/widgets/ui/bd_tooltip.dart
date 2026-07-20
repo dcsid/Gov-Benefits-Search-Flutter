@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import '../../theme/extensions/bd_colors.dart';
 
 class BdTooltip extends StatelessWidget {
-  const BdTooltip({
-    super.key,
-    required this.message,
-    required this.child,
-  });
+  const BdTooltip({super.key, required this.message, required this.child});
 
   final String message;
   final Widget child;

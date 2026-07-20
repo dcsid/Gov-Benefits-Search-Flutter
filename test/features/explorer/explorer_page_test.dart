@@ -47,10 +47,12 @@ void main() {
       ],
     );
 
-    when(() => mockExplorer.search(any()))
-        .thenAnswer((_) async => fakeResponse);
-    when(() => mockStates.listStates())
-        .thenAnswer((_) async => const <StateInfo>[]);
+    when(
+      () => mockExplorer.search(any()),
+    ).thenAnswer((_) async => fakeResponse);
+    when(
+      () => mockStates.listStates(),
+    ).thenAnswer((_) async => const <StateInfo>[]);
 
     final router = GoRouter(
       initialLocation: '/explorer',
@@ -59,10 +61,7 @@ void main() {
         GoRoute(path: '/screen', builder: (_, __) => const Scaffold()),
         GoRoute(path: '/chat', builder: (_, __) => const Scaffold()),
         GoRoute(path: '/', builder: (_, __) => const Scaffold()),
-        GoRoute(
-          path: '/program/:slug',
-          builder: (_, __) => const Scaffold(),
-        ),
+        GoRoute(path: '/program/:slug', builder: (_, __) => const Scaffold()),
       ],
     );
     await tester.pumpWidget(

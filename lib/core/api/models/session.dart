@@ -91,11 +91,8 @@ class ProgramResult with _$ProgramResult {
     String? kind,
     String? category,
     String? family,
-    @JsonKey(name: 'eligibility_status')
-    required String eligibilityStatus,
-    @JsonKey(name: 'decision_certainty')
-    @Default(0)
-    int decisionCertainty,
+    @JsonKey(name: 'eligibility_status') required String eligibilityStatus,
+    @JsonKey(name: 'decision_certainty') @Default(0) int decisionCertainty,
     @JsonKey(name: 'certainty_breakdown')
     @Default(<String, dynamic>{})
     Map<String, dynamic> certaintyBreakdown,
@@ -115,16 +112,14 @@ class ProgramResult with _$ProgramResult {
     @JsonKey(name: 'failed_reasons')
     @Default(<String>[])
     List<String> failedReasons,
-    @Default(<Map<String, dynamic>>[])
-    List<Map<String, dynamic>> documents,
+    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> documents,
     @JsonKey(name: 'data_gathered_from')
     @Default(<Map<String, dynamic>>[])
     List<Map<String, dynamic>> dataGatheredFrom,
     @JsonKey(name: 'how_to_get_benefit')
     @Default(<Map<String, dynamic>>[])
     List<Map<String, dynamic>> howToGetBenefit,
-    @Default(<Map<String, dynamic>>[])
-    List<Map<String, dynamic>> sources,
+    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> sources,
   }) = _ProgramResult;
 
   factory ProgramResult.fromJson(Map<String, dynamic> json) =>
@@ -157,12 +152,8 @@ class PlanOverview with _$PlanOverview {
     @JsonKey(name: 'likely_federal_programs')
     @Default(0)
     int likelyFederalPrograms,
-    @JsonKey(name: 'likely_state_programs')
-    @Default(0)
-    int likelyStatePrograms,
-    @JsonKey(name: 'average_rule_coverage')
-    @Default(0)
-    int averageRuleCoverage,
+    @JsonKey(name: 'likely_state_programs') @Default(0) int likelyStatePrograms,
+    @JsonKey(name: 'average_rule_coverage') @Default(0) int averageRuleCoverage,
     @JsonKey(name: 'answered_questions') @Default(0) int answeredQuestions,
     @JsonKey(name: 'next_question_key') String? nextQuestionKey,
     @JsonKey(name: 'estimated_monthly_total')
@@ -222,8 +213,7 @@ class CompareScenarioInput with _$CompareScenarioInput {
 @freezed
 class CompareRequest with _$CompareRequest {
   const factory CompareRequest({
-    @Default(<CompareScenarioInput>[])
-    List<CompareScenarioInput> scenarios,
+    @Default(<CompareScenarioInput>[]) List<CompareScenarioInput> scenarios,
   }) = _CompareRequest;
 
   factory CompareRequest.fromJson(Map<String, dynamic> json) =>
@@ -261,8 +251,7 @@ class SessionCompare with _$SessionCompare {
   const factory SessionCompare({
     @JsonKey(name: 'session_id') required String sessionId,
     @Default(<String, dynamic>{}) Map<String, dynamic> baseline,
-    @Default(<ScenarioComparison>[])
-    List<ScenarioComparison> comparisons,
+    @Default(<ScenarioComparison>[]) List<ScenarioComparison> comparisons,
   }) = _SessionCompare;
 
   factory SessionCompare.fromJson(Map<String, dynamic> json) =>

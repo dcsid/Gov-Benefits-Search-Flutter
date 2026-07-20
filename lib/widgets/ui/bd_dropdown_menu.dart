@@ -30,11 +30,15 @@ class BdDropdownMenu<T> extends StatefulWidget {
     this.maxWidth = 320,
     this.viewportPadding = 8,
     this.gap = 6,
-    @Deprecated('Positioning is now computed from viewport bounds. '
-        'Retained for source compatibility but ignored.')
+    @Deprecated(
+      'Positioning is now computed from viewport bounds. '
+      'Retained for source compatibility but ignored.',
+    )
     this.targetAnchor = Alignment.bottomLeft,
-    @Deprecated('Positioning is now computed from viewport bounds. '
-        'Retained for source compatibility but ignored.')
+    @Deprecated(
+      'Positioning is now computed from viewport bounds. '
+      'Retained for source compatibility but ignored.',
+    )
     this.followerAnchor = Alignment.topLeft,
     @Deprecated('Use `gap` instead. Retained for source compatibility.')
     this.offset = const Offset(0, 6),
@@ -148,13 +152,21 @@ class _AnchoredMenu<T> extends StatelessWidget {
     final triggerSize = triggerBox.size;
 
     final spaceBelow =
-        viewport.height - (triggerOrigin.dy + triggerSize.height) - viewportPadding - gap;
+        viewport.height -
+        (triggerOrigin.dy + triggerSize.height) -
+        viewportPadding -
+        gap;
     final spaceAbove = triggerOrigin.dy - viewportPadding - gap;
     final placeBelow = spaceBelow >= 160 || spaceBelow >= spaceAbove;
-    final maxAvailableHeight =
-        (placeBelow ? spaceBelow : spaceAbove).clamp(120.0, viewport.height);
+    final maxAvailableHeight = (placeBelow ? spaceBelow : spaceAbove).clamp(
+      120.0,
+      viewport.height,
+    );
 
-    final desiredWidth = maxWidth.clamp(minWidth, viewport.width - viewportPadding * 2);
+    final desiredWidth = maxWidth.clamp(
+      minWidth,
+      viewport.width - viewportPadding * 2,
+    );
     double left = triggerOrigin.dx;
     if (left + desiredWidth > viewport.width - viewportPadding) {
       left = triggerOrigin.dx + triggerSize.width - desiredWidth;
@@ -255,7 +267,9 @@ class _MenuRow<T> extends StatelessWidget {
                 Icon(
                   item.checked! ? Icons.check : Icons.check_box_outline_blank,
                   size: 16,
-                  color: item.checked! ? scheme.primary : scheme.onSurfaceVariant,
+                  color: item.checked!
+                      ? scheme.primary
+                      : scheme.onSurfaceVariant,
                 ),
                 const SizedBox(width: 8),
               ],
@@ -267,10 +281,7 @@ class _MenuRow<T> extends StatelessWidget {
                 const SizedBox(width: 8),
               ],
               Expanded(
-                child: Text(
-                  item.label,
-                  style: const TextStyle(fontSize: 14),
-                ),
+                child: Text(item.label, style: const TextStyle(fontSize: 14)),
               ),
               if (item.trailing != null) item.trailing!,
             ],

@@ -113,37 +113,38 @@ Widget _wrap() {
 }
 
 void main() {
-  testWidgets(
-    'Dashboard renders 10 frames within a 60-fps-relaxed budget',
-    (WidgetTester tester) async {
-      tester.view.physicalSize = const Size(1440, 900);
-      tester.view.devicePixelRatio = 1.0;
-      addTearDown(tester.view.reset);
+  testWidgets('Dashboard renders 10 frames within a 60-fps-relaxed budget', (
+    WidgetTester tester,
+  ) async {
+    tester.view.physicalSize = const Size(1440, 900);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
 
-      await tester.pumpWidget(_wrap());
-      await tester.pumpAndSettle(const Duration(milliseconds: 200));
+    await tester.pumpWidget(_wrap());
+    await tester.pumpAndSettle(const Duration(milliseconds: 200));
 
-      final sw = Stopwatch()..start();
-      const frames = 10;
-      for (var i = 0; i < frames; i++) {
-        tester.view.physicalSize = Size(1440 + (i % 2) * 16.0, 900);
-        await tester.pump(const Duration(milliseconds: 16));
-      }
-      sw.stop();
-      final perFrameMs = sw.elapsedMicroseconds / 1000.0 / frames;
+    final sw = Stopwatch()..start();
+    const frames = 10;
+    for (var i = 0; i < frames; i++) {
+      tester.view.physicalSize = Size(1440 + (i % 2) * 16.0, 900);
+      await tester.pump(const Duration(milliseconds: 16));
+    }
+    sw.stop();
+    final perFrameMs = sw.elapsedMicroseconds / 1000.0 / frames;
 
-      const budgetMs = 16.67 * 5;
-      // ignore: avoid_print
-      print('[perf] dashboard per-frame: ${perFrameMs.toStringAsFixed(2)} ms '
-          '(budget ${budgetMs.toStringAsFixed(2)} ms)');
-      expect(
-        perFrameMs,
-        lessThan(budgetMs),
-        reason:
-            'Dashboard frame time regressed beyond 5x the 60 fps budget. '
-            'Candidates: a stray full-state ref.watch, a non-builder list, '
-            'or a controller that lost autoDispose.',
-      );
-    },
-  );
+    const budgetMs = 16.67 * 5;
+    // ignore: avoid_print
+    print(
+      '[perf] dashboard per-frame: ${perFrameMs.toStringAsFixed(2)} ms '
+      '(budget ${budgetMs.toStringAsFixed(2)} ms)',
+    );
+    expect(
+      perFrameMs,
+      lessThan(budgetMs),
+      reason:
+          'Dashboard frame time regressed beyond 5x the 60 fps budget. '
+          'Candidates: a stray full-state ref.watch, a non-builder list, '
+          'or a controller that lost autoDispose.',
+    );
+  });
 }

@@ -25,9 +25,21 @@ class BdThemeToggle extends ConsumerWidget {
       followerAnchor: Alignment.topRight,
       onSelected: (m) => notifier.set(m),
       items: const [
-        BdDropdownItem(value: ThemeMode.light, label: 'Light', leading: Icon(BdIcons.sun)),
-        BdDropdownItem(value: ThemeMode.dark, label: 'Dark', leading: Icon(BdIcons.moon)),
-        BdDropdownItem(value: ThemeMode.system, label: 'System', leading: Icon(BdIcons.monitor)),
+        BdDropdownItem(
+          value: ThemeMode.light,
+          label: 'Light',
+          leading: Icon(BdIcons.sun),
+        ),
+        BdDropdownItem(
+          value: ThemeMode.dark,
+          label: 'Dark',
+          leading: Icon(BdIcons.moon),
+        ),
+        BdDropdownItem(
+          value: ThemeMode.system,
+          label: 'System',
+          leading: Icon(BdIcons.monitor),
+        ),
       ],
       trigger: BdButton(
         onPressed: () {},

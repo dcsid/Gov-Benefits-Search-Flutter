@@ -23,14 +23,11 @@ class IntakeService {
       });
 
   /// POST /intake/probe — continue an intake conversation with a follow-up probe.
-  Future<IntakeResponse> probe(IntakeProbeRequest body) =>
-      runRequest(() async {
-        final res = await _dio.post<Object?>(
-          Endpoints.intakeProbe,
-          data: body.toJson(),
-        );
-        return IntakeResponse.fromJson(
-          asJsonMap(res.data, name: 'intakeProbe'),
-        );
-      });
+  Future<IntakeResponse> probe(IntakeProbeRequest body) => runRequest(() async {
+    final res = await _dio.post<Object?>(
+      Endpoints.intakeProbe,
+      data: body.toJson(),
+    );
+    return IntakeResponse.fromJson(asJsonMap(res.data, name: 'intakeProbe'));
+  });
 }

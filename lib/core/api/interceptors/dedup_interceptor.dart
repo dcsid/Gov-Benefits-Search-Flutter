@@ -51,10 +51,7 @@ class DedupInterceptor extends Interceptor {
               statusCode: response.statusCode,
               statusMessage: response.statusMessage,
               headers: response.headers,
-              extra: <String, dynamic>{
-                ...response.extra,
-                '__dedup_hit': true,
-              },
+              extra: <String, dynamic>{...response.extra, '__dedup_hit': true},
               isRedirect: response.isRedirect,
             ),
           );
@@ -84,7 +81,9 @@ class DedupInterceptor extends Interceptor {
 
   @override
   void onResponse(
-      Response<dynamic> response, ResponseInterceptorHandler handler) {
+    Response<dynamic> response,
+    ResponseInterceptorHandler handler,
+  ) {
     final key = response.requestOptions.extra['__dedup_key'] as String?;
     if (key != null) {
       final c = _inflight.remove(key);
@@ -108,8 +107,10 @@ class DedupInterceptor extends Interceptor {
     final params = <String, dynamic>{...uri.queryParameters};
     final sortedKeys = params.keys.toList()..sort();
     final canonicalQuery = sortedKeys
-        .map((k) =>
-            '${Uri.encodeQueryComponent(k)}=${Uri.encodeQueryComponent(params[k].toString())}')
+        .map(
+          (k) =>
+              '${Uri.encodeQueryComponent(k)}=${Uri.encodeQueryComponent(params[k].toString())}',
+        )
         .join('&');
     return '${o.method} ${uri.scheme}://${uri.host}:${uri.port}${uri.path}?$canonicalQuery';
   }

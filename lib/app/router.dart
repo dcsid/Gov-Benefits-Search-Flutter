@@ -168,8 +168,7 @@ class _DeferredPageState extends State<_DeferredPage> {
                     const Text("This page didn't finish loading."),
                     const SizedBox(height: 12),
                     OutlinedButton(
-                      onPressed: () =>
-                          setState(() => _future = widget.load()),
+                      onPressed: () => setState(() => _future = widget.load()),
                       child: const Text('Retry'),
                     ),
                   ],

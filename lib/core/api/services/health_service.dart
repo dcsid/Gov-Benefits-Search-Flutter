@@ -12,7 +12,7 @@ class HealthService {
 
   /// Liveness + dependency probe. Returns the rolled-up `{status,db,llm}` body.
   Future<HealthCheck> checkHealth() => runRequest(() async {
-        final res = await _dio.get<Object?>(Endpoints.health);
-        return HealthCheck.fromJson(asJsonMap(res.data, name: 'health'));
-      });
+    final res = await _dio.get<Object?>(Endpoints.health);
+    return HealthCheck.fromJson(asJsonMap(res.data, name: 'health'));
+  });
 }

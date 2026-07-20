@@ -64,9 +64,7 @@ class ExplorerController extends Notifier<ExplorerState> {
   }
 
   void setStateCode(String? code) {
-    state = state.copyWith(
-      request: state.request.copyWith(stateCode: code),
-    );
+    state = state.copyWith(request: state.request.copyWith(stateCode: code));
     _runSearch();
   }
 
@@ -85,9 +83,7 @@ class ExplorerController extends Notifier<ExplorerState> {
   }
 
   void setScope(ScopeChoice scope) {
-    state = state.copyWith(
-      request: state.request.copyWith(scope: scope.name),
-    );
+    state = state.copyWith(request: state.request.copyWith(scope: scope.name));
     _runSearch();
   }
 
@@ -100,8 +96,7 @@ class ExplorerController extends Notifier<ExplorerState> {
     final seq = ++_searchSeq;
     state = state.copyWith(isLoading: true, clearError: true);
     try {
-      final res =
-          await ref.read(explorerServiceProvider).search(state.request);
+      final res = await ref.read(explorerServiceProvider).search(state.request);
       if (seq != _searchSeq) return;
       state = state.copyWith(isLoading: false, response: res);
     } catch (err, st) {
@@ -112,9 +107,7 @@ class ExplorerController extends Notifier<ExplorerState> {
 }
 
 final explorerControllerProvider =
-    NotifierProvider<ExplorerController, ExplorerState>(
-  ExplorerController.new,
-);
+    NotifierProvider<ExplorerController, ExplorerState>(ExplorerController.new);
 
 /// Maps a [ProgramCategory] enum to its FastAPI wire string.
 String _categoryWire(ProgramCategory cat) {

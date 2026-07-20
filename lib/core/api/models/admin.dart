@@ -31,13 +31,9 @@ class SyncReport with _$SyncReport {
   const factory SyncReport({
     @Default('skipped') String federal,
     @Default('skipped') String states,
-    @JsonKey(name: 'review_tasks_created')
-    @Default(0)
-    int reviewTasksCreated,
+    @JsonKey(name: 'review_tasks_created') @Default(0) int reviewTasksCreated,
     @JsonKey(name: 'crawled_programs') @Default(0) int crawledPrograms,
-    @JsonKey(name: 'crawl_sources_added')
-    @Default(0)
-    int crawlSourcesAdded,
+    @JsonKey(name: 'crawl_sources_added') @Default(0) int crawlSourcesAdded,
     @JsonKey(name: 'review_tasks')
     @Default(<ReviewTask>[])
     List<ReviewTask> reviewTasks,

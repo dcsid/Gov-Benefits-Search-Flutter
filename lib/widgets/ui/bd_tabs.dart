@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import '../../theme/extensions/bd_colors.dart';
 
 class BdTab {
-  const BdTab({required this.value, required this.label, required this.content});
+  const BdTab({
+    required this.value,
+    required this.label,
+    required this.content,
+  });
   final String value;
   final String label;
   final Widget content;
@@ -27,7 +31,8 @@ class BdTabs extends StatefulWidget {
 
 class _BdTabsState extends State<BdTabs> {
   late String _value =
-      widget.initialValue ?? (widget.tabs.isNotEmpty ? widget.tabs.first.value : '');
+      widget.initialValue ??
+      (widget.tabs.isNotEmpty ? widget.tabs.first.value : '');
 
   @override
   Widget build(BuildContext context) {

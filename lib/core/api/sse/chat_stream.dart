@@ -37,7 +37,7 @@ class ChatStream {
     http.Client? httpClient,
     this.maxRetries = 3,
     this.baseUrl,
-  })  : _sseClient = sseClient ?? SseClient(client: httpClient);
+  }) : _sseClient = sseClient ?? SseClient(client: httpClient);
 
   final SseClient _sseClient;
   final int maxRetries;

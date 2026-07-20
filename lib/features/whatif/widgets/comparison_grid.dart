@@ -16,8 +16,8 @@ class ComparisonGrid extends StatelessWidget {
 
   ScenarioComparison? get _scenario =>
       compare == null || compare!.comparisons.isEmpty
-          ? null
-          : compare!.comparisons.first;
+      ? null
+      : compare!.comparisons.first;
 
   @override
   Widget build(BuildContext context) {
@@ -35,35 +35,35 @@ class ComparisonGrid extends StatelessWidget {
               builder: (context, constraints) {
                 final cols = constraints.maxWidth > 600 ? 4 : 2;
                 return GridView.count(
-                crossAxisCount: cols,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
-                childAspectRatio: 1.8,
-                children: [
-                  DeltaBadge(
-                    label: 'Likely matches',
-                    value: _readInt(summary, 'likely_delta'),
-                    unit: '',
-                  ),
-                  DeltaBadge(
-                    label: 'Possible matches',
-                    value: _readInt(summary, 'possible_delta'),
-                    unit: '',
-                  ),
-                  DeltaBadge(
-                    label: 'Federal',
-                    value: _readInt(summary, 'federal_delta'),
-                    unit: '',
-                  ),
-                  DeltaBadge(
-                    label: 'State',
-                    value: _readInt(summary, 'state_delta'),
-                    unit: '',
-                  ),
-                ],
-              );
+                  crossAxisCount: cols,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  childAspectRatio: 1.8,
+                  children: [
+                    DeltaBadge(
+                      label: 'Likely matches',
+                      value: _readInt(summary, 'likely_delta'),
+                      unit: '',
+                    ),
+                    DeltaBadge(
+                      label: 'Possible matches',
+                      value: _readInt(summary, 'possible_delta'),
+                      unit: '',
+                    ),
+                    DeltaBadge(
+                      label: 'Federal',
+                      value: _readInt(summary, 'federal_delta'),
+                      unit: '',
+                    ),
+                    DeltaBadge(
+                      label: 'State',
+                      value: _readInt(summary, 'state_delta'),
+                      unit: '',
+                    ),
+                  ],
+                );
               },
             ),
           ),
@@ -177,9 +177,7 @@ class _Empty extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        border: Border.all(
-          color: Theme.of(context).colorScheme.outlineVariant,
-        ),
+        border: Border.all(color: Theme.of(context).colorScheme.outlineVariant),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(text, style: Theme.of(context).textTheme.bodySmall),
@@ -229,10 +227,7 @@ class _ProgramList extends StatelessWidget {
                 ),
               ),
               if (entry['eligibility_status'] != null)
-                Text(
-                  entry['eligibility_status'].toString(),
-                  style: smallText,
-                ),
+                Text(entry['eligibility_status'].toString(), style: smallText),
             ],
           ),
         );

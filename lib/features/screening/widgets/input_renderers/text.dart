@@ -48,9 +48,7 @@ class _TextInputRendererState extends State<TextInputRenderer> {
       maxLines: widget.multiline ? 6 : 1,
       minLines: widget.multiline ? 4 : 1,
       onChanged: widget.onChanged,
-      decoration: const InputDecoration(
-        hintText: 'Type your answer...',
-      ),
+      decoration: const InputDecoration(hintText: 'Type your answer...'),
     );
   }
 }

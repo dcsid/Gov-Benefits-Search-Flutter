@@ -7,10 +7,8 @@ part 'state.g.dart';
 // optional `abbreviation` field that the live API does not emit.
 @freezed
 class StateInfo with _$StateInfo {
-  const factory StateInfo({
-    required String code,
-    required String name,
-  }) = _StateInfo;
+  const factory StateInfo({required String code, required String name}) =
+      _StateInfo;
 
   factory StateInfo.fromJson(Map<String, dynamic> json) =>
       _$StateInfoFromJson(json);

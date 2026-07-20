@@ -67,8 +67,7 @@ class ProgramDetail with _$ProgramDetail {
     String? family,
     String? summary,
     @JsonKey(name: 'apply_url') String? applyUrl,
-    @Default(<Map<String, dynamic>>[])
-    List<Map<String, dynamic>> documents,
+    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> documents,
     Jurisdiction? jurisdiction,
     String? agency,
     @JsonKey(name: 'version_label') String? versionLabel,

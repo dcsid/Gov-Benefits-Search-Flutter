@@ -10,10 +10,14 @@ import 'interceptors/dedup_interceptor.dart';
 /// Process-wide cache (5 min /programs/*, 1 min /sessions/*, 1 h
 /// /jurisdictions/*). Exposed so feature controllers can invalidate
 /// after mutating POSTs.
-final apiCacheProvider = Provider<CacheInterceptor>((ref) => CacheInterceptor());
+final apiCacheProvider = Provider<CacheInterceptor>(
+  (ref) => CacheInterceptor(),
+);
 
 /// Process-wide GET deduper. Exposed for diagnostics (coalescedCount).
-final apiDedupProvider = Provider<DedupInterceptor>((ref) => DedupInterceptor());
+final apiDedupProvider = Provider<DedupInterceptor>(
+  (ref) => DedupInterceptor(),
+);
 
 final dioProvider = Provider<Dio>((ref) {
   final dio = Dio(

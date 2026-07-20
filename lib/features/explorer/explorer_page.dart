@@ -41,10 +41,7 @@ class ExplorerPage extends StatelessWidget {
                               ? const Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    SizedBox(
-                                      width: 280,
-                                      child: FilterRail(),
-                                    ),
+                                    SizedBox(width: 280, child: FilterRail()),
                                     SizedBox(width: 24),
                                     Expanded(child: _Results()),
                                   ],
@@ -81,10 +78,10 @@ class _Header extends StatelessWidget {
         Text(
           'CATALOG SEARCH',
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: scheme.primary,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 1.4,
-              ),
+            color: scheme.primary,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 1.4,
+          ),
         ),
         const SizedBox(height: 4),
         Text(
@@ -155,7 +152,8 @@ class _Results extends ConsumerWidget {
         : 'Start typing above to explore the program catalog.';
     final response = state.response;
     final mode = response?.mode ?? '';
-    final interpretation = response?.interpretation ?? const <String, dynamic>{};
+    final interpretation =
+        response?.interpretation ?? const <String, dynamic>{};
     final interpretationText =
         (interpretation['summary'] ?? interpretation['intent'])?.toString();
     final showInterpretation = response != null;

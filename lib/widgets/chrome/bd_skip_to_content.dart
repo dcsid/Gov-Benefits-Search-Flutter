@@ -53,7 +53,10 @@ class _BdSkipToContentState extends State<BdSkipToContent> {
               onTap: () => widget.targetFocusNode.requestFocus(),
               child: Container(
                 margin: const EdgeInsets.all(8),
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
                 decoration: BoxDecoration(
                   color: scheme.primary,
                   borderRadius: BorderRadius.circular(6),

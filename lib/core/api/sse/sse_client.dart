@@ -66,10 +66,7 @@ class SseClient {
       if (line.isEmpty) {
         // Blank line — dispatch the buffered frame if any.
         if (dataLines.isNotEmpty) {
-          yield SseEvent(
-            event: currentEvent,
-            data: dataLines.join('\n'),
-          );
+          yield SseEvent(event: currentEvent, data: dataLines.join('\n'));
         }
         currentEvent = 'message';
         dataLines.clear();

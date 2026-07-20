@@ -42,8 +42,7 @@ QuestionInput questionInputFromString(String raw, {bool hasOptions = false}) {
     case 'text':
       return QuestionInput.text;
     default:
-      final fallback =
-          hasOptions ? QuestionInput.radio : QuestionInput.text;
+      final fallback = hasOptions ? QuestionInput.radio : QuestionInput.text;
       developer.log(
         'Unknown screening inputType "$raw" — falling back to ${fallback.name}',
         name: 'screening',
@@ -147,16 +146,15 @@ class ScreeningState {
     bool? busy,
     String? error,
     bool clearError = false,
-  }) =>
-      ScreeningState(
-        sessionId: sessionId,
-        history: history ?? this.history,
-        answers: answers ?? this.answers,
-        current: clearCurrent ? null : (current ?? this.current),
-        completed: completed ?? this.completed,
-        busy: busy ?? this.busy,
-        error: clearError ? null : (error ?? this.error),
-      );
+  }) => ScreeningState(
+    sessionId: sessionId,
+    history: history ?? this.history,
+    answers: answers ?? this.answers,
+    current: clearCurrent ? null : (current ?? this.current),
+    completed: completed ?? this.completed,
+    busy: busy ?? this.busy,
+    error: clearError ? null : (error ?? this.error),
+  );
 
   int get answeredCount =>
       history.where((q) => answers.containsKey(q.key)).length;
@@ -188,8 +186,9 @@ class ScreeningController
       const SessionAnswersRequest(),
     );
     final next = envelope.nextQuestion;
-    final current =
-        next == null ? null : ScreeningQuestion.fromQuestionOut(next);
+    final current = next == null
+        ? null
+        : ScreeningQuestion.fromQuestionOut(next);
     return ScreeningState(
       sessionId: sessionId,
       history: current != null
@@ -215,7 +214,9 @@ class ScreeningController
     try {
       final envelope = await _service.submitAnswers(
         s.sessionId,
-        SessionAnswersRequest(answers: <String, dynamic>{question.key: encoded}),
+        SessionAnswersRequest(
+          answers: <String, dynamic>{question.key: encoded},
+        ),
       );
       final next = envelope.nextQuestion == null
           ? null
@@ -258,7 +259,7 @@ class ScreeningController
   }
 }
 
-final screeningControllerProvider =
-    AsyncNotifierProvider.autoDispose.family<ScreeningController, ScreeningState, String>(
+final screeningControllerProvider = AsyncNotifierProvider.autoDispose
+    .family<ScreeningController, ScreeningState, String>(
       ScreeningController.new,
     );

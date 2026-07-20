@@ -48,7 +48,10 @@ class BdSelect<T> extends StatelessWidget {
             ),
       decoration: InputDecoration(
         isDense: true,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 10,
+        ),
         filled: true,
         fillColor: scheme.surface,
         enabledBorder: OutlineInputBorder(

@@ -18,17 +18,20 @@ class BdTrustSignals extends StatelessWidget {
       _Signal(
         icon: BdIcons.badgeCheck,
         title: 'Sourced from official rules',
-        body: 'We cite the program manuals, statutes, and notices that drive each match.',
+        body:
+            'We cite the program manuals, statutes, and notices that drive each match.',
       ),
       _Signal(
         icon: BdIcons.lock,
         title: 'Private by default',
-        body: "Your answers stay in your browser. We don't ask for your name or SSN.",
+        body:
+            "Your answers stay in your browser. We don't ask for your name or SSN.",
       ),
       _Signal(
         icon: BdIcons.spark,
         title: 'Explainable matches',
-        body: 'Every result includes the rule that matched and what could change the answer.',
+        body:
+            'Every result includes the rule that matched and what could change the answer.',
       ),
     ];
 
@@ -57,7 +60,9 @@ class BdTrustSignals extends StatelessWidget {
               children: [
                 for (var i = 0; i < signals.length; i++) ...[
                   if (i > 0)
-                    isWide ? const SizedBox(width: 32) : const SizedBox(height: 24),
+                    isWide
+                        ? const SizedBox(width: 32)
+                        : const SizedBox(height: 24),
                   Expanded(
                     flex: isWide ? 1 : 0,
                     child: Row(
@@ -79,7 +84,11 @@ class BdTrustSignals extends StatelessWidget {
                               ),
                             ],
                           ),
-                          child: Icon(signals[i].icon, size: 20, color: scheme.primary),
+                          child: Icon(
+                            signals[i].icon,
+                            size: 20,
+                            color: scheme.primary,
+                          ),
                         ),
                         const SizedBox(width: 14),
                         Expanded(

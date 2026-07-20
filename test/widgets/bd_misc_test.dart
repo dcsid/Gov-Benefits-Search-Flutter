@@ -28,13 +28,19 @@ void main() {
   });
 
   testWidgets('scroll area scrolls', (tester) async {
-    await tester.pumpWidget(bdHarness(SizedBox(
-      width: 200,
-      height: 100,
-      child: BdScrollArea(
-        child: Column(children: [for (var i = 0; i < 20; i++) Text('Row $i')]),
+    await tester.pumpWidget(
+      bdHarness(
+        SizedBox(
+          width: 200,
+          height: 100,
+          child: BdScrollArea(
+            child: Column(
+              children: [for (var i = 0; i < 20; i++) Text('Row $i')],
+            ),
+          ),
+        ),
       ),
-    )));
+    );
     expect(find.text('Row 0'), findsOneWidget);
   });
 }

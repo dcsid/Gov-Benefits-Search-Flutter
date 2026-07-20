@@ -23,17 +23,18 @@ class AdminService {
           Endpoints.adminReviewTasks,
           options: _authOptions(adminKey),
         );
-        return asJsonList(res.data, name: 'reviewTasks')
-            .map(ReviewTask.fromJson)
-            .toList(growable: false);
+        return asJsonList(
+          res.data,
+          name: 'reviewTasks',
+        ).map(ReviewTask.fromJson).toList(growable: false);
       });
 
   /// POST /admin/sync — trigger a remote-source sync run.
   Future<SyncReport> triggerSync({String? adminKey}) => runRequest(() async {
-        final res = await _dio.post<Object?>(
-          Endpoints.adminSync,
-          options: _authOptions(adminKey),
-        );
-        return SyncReport.fromJson(asJsonMap(res.data, name: 'syncReport'));
-      });
+    final res = await _dio.post<Object?>(
+      Endpoints.adminSync,
+      options: _authOptions(adminKey),
+    );
+    return SyncReport.fromJson(asJsonMap(res.data, name: 'syncReport'));
+  });
 }

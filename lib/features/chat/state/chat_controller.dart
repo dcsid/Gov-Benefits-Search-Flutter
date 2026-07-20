@@ -48,7 +48,8 @@ class UiToolCall {
   static UiToolCall fromJson(Map<String, Object?> json) => UiToolCall(
     id: (json['id'] as String?) ?? '',
     name: (json['name'] as String?) ?? '',
-    args: (json['args'] as Map?)?.cast<String, Object?>() ?? <String, Object?>{},
+    args:
+        (json['args'] as Map?)?.cast<String, Object?>() ?? <String, Object?>{},
     result: json['result'],
   );
 }
@@ -100,8 +101,11 @@ class UiMessage {
         orElse: () => ChatRole.assistant,
       ),
       content: (json['content'] as String?) ?? '',
-      createdAt: (json['createdAt'] as int?) ?? DateTime.now().millisecondsSinceEpoch,
-      status: status == UiMessageStatus.streaming ? UiMessageStatus.idle : status,
+      createdAt:
+          (json['createdAt'] as int?) ?? DateTime.now().millisecondsSinceEpoch,
+      status: status == UiMessageStatus.streaming
+          ? UiMessageStatus.idle
+          : status,
       toolCalls: calls,
       error: json['error'] as String?,
     );
@@ -141,7 +145,8 @@ class ChatState {
   );
 }
 
-class ChatController extends AutoDisposeFamilyAsyncNotifier<ChatState, String?> {
+class ChatController
+    extends AutoDisposeFamilyAsyncNotifier<ChatState, String?> {
   StreamSubscription<ChatStreamEvent>? _sub;
   String? _streamingMessageId;
 
@@ -169,8 +174,9 @@ class ChatController extends AutoDisposeFamilyAsyncNotifier<ChatState, String?> 
     state = AsyncData(
       s.copyWith(
         useScreeningContext: value,
-        contextMode:
-            value ? ChatContextMode.screening : ChatContextMode.general,
+        contextMode: value
+            ? ChatContextMode.screening
+            : ChatContextMode.general,
       ),
     );
     // No persistence — toggle resets to off on next session.
@@ -240,8 +246,7 @@ class ChatController extends AutoDisposeFamilyAsyncNotifier<ChatState, String?> 
     final svc = ref.read(chatStreamProvider);
     final history = messages
         .where(
-          (m) =>
-              m.role != ChatRole.system && m.status != UiMessageStatus.error,
+          (m) => m.role != ChatRole.system && m.status != UiMessageStatus.error,
         )
         .map((m) => ChatMessage(role: m.role.name, content: m.content))
         .toList();
@@ -363,7 +368,5 @@ class ChatController extends AutoDisposeFamilyAsyncNotifier<ChatState, String?> 
   }
 }
 
-final chatControllerProvider =
-    AsyncNotifierProvider.autoDispose.family<ChatController, ChatState, String?>(
-      ChatController.new,
-    );
+final chatControllerProvider = AsyncNotifierProvider.autoDispose
+    .family<ChatController, ChatState, String?>(ChatController.new);

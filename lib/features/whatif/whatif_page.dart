@@ -82,10 +82,7 @@ class _Header extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 4),
-        Text(
-          'What-If Lab',
-          style: Theme.of(context).textTheme.headlineLarge,
-        ),
+        Text('What-If Lab', style: Theme.of(context).textTheme.headlineLarge),
         const SizedBox(height: 8),
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 720),
@@ -166,9 +163,7 @@ class _Body extends StatelessWidget {
                   const Expanded(flex: 3, child: results),
                 ],
               )
-            : Column(
-                children: [editor, const SizedBox(height: 16), results],
-              );
+            : Column(children: [editor, const SizedBox(height: 16), results]);
       },
     );
   }

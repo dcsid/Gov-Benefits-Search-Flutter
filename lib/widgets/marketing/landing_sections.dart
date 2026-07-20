@@ -17,11 +17,23 @@ class BdCategories extends StatelessWidget {
 
     const cats = <_Cat>[
       _Cat(icon: BdIcons.cart, key: 'Food', sub: 'SNAP, WIC, school meals'),
-      _Cat(icon: BdIcons.home, key: 'Housing', sub: 'Section 8, LIHEAP, rent help'),
-      _Cat(icon: BdIcons.heart, key: 'Healthcare', sub: 'Medicaid, Medicare, ACA'),
+      _Cat(
+        icon: BdIcons.home,
+        key: 'Housing',
+        sub: 'Section 8, LIHEAP, rent help',
+      ),
+      _Cat(
+        icon: BdIcons.heart,
+        key: 'Healthcare',
+        sub: 'Medicaid, Medicare, ACA',
+      ),
       _Cat(icon: BdIcons.brief, key: 'Income', sub: 'TANF, EITC, unemployment'),
       _Cat(icon: BdIcons.pill, key: 'Childcare', sub: 'Head Start, CCDF, CHIP'),
-      _Cat(icon: BdIcons.ear, key: 'Disability', sub: 'SSI, SSDI, vocational rehab'),
+      _Cat(
+        icon: BdIcons.ear,
+        key: 'Disability',
+        sub: 'SSI, SSDI, vocational rehab',
+      ),
     ];
 
     return Container(
@@ -114,15 +126,15 @@ class BdHonesty extends StatelessWidget {
     const items = <(String, String)>[
       (
         'This is not an application.',
-        'We help you find programs. You apply on the official site.'
+        'We help you find programs. You apply on the official site.',
       ),
       (
         "We don't store your answers.",
-        'Your data lives in your browser unless you save it.'
+        'Your data lives in your browser unless you save it.',
       ),
       (
         'We can be wrong.',
-        'Final eligibility is decided by the agency that runs the program.'
+        'Final eligibility is decided by the agency that runs the program.',
       ),
     ];
     return Container(
@@ -165,7 +177,9 @@ class BdHonesty extends StatelessWidget {
                           children: [
                             TextSpan(
                               text: '${it.$1} ',
-                              style: const TextStyle(fontWeight: FontWeight.w600),
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                             TextSpan(
                               text: it.$2,

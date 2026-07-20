@@ -26,8 +26,11 @@ class WhatIfState {
     this.error,
   });
 
-  factory WhatIfState.initial() =>
-      const WhatIfState(label: 'Two more dependents', rows: [], isSubmitting: false);
+  factory WhatIfState.initial() => const WhatIfState(
+    label: 'Two more dependents',
+    rows: [],
+    isSubmitting: false,
+  );
 
   final String label;
   final List<ScenarioRow> rows;
@@ -64,18 +67,12 @@ class WhatIfController extends Notifier<WhatIfState> {
 
   void addRow() {
     final next = List<ScenarioRow>.from(state.rows)
-      ..add(
-        ScenarioRow(
-          id: 'r-${DateTime.now().microsecondsSinceEpoch}',
-        ),
-      );
+      ..add(ScenarioRow(id: 'r-${DateTime.now().microsecondsSinceEpoch}'));
     state = state.copyWith(rows: next);
   }
 
   void removeRow(String id) {
-    state = state.copyWith(
-      rows: state.rows.where((r) => r.id != id).toList(),
-    );
+    state = state.copyWith(rows: state.rows.where((r) => r.id != id).toList());
   }
 
   void updateRow(
@@ -114,7 +111,9 @@ class WhatIfController extends Notifier<WhatIfState> {
       clearCompare: true,
     );
     try {
-      final res = await ref.read(sessionsServiceProvider).compare(
+      final res = await ref
+          .read(sessionsServiceProvider)
+          .compare(
             sessionId,
             CompareRequest(
               scenarios: <CompareScenarioInput>[

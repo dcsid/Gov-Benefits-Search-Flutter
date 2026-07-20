@@ -56,7 +56,9 @@ class _Row extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final border = selected ? scheme.primary : scheme.outlineVariant;
-    final bg = selected ? scheme.primary.withValues(alpha: 0.08) : scheme.surface;
+    final bg = selected
+        ? scheme.primary.withValues(alpha: 0.08)
+        : scheme.surface;
 
     return Material(
       color: bg,

@@ -30,7 +30,10 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
   Object? _draft;
   String? _draftFor;
 
-  void _seedDraftIfNeeded(ScreeningQuestion current, Map<String, Object?> answers) {
+  void _seedDraftIfNeeded(
+    ScreeningQuestion current,
+    Map<String, Object?> answers,
+  ) {
     if (_draftFor == current.key) return;
     _draftFor = current.key;
     final saved = answers[current.key];
@@ -53,7 +56,8 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
         if (saved is DateTime) return saved;
         return DateTime.tryParse(saved.toString());
       case QuestionInput.multiselect:
-        if (saved is List) return List<String>.from(saved.map((e) => e.toString()));
+        if (saved is List)
+          return List<String>.from(saved.map((e) => e.toString()));
         return <String>[];
       case QuestionInput.text:
       case QuestionInput.select:
@@ -64,145 +68,158 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
 
   @override
   Widget build(BuildContext context) {
-    final asyncState = ref.watch(
-      screeningControllerProvider(widget.sessionId),
-    );
+    final asyncState = ref.watch(screeningControllerProvider(widget.sessionId));
 
     return Scaffold(
-      body: Column(children: [
-        const RepaintBoundary(
-          child: BdHeader(variant: BdHeaderVariant.question),
-        ),
-        Expanded(child: asyncState.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (e, st) => _ScreeningError(
-          error: e,
-          stackTrace: st,
-          onRetry: () => ref.invalidate(
-            screeningControllerProvider(widget.sessionId),
+      body: Column(
+        children: [
+          const RepaintBoundary(
+            child: BdHeader(variant: BdHeaderVariant.question),
           ),
-        ),
-        data: (state) {
-          if (state.completed && state.current == null) {
-            // Defer navigation until after the build phase.
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              if (mounted) context.go('/results/${widget.sessionId}');
-            });
-            return const Center(child: CircularProgressIndicator());
-          }
-
-          final current = state.current;
-          if (current == null) {
-            return const Center(child: CircularProgressIndicator());
-          }
-
-          _seedDraftIfNeeded(current, state.answers);
-
-          final canGoBack = state.currentIndex > 0;
-          final width = MediaQuery.of(context).size.width;
-          final showRail = width >= 880;
-
-          final questionView = SingleChildScrollView(
-            padding: const EdgeInsets.all(24),
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 720),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  _ProgressBar(
-                    // Use the standard-breadth cap (30) as the denominator
-                    // so the count doesn't read "1 of 1, 2 of 2, ..." (which
-                    // happened when we passed history.length — both grew
-                    // together). The backend caps standard screening at 30
-                    // questions; if the user is on deep breadth (cap 80),
-                    // the bar may briefly exceed 100% but that's fine.
-                    current: state.questionNumber,
-                    total: state.history.length > _kStandardScreeningCap
-                        ? state.history.length + 1
-                        : _kStandardScreeningCap,
-                    answered: state.answeredCount,
-                  ),
-                  const SizedBox(height: 24),
-                  // RepaintBoundary so an `_draft` setState (fired on every
-                  // keystroke / option tap) repaints just the question card
-                  // and not the surrounding chrome / progress bar.
-                  RepaintBoundary(child: BdQuestionCard(
-                    question: current,
-                    draft: _draft,
-                    onChange: (v) => setState(() => _draft = v),
-                    busy: state.busy,
-                    onSubmit: () async {
-                      final ctl = ref.read(
-                        screeningControllerProvider(widget.sessionId).notifier,
-                      );
-                      final done = await ctl.submit(_draft);
-                      if (!context.mounted) return;
-                      if (done) {
-                        context.go('/results/${widget.sessionId}');
-                      } else {
-                        _draftFor = null;
-                      }
-                    },
-                    onUnsure: () async {
-                      final ctl = ref.read(
-                        screeningControllerProvider(widget.sessionId).notifier,
-                      );
-                      final done = await ctl.submit(null, unsure: true);
-                      if (!context.mounted) return;
-                      if (done) {
-                        context.go('/results/${widget.sessionId}');
-                      } else {
-                        _draftFor = null;
-                      }
-                    },
-                    onBack: canGoBack
-                        ? () {
-                            final prev = state.history[state.currentIndex - 1];
-                            ref
-                                .read(
-                                  screeningControllerProvider(
-                                    widget.sessionId,
-                                  ).notifier,
-                                )
-                                .jumpTo(prev.key);
-                            _draftFor = null;
-                          }
-                        : null,
-                  )),
-                  if (state.error != null) ...<Widget>[
-                    const SizedBox(height: 12),
-                    Text(
-                      state.error!,
-                      style: TextStyle(color: Theme.of(context).colorScheme.error),
-                    ),
-                  ],
-                ],
-              ),
-            ),
-          );
-
-          if (showRail) {
-            return Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                ProgressRail(
-                  history: state.history,
-                  answers: state.answers,
-                  currentKey: current.key,
-                  onJump: (key) => ref
-                      .read(
-                        screeningControllerProvider(widget.sessionId).notifier,
-                      )
-                      .jumpTo(key),
+          Expanded(
+            child: asyncState.when(
+              loading: () => const Center(child: CircularProgressIndicator()),
+              error: (e, st) => _ScreeningError(
+                error: e,
+                stackTrace: st,
+                onRetry: () => ref.invalidate(
+                  screeningControllerProvider(widget.sessionId),
                 ),
-                Expanded(child: questionView),
-              ],
-            );
-          }
-          return questionView;
-        },
-      )),
-      ]),
+              ),
+              data: (state) {
+                if (state.completed && state.current == null) {
+                  // Defer navigation until after the build phase.
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    if (mounted) context.go('/results/${widget.sessionId}');
+                  });
+                  return const Center(child: CircularProgressIndicator());
+                }
+
+                final current = state.current;
+                if (current == null) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+
+                _seedDraftIfNeeded(current, state.answers);
+
+                final canGoBack = state.currentIndex > 0;
+                final width = MediaQuery.of(context).size.width;
+                final showRail = width >= 880;
+
+                final questionView = SingleChildScrollView(
+                  padding: const EdgeInsets.all(24),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 720),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        _ProgressBar(
+                          // Use the standard-breadth cap (30) as the denominator
+                          // so the count doesn't read "1 of 1, 2 of 2, ..." (which
+                          // happened when we passed history.length — both grew
+                          // together). The backend caps standard screening at 30
+                          // questions; if the user is on deep breadth (cap 80),
+                          // the bar may briefly exceed 100% but that's fine.
+                          current: state.questionNumber,
+                          total: state.history.length > _kStandardScreeningCap
+                              ? state.history.length + 1
+                              : _kStandardScreeningCap,
+                          answered: state.answeredCount,
+                        ),
+                        const SizedBox(height: 24),
+                        // RepaintBoundary so an `_draft` setState (fired on every
+                        // keystroke / option tap) repaints just the question card
+                        // and not the surrounding chrome / progress bar.
+                        RepaintBoundary(
+                          child: BdQuestionCard(
+                            question: current,
+                            draft: _draft,
+                            onChange: (v) => setState(() => _draft = v),
+                            busy: state.busy,
+                            onSubmit: () async {
+                              final ctl = ref.read(
+                                screeningControllerProvider(
+                                  widget.sessionId,
+                                ).notifier,
+                              );
+                              final done = await ctl.submit(_draft);
+                              if (!context.mounted) return;
+                              if (done) {
+                                context.go('/results/${widget.sessionId}');
+                              } else {
+                                _draftFor = null;
+                              }
+                            },
+                            onUnsure: () async {
+                              final ctl = ref.read(
+                                screeningControllerProvider(
+                                  widget.sessionId,
+                                ).notifier,
+                              );
+                              final done = await ctl.submit(null, unsure: true);
+                              if (!context.mounted) return;
+                              if (done) {
+                                context.go('/results/${widget.sessionId}');
+                              } else {
+                                _draftFor = null;
+                              }
+                            },
+                            onBack: canGoBack
+                                ? () {
+                                    final prev =
+                                        state.history[state.currentIndex - 1];
+                                    ref
+                                        .read(
+                                          screeningControllerProvider(
+                                            widget.sessionId,
+                                          ).notifier,
+                                        )
+                                        .jumpTo(prev.key);
+                                    _draftFor = null;
+                                  }
+                                : null,
+                          ),
+                        ),
+                        if (state.error != null) ...<Widget>[
+                          const SizedBox(height: 12),
+                          Text(
+                            state.error!,
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.error,
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                );
+
+                if (showRail) {
+                  return Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      ProgressRail(
+                        history: state.history,
+                        answers: state.answers,
+                        currentKey: current.key,
+                        onJump: (key) => ref
+                            .read(
+                              screeningControllerProvider(
+                                widget.sessionId,
+                              ).notifier,
+                            )
+                            .jumpTo(key),
+                      ),
+                      Expanded(child: questionView),
+                    ],
+                  );
+                }
+                return questionView;
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -230,18 +247,12 @@ class _ProgressBar extends StatelessWidget {
           children: <Widget>[
             Text(
               'Question $current of about $denom',
-              style: TextStyle(
-                fontSize: 12,
-                color: scheme.onSurfaceVariant,
-              ),
+              style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
             ),
             const Spacer(),
             Text(
               '$answered answered',
-              style: TextStyle(
-                fontSize: 12,
-                color: scheme.onSurfaceVariant,
-              ),
+              style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
             ),
           ],
         ),

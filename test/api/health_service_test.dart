@@ -50,8 +50,9 @@ void main() {
       );
       await expectLater(
         () => HealthService(dio).checkHealth(),
-        throwsA(isA<HttpException>()
-            .having((e) => e.statusCode, 'statusCode', 500)),
+        throwsA(
+          isA<HttpException>().having((e) => e.statusCode, 'statusCode', 500),
+        ),
       );
     });
 

@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BdAvatar extends StatelessWidget {
-  const BdAvatar({
-    super.key,
-    this.imageUrl,
-    this.fallback,
-    this.size = 40,
-  });
+  const BdAvatar({super.key, this.imageUrl, this.fallback, this.size = 40});
 
   final String? imageUrl;
   final String? fallback;
@@ -31,15 +26,15 @@ class BdAvatar extends StatelessWidget {
   }
 
   Widget _fallback(ColorScheme scheme) => Container(
-        color: scheme.surfaceContainerHigh,
-        alignment: Alignment.center,
-        child: Text(
-          (fallback ?? '?').characters.take(2).toString().toUpperCase(),
-          style: TextStyle(
-            fontSize: size * 0.36,
-            fontWeight: FontWeight.w500,
-            color: scheme.onSurfaceVariant,
-          ),
-        ),
-      );
+    color: scheme.surfaceContainerHigh,
+    alignment: Alignment.center,
+    child: Text(
+      (fallback ?? '?').characters.take(2).toString().toUpperCase(),
+      style: TextStyle(
+        fontSize: size * 0.36,
+        fontWeight: FontWeight.w500,
+        color: scheme.onSurfaceVariant,
+      ),
+    ),
+  );
 }

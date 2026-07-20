@@ -8,10 +8,8 @@ part 'intake.g.dart';
 // Single message in an intake conversation — used by /intake/probe.
 @freezed
 class IntakeMessage with _$IntakeMessage {
-  const factory IntakeMessage({
-    required String role,
-    required String content,
-  }) = _IntakeMessage;
+  const factory IntakeMessage({required String role, required String content}) =
+      _IntakeMessage;
 
   factory IntakeMessage.fromJson(Map<String, dynamic> json) =>
       _$IntakeMessageFromJson(json);
@@ -86,8 +84,7 @@ class IntakeProbeQuestion with _$IntakeProbeQuestion {
     String? hint,
     @JsonKey(name: 'question_type') String? questionType,
     @JsonKey(name: 'input_type') String? inputType,
-    @Default(<Map<String, dynamic>>[])
-    List<Map<String, dynamic>> options,
+    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> options,
   }) = _IntakeProbeQuestion;
 
   factory IntakeProbeQuestion.fromJson(Map<String, dynamic> json) =>

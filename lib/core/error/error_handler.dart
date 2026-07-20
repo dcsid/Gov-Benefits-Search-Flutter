@@ -11,7 +11,11 @@ import '../api/api_exception.dart';
 ///
 /// Use everywhere a `.when(error: ...)` or `catch (e)` site would otherwise
 /// surface a raw `HttpException(422)` / `DioException(...)` string to the user.
-void showApiError(BuildContext context, Object error, {StackTrace? stackTrace}) {
+void showApiError(
+  BuildContext context,
+  Object error, {
+  StackTrace? stackTrace,
+}) {
   final l10n = AppLocalizations.of(context);
   final message = _resolveMessage(error, l10n);
 
@@ -67,8 +71,7 @@ String _server(AppLocalizations? l) =>
     'Our service is having trouble. Please try again later.';
 
 String _network(AppLocalizations? l) =>
-    l?.errors_network ??
-    "Couldn't reach the server. Check your connection.";
+    l?.errors_network ?? "Couldn't reach the server. Check your connection.";
 
 String _timeout(AppLocalizations? l) =>
     l?.errors_timeout ?? 'The request timed out. Please try again.';

@@ -18,7 +18,8 @@ Widget _harness({
 }) {
   return ProviderScope(
     overrides: <Override>[
-      if (helpService != null) helpServiceProvider.overrideWithValue(helpService),
+      if (helpService != null)
+        helpServiceProvider.overrideWithValue(helpService),
     ],
     child: MaterialApp(
       theme: AppTheme.light,
@@ -67,12 +68,15 @@ void main() {
   });
 
   group('HelpBot widget', () {
-    testWidgets('renders FAB when closed and shows panel after tap',
-        (tester) async {
-      await tester.pumpWidget(_harness(
-        helpService: MockHelpService(tokens: const <String>[]),
-        child: const HelpBot(currentRoute: '/'),
-      ));
+    testWidgets('renders FAB when closed and shows panel after tap', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        _harness(
+          helpService: MockHelpService(tokens: const <String>[]),
+          child: const HelpBot(currentRoute: '/'),
+        ),
+      );
       await tester.pump();
 
       // Closed: FAB icon present, panel header absent.
@@ -87,20 +91,25 @@ void main() {
     });
 
     testWidgets('renders nothing on /chat', (tester) async {
-      await tester.pumpWidget(_harness(
-        helpService: MockHelpService(tokens: const <String>[]),
-        child: const HelpBot(currentRoute: '/chat'),
-      ));
+      await tester.pumpWidget(
+        _harness(
+          helpService: MockHelpService(tokens: const <String>[]),
+          child: const HelpBot(currentRoute: '/chat'),
+        ),
+      );
       await tester.pump();
       expect(find.byIcon(Icons.help_outline), findsNothing);
     });
 
-    testWidgets('close button in panel closes the bot back to FAB',
-        (tester) async {
-      await tester.pumpWidget(_harness(
-        helpService: MockHelpService(tokens: const <String>[]),
-        child: const HelpBot(currentRoute: '/'),
-      ));
+    testWidgets('close button in panel closes the bot back to FAB', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        _harness(
+          helpService: MockHelpService(tokens: const <String>[]),
+          child: const HelpBot(currentRoute: '/'),
+        ),
+      );
       await tester.tap(find.byIcon(Icons.help_outline));
       await tester.pumpAndSettle();
       expect(find.text('Help with this app'), findsOneWidget);
@@ -127,16 +136,17 @@ void main() {
       expect(container.read(helpBotControllerProvider).isOpen, isTrue);
     });
 
-    test('send appends user + assistant messages and streams tokens',
-        () async {
-      final container = ProviderContainer(overrides: <Override>[
-        helpServiceProvider.overrideWithValue(
-          MockHelpService(
-            tokens: const <String>['hello ', 'world'],
-            tokenDelay: Duration.zero,
+    test('send appends user + assistant messages and streams tokens', () async {
+      final container = ProviderContainer(
+        overrides: <Override>[
+          helpServiceProvider.overrideWithValue(
+            MockHelpService(
+              tokens: const <String>['hello ', 'world'],
+              tokenDelay: Duration.zero,
+            ),
           ),
-        ),
-      ]);
+        ],
+      );
       addTearDown(container.dispose);
       final ctl = container.read(helpBotControllerProvider.notifier);
       await ctl.send('how do I screen?');
@@ -171,16 +181,13 @@ void main() {
         events.add(e);
       }
       expect(events, hasLength(3));
+      expect(events.first.maybeWhen(token: (t) => t, orElse: () => null), 'a');
+      expect(events[1].maybeWhen(token: (t) => t, orElse: () => null), 'b');
       expect(
-        events.first.maybeWhen(token: (t) => t, orElse: () => null),
-        'a',
-      );
-      expect(
-        events[1].maybeWhen(token: (t) => t, orElse: () => null),
-        'b',
-      );
-      expect(
-        events.last.maybeWhen(done: (_, __, ___, ____) => true, orElse: () => false),
+        events.last.maybeWhen(
+          done: (_, __, ___, ____) => true,
+          orElse: () => false,
+        ),
         isTrue,
       );
     });

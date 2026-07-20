@@ -40,13 +40,19 @@ class BdSheet extends StatelessWidget {
                         if (title != null)
                           Text(
                             title!,
-                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         if (description != null) ...[
                           const SizedBox(height: 4),
                           Text(
                             description!,
-                            style: TextStyle(fontSize: 14, color: scheme.onSurfaceVariant),
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: scheme.onSurfaceVariant,
+                            ),
                           ),
                         ],
                       ],
@@ -111,7 +117,8 @@ Future<T?> showBdSheet<T>({
           align = Alignment.bottomCenter;
           break;
       }
-      final isHorizontal = side == BdSheetSide.left || side == BdSheetSide.right;
+      final isHorizontal =
+          side == BdSheetSide.left || side == BdSheetSide.right;
       return Align(
         alignment: align,
         child: Material(

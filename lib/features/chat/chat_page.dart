@@ -28,14 +28,12 @@ class ChatPage extends ConsumerWidget {
     return Scaffold(
       body: Column(
         children: [
-          const RepaintBoundary(
-            child: BdHeader(variant: BdHeaderVariant.chat),
-          ),
+          const RepaintBoundary(child: BdHeader(variant: BdHeaderVariant.chat)),
           Expanded(
             child: !isReady
                 ? (error != null
-                    ? Center(child: Text('Chat init failed: $error'))
-                    : const Center(child: CircularProgressIndicator()))
+                      ? Center(child: Text('Chat init failed: $error'))
+                      : const Center(child: CircularProgressIndicator()))
                 : _ChatBody(sessionId: sessionId),
           ),
         ],
@@ -65,9 +63,9 @@ class _ContextToggleSlice extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final value = ref.watch(
-      chatControllerProvider(sessionId).select(
-        (a) => a.value?.useScreeningContext ?? false,
-      ),
+      chatControllerProvider(
+        sessionId,
+      ).select((a) => a.value?.useScreeningContext ?? false),
     );
     final ctl = ref.read(chatControllerProvider(sessionId).notifier);
     return ChatContextToggle(
@@ -84,9 +82,9 @@ class _MessagesSlice extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final messages = ref.watch(
-      chatControllerProvider(sessionId).select(
-        (a) => a.value?.messages ?? const <UiMessage>[],
-      ),
+      chatControllerProvider(
+        sessionId,
+      ).select((a) => a.value?.messages ?? const <UiMessage>[]),
     );
     final ctl = ref.read(chatControllerProvider(sessionId).notifier);
     return BdChatWindow(messages: messages, onPromptTap: ctl.send);
@@ -99,9 +97,9 @@ class _InputBarSlice extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isStreaming = ref.watch(
-      chatControllerProvider(sessionId).select(
-        (a) => a.value?.isStreaming ?? false,
-      ),
+      chatControllerProvider(
+        sessionId,
+      ).select((a) => a.value?.isStreaming ?? false),
     );
     final ctl = ref.read(chatControllerProvider(sessionId).notifier);
     return ChatInputBar(

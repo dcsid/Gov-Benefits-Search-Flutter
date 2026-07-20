@@ -13,9 +13,11 @@ class _FakeStreamingClient extends http.BaseClient {
 
   @override
   Future<http.StreamedResponse> send(http.BaseRequest request) async {
-    return http.StreamedResponse(_stream, 200, headers: <String, String>{
-      'content-type': 'text/event-stream',
-    });
+    return http.StreamedResponse(
+      _stream,
+      200,
+      headers: <String, String>{'content-type': 'text/event-stream'},
+    );
   }
 }
 
@@ -26,7 +28,9 @@ class _FakeErrorClient extends http.BaseClient {
 
   @override
   Future<http.StreamedResponse> send(http.BaseRequest request) async {
-    final stream = Stream<List<int>>.fromIterable(<List<int>>[utf8.encode(body)]);
+    final stream = Stream<List<int>>.fromIterable(<List<int>>[
+      utf8.encode(body),
+    ]);
     return http.StreamedResponse(stream, statusCode);
   }
 }
@@ -114,8 +118,13 @@ id: 7
               body: <String, dynamic>{},
             )
             .toList(),
-        throwsA(isA<SseHttpException>()
-            .having((e) => e.statusCode, 'statusCode', 503)),
+        throwsA(
+          isA<SseHttpException>().having(
+            (e) => e.statusCode,
+            'statusCode',
+            503,
+          ),
+        ),
       );
     });
   });

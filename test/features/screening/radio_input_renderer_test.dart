@@ -14,35 +14,45 @@ void main() {
     ];
 
     testWidgets('renders one BdButton per option', (tester) async {
-      await tester.pumpWidget(bdHarness(
-        RadioInputRenderer(options: yesNo, value: null, onChanged: (_) {}),
-      ));
+      await tester.pumpWidget(
+        bdHarness(
+          RadioInputRenderer(options: yesNo, value: null, onChanged: (_) {}),
+        ),
+      );
       expect(find.text('Yes'), findsOneWidget);
       expect(find.text('No'), findsOneWidget);
       expect(find.byType(BdButton), findsNWidgets(2));
     });
 
-    testWidgets('selecting an option fires onChanged with the option value',
-        (tester) async {
+    testWidgets('selecting an option fires onChanged with the option value', (
+      tester,
+    ) async {
       String? received;
-      await tester.pumpWidget(bdHarness(
-        RadioInputRenderer(
-          options: yesNo,
-          value: null,
-          onChanged: (v) => received = v,
+      await tester.pumpWidget(
+        bdHarness(
+          RadioInputRenderer(
+            options: yesNo,
+            value: null,
+            onChanged: (v) => received = v,
+          ),
         ),
-      ));
+      );
       await tester.tap(find.text('Yes'));
       await tester.pump();
       expect(received, 'Yes');
     });
 
-    testWidgets('selected option uses primary variant, others outline',
-        (tester) async {
-      await tester.pumpWidget(bdHarness(
-        RadioInputRenderer(options: yesNo, value: 'Yes', onChanged: (_) {}),
-      ));
-      final buttons = tester.widgetList<BdButton>(find.byType(BdButton)).toList();
+    testWidgets('selected option uses primary variant, others outline', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        bdHarness(
+          RadioInputRenderer(options: yesNo, value: 'Yes', onChanged: (_) {}),
+        ),
+      );
+      final buttons = tester
+          .widgetList<BdButton>(find.byType(BdButton))
+          .toList();
       expect(buttons, hasLength(2));
       final yesBtn = buttons.firstWhere((b) => b.label == 'Yes');
       final noBtn = buttons.firstWhere((b) => b.label == 'No');
@@ -50,17 +60,20 @@ void main() {
       expect(noBtn.variant, BdButtonVariant.outline);
     });
 
-    testWidgets('renders all options for a long enum-style question',
-        (tester) async {
+    testWidgets('renders all options for a long enum-style question', (
+      tester,
+    ) async {
       const opts = <QuestionOption>[
         QuestionOption(value: 'a', label: 'Alpha'),
         QuestionOption(value: 'b', label: 'Beta'),
         QuestionOption(value: 'c', label: 'Gamma'),
         QuestionOption(value: 'd', label: 'Delta'),
       ];
-      await tester.pumpWidget(bdHarness(
-        RadioInputRenderer(options: opts, value: 'c', onChanged: (_) {}),
-      ));
+      await tester.pumpWidget(
+        bdHarness(
+          RadioInputRenderer(options: opts, value: 'c', onChanged: (_) {}),
+        ),
+      );
       for (final o in opts) {
         expect(find.text(o.label), findsOneWidget);
       }
@@ -94,10 +107,7 @@ void main() {
 
     test('select stays a select (radio-style list)', () {
       expect(questionInputFromString('select'), QuestionInput.select);
-      expect(
-        questionInputFromString('single_select'),
-        QuestionInput.select,
-      );
+      expect(questionInputFromString('single_select'), QuestionInput.select);
     });
 
     test('multi_select / multiselect map to multiselect', () {
@@ -105,10 +115,7 @@ void main() {
         questionInputFromString('multi_select'),
         QuestionInput.multiselect,
       );
-      expect(
-        questionInputFromString('multiselect'),
-        QuestionInput.multiselect,
-      );
+      expect(questionInputFromString('multiselect'), QuestionInput.multiselect);
     });
   });
 }

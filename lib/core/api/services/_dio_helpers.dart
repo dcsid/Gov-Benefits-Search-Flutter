@@ -47,12 +47,17 @@ Map<String, dynamic> asJsonMap(Object? data, {String name = 'response'}) {
   );
 }
 
-List<Map<String, dynamic>> asJsonList(Object? data, {String name = 'response'}) {
+List<Map<String, dynamic>> asJsonList(
+  Object? data, {
+  String name = 'response',
+}) {
   if (data is List) {
     return data
-        .map((e) => e is Map<String, dynamic>
-            ? e
-            : Map<String, dynamic>.from(e as Map))
+        .map(
+          (e) => e is Map<String, dynamic>
+              ? e
+              : Map<String, dynamic>.from(e as Map),
+        )
         .toList(growable: false);
   }
   throw HttpException(

@@ -5,12 +5,25 @@ class ChatEmptyState extends StatelessWidget {
 
   final ValueChanged<String> onPromptTap;
 
-  static const List<({String title, String prompt})> _prompts = <({String title, String prompt})>[
-    (title: 'What papers do I bring?', prompt: 'What documents should I bring when I apply for SNAP?'),
-    (title: 'How long until SNAP starts?', prompt: 'After I apply for SNAP, how long until benefits start?'),
-    (title: 'What if I work part-time?', prompt: 'How would working 20 hours a week affect my benefits?'),
-    (title: 'Who do I call for help?', prompt: 'Where can I get free help applying for benefits?'),
-  ];
+  static const List<({String title, String prompt})> _prompts =
+      <({String title, String prompt})>[
+        (
+          title: 'What papers do I bring?',
+          prompt: 'What documents should I bring when I apply for SNAP?',
+        ),
+        (
+          title: 'How long until SNAP starts?',
+          prompt: 'After I apply for SNAP, how long until benefits start?',
+        ),
+        (
+          title: 'What if I work part-time?',
+          prompt: 'How would working 20 hours a week affect my benefits?',
+        ),
+        (
+          title: 'Who do I call for help?',
+          prompt: 'Where can I get free help applying for benefits?',
+        ),
+      ];
 
   @override
   Widget build(BuildContext context) {

@@ -33,9 +33,9 @@ class ProgressRail extends StatelessWidget {
           Text(
             'Your screening',
             style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 0.5,
-                ),
+              fontWeight: FontWeight.w600,
+              letterSpacing: 0.5,
+            ),
           ),
           const SizedBox(height: 16),
           Expanded(
@@ -88,8 +88,8 @@ class _RailRow extends StatelessWidget {
     final color = current
         ? scheme.primary
         : answered
-            ? scheme.onSurface
-            : scheme.onSurfaceVariant;
+        ? scheme.onSurface
+        : scheme.onSurfaceVariant;
 
     return InkWell(
       onTap: onTap,
@@ -109,8 +109,8 @@ class _RailRow extends StatelessWidget {
                   color: current
                       ? scheme.primary
                       : answered
-                          ? scheme.outline
-                          : scheme.outlineVariant,
+                      ? scheme.outline
+                      : scheme.outlineVariant,
                 ),
                 shape: BoxShape.circle,
               ),

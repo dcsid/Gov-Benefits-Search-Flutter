@@ -10,10 +10,12 @@ void main() {
   group('ProgramsService', () {
     test('listPrograms hits /programs with query parameters', () async {
       final dio = _MockDio();
-      when(() => dio.get<Object?>(
-            any(),
-            queryParameters: any(named: 'queryParameters'),
-          )).thenAnswer(
+      when(
+        () => dio.get<Object?>(
+          any(),
+          queryParameters: any(named: 'queryParameters'),
+        ),
+      ).thenAnswer(
         (_) async => Response<Object?>(
           requestOptions: RequestOptions(path: '/programs'),
           statusCode: 200,
@@ -26,14 +28,17 @@ void main() {
           ],
         ),
       );
-      final out = await ProgramsService(dio)
-          .listPrograms('NY', query: 'food', categories: <String>['food']);
+      final out = await ProgramsService(
+        dio,
+      ).listPrograms('NY', query: 'food', categories: <String>['food']);
       expect(out, hasLength(1));
       expect(out.first.slug, 'snap');
-      final captured = verify(() => dio.get<Object?>(
-            captureAny(),
-            queryParameters: captureAny(named: 'queryParameters'),
-          )).captured;
+      final captured = verify(
+        () => dio.get<Object?>(
+          captureAny(),
+          queryParameters: captureAny(named: 'queryParameters'),
+        ),
+      ).captured;
       // Path includes the embedded jurisdiction_code from Endpoints.programs.
       expect(captured.first.toString(), contains('jurisdiction_code=NY'));
       final params = captured.last as Map<String, dynamic>;
@@ -79,8 +84,9 @@ void main() {
       );
       await expectLater(
         () => ProgramsService(dio).getProgram('missing'),
-        throwsA(isA<HttpException>()
-            .having((e) => e.statusCode, 'statusCode', 404)),
+        throwsA(
+          isA<HttpException>().having((e) => e.statusCode, 'statusCode', 404),
+        ),
       );
     });
   });

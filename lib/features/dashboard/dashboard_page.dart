@@ -112,8 +112,11 @@ class _DashboardErrorState extends State<_DashboardError> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.error_outline,
-                  size: 48, color: scheme.onSurfaceVariant),
+              Icon(
+                Icons.error_outline,
+                size: 48,
+                color: scheme.onSurfaceVariant,
+              ),
               const SizedBox(height: 16),
               Text(
                 l10n?.dashboard_couldNotLoad ??
@@ -198,11 +201,7 @@ class _PlanBody extends StatelessWidget {
                 )
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    summary,
-                    const SizedBox(height: 16),
-                    main,
-                  ],
+                  children: <Widget>[summary, const SizedBox(height: 16), main],
                 ),
         ),
       ),
@@ -242,18 +241,9 @@ class _SummaryCard extends StatelessWidget {
               label: 'Estimated /month',
               value: '\$${overview.estimatedMonthlyTotal}',
             ),
-          _Stat(
-            label: 'Likely',
-            value: '${overview.likelyPrograms}',
-          ),
-          _Stat(
-            label: 'Possible',
-            value: '${overview.possiblePrograms}',
-          ),
-          _Stat(
-            label: 'Answered',
-            value: '${overview.answeredQuestions}',
-          ),
+          _Stat(label: 'Likely', value: '${overview.likelyPrograms}'),
+          _Stat(label: 'Possible', value: '${overview.possiblePrograms}'),
+          _Stat(label: 'Answered', value: '${overview.answeredQuestions}'),
           _Stat(
             label: 'Rule coverage',
             value: '${overview.averageRuleCoverage}%',
@@ -368,9 +358,8 @@ class _StackGroup extends StatelessWidget {
     final label = (entry['label'] ?? entry['category'] ?? '').toString();
     final likely = (entry['likely_programs'] as num?)?.toInt() ?? 0;
     final possible = (entry['possible_programs'] as num?)?.toInt() ?? 0;
-    final top = (entry['top_programs'] as List?)
-            ?.map((e) => e.toString())
-            .toList() ??
+    final top =
+        (entry['top_programs'] as List?)?.map((e) => e.toString()).toList() ??
         const <String>[];
 
     return Padding(
@@ -417,13 +406,14 @@ class _StackGroup extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 6, right: 8),
-                      child: Icon(Icons.circle, size: 4, color: scheme.tertiary),
+                      child: Icon(
+                        Icons.circle,
+                        size: 4,
+                        color: scheme.tertiary,
+                      ),
                     ),
                     Expanded(
-                      child: Text(
-                        name,
-                        style: const TextStyle(fontSize: 13),
-                      ),
+                      child: Text(name, style: const TextStyle(fontSize: 13)),
                     ),
                   ],
                 ),
@@ -514,11 +504,11 @@ class _ActionRow extends StatelessWidget {
     final headerText = program.isEmpty ? stepHeader : '$stepHeader: $program';
     final statusEntry = status != null ? _statusVariants[status] : null;
 
-    final validUri = (url != null && url.isNotEmpty)
-        ? Uri.tryParse(url)
-        : null;
-    final canOpen = validUri != null &&
-        (validUri.hasScheme && (validUri.scheme == 'http' || validUri.scheme == 'https'));
+    final validUri = (url != null && url.isNotEmpty) ? Uri.tryParse(url) : null;
+    final canOpen =
+        validUri != null &&
+        (validUri.hasScheme &&
+            (validUri.scheme == 'http' || validUri.scheme == 'https'));
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -568,10 +558,7 @@ class _ActionRow extends StatelessWidget {
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     if (statusEntry != null)
-                      BdBadge(
-                        label: statusEntry.$1,
-                        variant: statusEntry.$2,
-                      ),
+                      BdBadge(label: statusEntry.$1, variant: statusEntry.$2),
                     if (jurisdiction != null && jurisdiction.isNotEmpty)
                       BdBadge(
                         label: jurisdiction,
@@ -799,8 +786,8 @@ class _DocRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final name = (doc['name'] ?? doc['label'] ?? '').toString();
-    final description =
-        (doc['description'] ?? doc['why_required'] ?? '').toString();
+    final description = (doc['description'] ?? doc['why_required'] ?? '')
+        .toString();
     final sourceUrl = doc['source_url']?.toString();
     final programs = (doc['programs'] as List?)?.join(', ') ?? '';
 
@@ -984,8 +971,8 @@ class _SourceRow extends StatelessWidget {
     final label = (source['label'] ?? source['title'] ?? '').toString();
     final url = source['url']?.toString();
     final uri = (url != null && url.isNotEmpty) ? Uri.tryParse(url) : null;
-    final canOpen = uri != null &&
-        (uri.scheme == 'http' || uri.scheme == 'https');
+    final canOpen =
+        uri != null && (uri.scheme == 'http' || uri.scheme == 'https');
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 6),
@@ -1023,10 +1010,7 @@ class _SourceRow extends StatelessWidget {
 // ---------------------------------------------------------------------------
 
 class _MissingFactsCard extends StatelessWidget {
-  const _MissingFactsCard({
-    required this.sessionId,
-    required this.facts,
-  });
+  const _MissingFactsCard({required this.sessionId, required this.facts});
 
   final String sessionId;
   final List<Map<String, dynamic>> facts;
@@ -1065,8 +1049,11 @@ class _MissingFactsCard extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 6, right: 8),
-                    child: Icon(Icons.help_outline,
-                        size: 12, color: scheme.tertiary),
+                    child: Icon(
+                      Icons.help_outline,
+                      size: 12,
+                      color: scheme.tertiary,
+                    ),
                   ),
                   Expanded(
                     child: Text(

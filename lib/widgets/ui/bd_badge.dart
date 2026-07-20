@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../theme/extensions/bd_colors.dart';
 
-enum BdBadgeVariant { primary, secondary, destructive, outline, success, warning }
+enum BdBadgeVariant {
+  primary,
+  secondary,
+  destructive,
+  outline,
+  success,
+  warning,
+}
 
 class BdBadge extends StatelessWidget {
   const BdBadge({
@@ -24,7 +31,11 @@ class BdBadge extends StatelessWidget {
       BdBadgeVariant.primary => (scheme.primary, scheme.onPrimary, null),
       BdBadgeVariant.secondary => (scheme.secondary, scheme.onSecondary, null),
       BdBadgeVariant.destructive => (scheme.error, scheme.onError, null),
-      BdBadgeVariant.outline => (Colors.transparent, scheme.onSurface, bd.borderStrong),
+      BdBadgeVariant.outline => (
+        Colors.transparent,
+        scheme.onSurface,
+        bd.borderStrong,
+      ),
       BdBadgeVariant.success => (bd.success, bd.onSuccess, null),
       BdBadgeVariant.warning => (bd.warning, bd.onWarning, null),
     };

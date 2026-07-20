@@ -43,7 +43,11 @@ class BdHero extends StatelessWidget {
     final text = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BdBadge(label: eyebrow.toUpperCase(), variant: BdBadgeVariant.outline, leading: const Icon(BdIcons.spark)),
+        BdBadge(
+          label: eyebrow.toUpperCase(),
+          variant: BdBadgeVariant.outline,
+          leading: const Icon(BdIcons.spark),
+        ),
         const SizedBox(height: 18),
         Text(
           title,
@@ -106,11 +110,7 @@ class BdHero extends StatelessWidget {
               )
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  text,
-                  const SizedBox(height: 32),
-                  aside,
-                ],
+                children: [text, const SizedBox(height: 32), aside],
               ),
       ),
     );
@@ -194,9 +194,17 @@ class _HeroExampleCard extends StatelessWidget {
           const SizedBox(height: 14),
           Container(height: 1, color: bd.border),
           const SizedBox(height: 14),
-          _ResultLine(color: bd.pipStrong, label: 'SNAP (food)', conf: 'Strong match'),
+          _ResultLine(
+            color: bd.pipStrong,
+            label: 'SNAP (food)',
+            conf: 'Strong match',
+          ),
           const SizedBox(height: 8),
-          _ResultLine(color: bd.pipStrong, label: 'Medicaid (kids)', conf: 'Strong match'),
+          _ResultLine(
+            color: bd.pipStrong,
+            label: 'Medicaid (kids)',
+            conf: 'Strong match',
+          ),
           const SizedBox(height: 8),
           _ResultLine(
             color: bd.pipPartial,
@@ -204,7 +212,11 @@ class _HeroExampleCard extends StatelessWidget {
             conf: 'Likely waitlist',
           ),
           const SizedBox(height: 8),
-          _ResultLine(color: bd.pipCheck, label: 'EITC (taxes)', conf: 'Worth checking'),
+          _ResultLine(
+            color: bd.pipCheck,
+            label: 'EITC (taxes)',
+            conf: 'Worth checking',
+          ),
           const SizedBox(height: 14),
           Text(
             'Anonymized example. Your screening is private.',
@@ -217,7 +229,11 @@ class _HeroExampleCard extends StatelessWidget {
 }
 
 class _ResultLine extends StatelessWidget {
-  const _ResultLine({required this.color, required this.label, required this.conf});
+  const _ResultLine({
+    required this.color,
+    required this.label,
+    required this.conf,
+  });
   final Color color;
   final String label;
   final String conf;
@@ -232,9 +248,7 @@ class _ResultLine extends StatelessWidget {
           decoration: BoxDecoration(color: color, shape: BoxShape.circle),
         ),
         const SizedBox(width: 10),
-        Expanded(
-          child: Text(label, style: const TextStyle(fontSize: 14)),
-        ),
+        Expanded(child: Text(label, style: const TextStyle(fontSize: 14))),
         Text(
           conf,
           style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),

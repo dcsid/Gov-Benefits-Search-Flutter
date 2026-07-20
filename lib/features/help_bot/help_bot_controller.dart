@@ -5,7 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/api/models/chat.dart';
 import '../../core/api/providers.dart';
-import '../chat/state/chat_controller.dart' show UiMessage, UiMessageStatus, ChatRole;
+import '../chat/state/chat_controller.dart'
+    show UiMessage, UiMessageStatus, ChatRole;
 
 /// Single source of truth for the floating help bot — open/closed state,
 /// message log for the current session, and an in-flight stream flag.
@@ -29,12 +30,11 @@ class HelpBotState {
     List<UiMessage>? messages,
     bool? isOpen,
     bool? isStreaming,
-  }) =>
-      HelpBotState(
-        messages: messages ?? this.messages,
-        isOpen: isOpen ?? this.isOpen,
-        isStreaming: isStreaming ?? this.isStreaming,
-      );
+  }) => HelpBotState(
+    messages: messages ?? this.messages,
+    isOpen: isOpen ?? this.isOpen,
+    isStreaming: isStreaming ?? this.isStreaming,
+  );
 }
 
 String _shortRandomId() {
@@ -70,10 +70,7 @@ class HelpBotController extends Notifier<HelpBotState> {
 
   Future<void> reset() async {
     abort();
-    state = HelpBotState(
-      messages: <UiMessage>[],
-      isOpen: state.isOpen,
-    );
+    state = HelpBotState(messages: <UiMessage>[], isOpen: state.isOpen);
   }
 
   void abort() {
@@ -123,8 +120,7 @@ class HelpBotController extends Notifier<HelpBotState> {
 
     final history = messages
         .where(
-          (m) =>
-              m.role != ChatRole.system && m.status != UiMessageStatus.error,
+          (m) => m.role != ChatRole.system && m.status != UiMessageStatus.error,
         )
         .map((m) => ChatMessage(role: m.role.name, content: m.content))
         .toList();

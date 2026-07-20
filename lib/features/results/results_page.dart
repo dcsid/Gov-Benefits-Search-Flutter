@@ -42,10 +42,8 @@ class ResultsPage extends ConsumerWidget {
                 onRetry: () =>
                     ref.invalidate(sessionResultsProvider(sessionId)),
               ),
-              data: (results) => _ResultsBody(
-                sessionId: sessionId,
-                results: results,
-              ),
+              data: (results) =>
+                  _ResultsBody(sessionId: sessionId, results: results),
             ),
           ),
         ],
@@ -121,8 +119,11 @@ class _ResultsErrorState extends State<_ResultsError> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.error_outline,
-                  size: 48, color: scheme.onSurfaceVariant),
+              Icon(
+                Icons.error_outline,
+                size: 48,
+                color: scheme.onSurfaceVariant,
+              ),
               const SizedBox(height: 16),
               Text(
                 l10n?.results_couldNotLoad ?? "We couldn't load your results.",
@@ -179,17 +180,21 @@ class _ResultsBody extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               _Section(
-                title: l10n?.results_federalSection(fed.length) ??
+                title:
+                    l10n?.results_federalSection(fed.length) ??
                     'Federal programs (${fed.length})',
-                emptyText: l10n?.results_emptyFederal ??
+                emptyText:
+                    l10n?.results_emptyFederal ??
                     'No federal programs matched. Try answering more questions or broadening your screening.',
                 programs: fed,
               ),
               const SizedBox(height: 24),
               _Section(
-                title: l10n?.results_stateSection(state.length) ??
+                title:
+                    l10n?.results_stateSection(state.length) ??
                     'State programs (${state.length})',
-                emptyText: l10n?.results_emptyState ??
+                emptyText:
+                    l10n?.results_emptyState ??
                     'No state programs matched yet. Add your state in the screening to see local programs.',
                 programs: state,
               ),
@@ -246,8 +251,11 @@ class _Section extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Icon(Icons.inbox_outlined,
-                    size: 20, color: scheme.onSurfaceVariant),
+                Icon(
+                  Icons.inbox_outlined,
+                  size: 20,
+                  color: scheme.onSurfaceVariant,
+                ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
@@ -346,7 +354,8 @@ class _ProgramCard extends StatelessWidget {
               BdBadge(label: badgeLabel, variant: badgeVariant),
             ],
           ),
-          if (program.summary != null && program.summary!.isNotEmpty) ...<Widget>[
+          if (program.summary != null &&
+              program.summary!.isNotEmpty) ...<Widget>[
             const SizedBox(height: 12),
             Text(program.summary!),
           ],

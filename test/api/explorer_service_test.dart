@@ -7,11 +7,11 @@ import 'package:mocktail/mocktail.dart';
 class _MockDio extends Mock implements Dio {}
 
 void main() {
-  test('search posts request body and parses ExplorerSearchResponse',
-      () async {
+  test('search posts request body and parses ExplorerSearchResponse', () async {
     final dio = _MockDio();
-    when(() => dio.post<Object?>('/explorer/search',
-            data: any(named: 'data'))).thenAnswer(
+    when(
+      () => dio.post<Object?>('/explorer/search', data: any(named: 'data')),
+    ).thenAnswer(
       (_) async => Response<Object?>(
         requestOptions: RequestOptions(path: '/explorer/search'),
         statusCode: 200,
@@ -30,15 +30,20 @@ void main() {
         },
       ),
     );
-    final out = await ExplorerService(dio).search(
-      const ExplorerSearchRequest(query: 'food', stateCode: 'NY'),
-    );
+    final out = await ExplorerService(
+      dio,
+    ).search(const ExplorerSearchRequest(query: 'food', stateCode: 'NY'));
     expect(out.mode, 'hybrid');
     expect(out.programs.single.searchScore, 5);
 
-    final captured = verify(
-      () => dio.post<Object?>('/explorer/search', data: captureAny(named: 'data')),
-    ).captured.single as Map<String, dynamic>;
+    final captured =
+        verify(
+              () => dio.post<Object?>(
+                '/explorer/search',
+                data: captureAny(named: 'data'),
+              ),
+            ).captured.single
+            as Map<String, dynamic>;
     expect(captured['query'], 'food');
     expect(captured['state_code'], 'NY');
   });

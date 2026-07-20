@@ -28,9 +28,9 @@ class ScenarioEditor extends StatelessWidget {
         Text(
           'QUICK PRESETS',
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                letterSpacing: 1.2,
-                color: Theme.of(context).colorScheme.onSurfaceVariant,
-              ),
+            letterSpacing: 1.2,
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+          ),
         ),
         const SizedBox(height: 8),
         const _PresetButtons(),
@@ -124,18 +124,15 @@ class _PresetButtons extends ConsumerWidget {
             label: preset.$1,
             variant: BdButtonVariant.outline,
             size: BdButtonSize.sm,
-            onPressed: () => controller.applyPreset(
-              preset.$1,
-              [
-                for (final a in preset.$2)
-                  ScenarioRow(
-                    id: 'p-${a.$1}-${DateTime.now().microsecondsSinceEpoch}',
-                    questionKey: a.$1,
-                    type: a.$2,
-                    value: a.$3,
-                  ),
-              ],
-            ),
+            onPressed: () => controller.applyPreset(preset.$1, [
+              for (final a in preset.$2)
+                ScenarioRow(
+                  id: 'p-${a.$1}-${DateTime.now().microsecondsSinceEpoch}',
+                  questionKey: a.$1,
+                  type: a.$2,
+                  value: a.$3,
+                ),
+            ]),
           ),
       ],
     );
@@ -162,9 +159,7 @@ class _RowsList extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // Only rebuilds when the row list identity changes (add/remove/preset),
     // not on every per-row keystroke.
-    final rows = ref.watch(
-      whatIfControllerProvider.select((s) => s.rows),
-    );
+    final rows = ref.watch(whatIfControllerProvider.select((s) => s.rows));
     if (rows.isEmpty) {
       return Container(
         padding: const EdgeInsets.all(12),
@@ -174,9 +169,7 @@ class _RowsList extends ConsumerWidget {
           ),
           borderRadius: BorderRadius.circular(8),
         ),
-        child: const Text(
-          'No overrides yet — add one or pick a preset above.',
-        ),
+        child: const Text('No overrides yet — add one or pick a preset above.'),
       );
     }
     return Column(
@@ -242,9 +235,7 @@ class _RowEditorState extends ConsumerState<_RowEditor> {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        border: Border.all(
-          color: Theme.of(context).colorScheme.outlineVariant,
-        ),
+        border: Border.all(color: Theme.of(context).colorScheme.outlineVariant),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
@@ -285,8 +276,7 @@ class _RowEditorState extends ConsumerState<_RowEditor> {
                 _ => 'value',
               },
               controller: _valueCtl,
-              onChanged: (v) =>
-                  controller.updateRow(widget.row.id, value: v),
+              onChanged: (v) => controller.updateRow(widget.row.id, value: v),
             ),
           ),
           IconButton(
@@ -324,9 +314,7 @@ class _ErrorBanner extends ConsumerWidget {
   const _ErrorBanner();
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final error = ref.watch(
-      whatIfControllerProvider.select((s) => s.error),
-    );
+    final error = ref.watch(whatIfControllerProvider.select((s) => s.error));
     if (error == null) return const SizedBox.shrink();
     return Padding(
       padding: const EdgeInsets.only(top: 12),

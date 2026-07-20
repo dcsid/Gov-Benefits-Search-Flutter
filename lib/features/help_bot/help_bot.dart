@@ -65,9 +65,7 @@ class _HelpBotInner extends ConsumerWidget {
   const _HelpBotInner();
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isOpen = ref.watch(
-      helpBotControllerProvider.select((s) => s.isOpen),
-    );
+    final isOpen = ref.watch(helpBotControllerProvider.select((s) => s.isOpen));
     return Stack(
       fit: StackFit.expand,
       children: <Widget>[
@@ -111,11 +109,7 @@ class _HelpBotFab extends ConsumerWidget {
           child: Semantics(
             button: true,
             label: label,
-            child: Icon(
-              Icons.help_outline,
-              color: scheme.onPrimary,
-              size: 26,
-            ),
+            child: Icon(Icons.help_outline, color: scheme.onPrimary, size: 26),
           ),
         ),
       ),
@@ -213,8 +207,7 @@ class _PanelHeader extends ConsumerWidget {
             label: closeLabel,
             child: InkWell(
               customBorder: const CircleBorder(),
-              onTap: () =>
-                  ref.read(helpBotControllerProvider.notifier).close(),
+              onTap: () => ref.read(helpBotControllerProvider.notifier).close(),
               child: Padding(
                 padding: const EdgeInsets.all(8),
                 child: Icon(Icons.close, color: scheme.onPrimary, size: 20),
@@ -247,7 +240,8 @@ class _EmptyState extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
-    final empty = l10n?.helpBot_emptyState ??
+    final empty =
+        l10n?.helpBot_emptyState ??
         'Ask how to use a feature, navigate to a page, or understand a screening question.';
     return Padding(
       padding: const EdgeInsets.all(24),
@@ -284,8 +278,7 @@ class _MessageListState extends State<_MessageList> {
   @override
   void didUpdateWidget(covariant _MessageList old) {
     super.didUpdateWidget(old);
-    final lastNew =
-        widget.messages.isEmpty ? '' : widget.messages.last.content;
+    final lastNew = widget.messages.isEmpty ? '' : widget.messages.last.content;
     final lastOld = old.messages.isEmpty ? '' : old.messages.last.content;
     if (old.messages.length != widget.messages.length || lastNew != lastOld) {
       WidgetsBinding.instance.addPostFrameCallback((_) {

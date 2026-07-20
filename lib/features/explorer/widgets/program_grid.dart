@@ -63,8 +63,8 @@ class ProgramGrid extends StatelessWidget {
         final cols = constraints.maxWidth > 900
             ? 3
             : constraints.maxWidth > 560
-                ? 2
-                : 1;
+            ? 2
+            : 1;
         return GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -89,16 +89,14 @@ class ExplorerHitCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final summary = hit.summary ??
-        'Official program description not yet ingested.';
+    final summary =
+        hit.summary ?? 'Official program description not yet ingested.';
     final jurisdictionLabel =
         hit.jurisdiction?.level.toUpperCase() ?? 'PROGRAM';
-    final agencyOrCode =
-        hit.agency ?? hit.jurisdiction?.code ?? '';
+    final agencyOrCode = hit.agency ?? hit.jurisdiction?.code ?? '';
     return BdCard(
       padding: const EdgeInsets.all(16),
-      onTap: () =>
-          context.push('/program/${Uri.encodeComponent(hit.slug)}'),
+      onTap: () => context.push('/program/${Uri.encodeComponent(hit.slug)}'),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -121,10 +119,7 @@ class ExplorerHitCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 4),
-          Text(
-            agencyOrCode,
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
+          Text(agencyOrCode, style: Theme.of(context).textTheme.bodySmall),
           const SizedBox(height: 8),
           Expanded(
             child: Text(
@@ -136,10 +131,7 @@ class ExplorerHitCard extends StatelessWidget {
           ),
           if (hit.category != null) ...[
             const SizedBox(height: 8),
-            BdBadge(
-              label: hit.category!,
-              variant: BdBadgeVariant.secondary,
-            ),
+            BdBadge(label: hit.category!, variant: BdBadgeVariant.secondary),
           ],
         ],
       ),

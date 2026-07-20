@@ -11,7 +11,12 @@ import 'package:benefits_digger/widgets/chrome/bd_logo.dart';
 Widget _routed(Widget child) {
   final router = GoRouter(
     initialLocation: '/',
-    routes: [GoRoute(path: '/', builder: (_, __) => Scaffold(body: child))],
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (_, __) => Scaffold(body: child),
+      ),
+    ],
   );
   return ProviderScope(
     child: MaterialApp.router(
@@ -27,9 +32,7 @@ void main() {
     tester.view.physicalSize = const Size(1400, 900);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
-    await tester.pumpWidget(_routed(const Column(
-      children: [BdHeader()],
-    )));
+    await tester.pumpWidget(_routed(const Column(children: [BdHeader()])));
     expect(find.text('Benefits Digger'), findsWidgets);
   });
 

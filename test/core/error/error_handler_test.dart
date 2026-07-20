@@ -40,19 +40,24 @@ void main() {
   });
 
   testWidgets('429 renders rate-limited copy', (tester) async {
-    await tester.pumpWidget(harness(
-        error: const HttpException(statusCode: 429, message: 'too many')));
+    await tester.pumpWidget(
+      harness(error: const HttpException(statusCode: 429, message: 'too many')),
+    );
     await tester.tap(find.text('go'));
     await tester.pump();
     expect(find.textContaining('Too many requests'), findsOneWidget);
   });
 
   testWidgets('5xx renders server copy', (tester) async {
-    await tester.pumpWidget(harness(
-        error: const HttpException(statusCode: 503, message: 'down')));
+    await tester.pumpWidget(
+      harness(error: const HttpException(statusCode: 503, message: 'down')),
+    );
     await tester.tap(find.text('go'));
     await tester.pump();
-    expect(find.textContaining('Our service is having trouble'), findsOneWidget);
+    expect(
+      find.textContaining('Our service is having trouble'),
+      findsOneWidget,
+    );
   });
 
   testWidgets('NetworkException renders offline copy', (tester) async {
@@ -69,7 +74,9 @@ void main() {
     expect(find.textContaining('timed out'), findsOneWidget);
   });
 
-  testWidgets('DioException with NetworkException attached unwraps', (tester) async {
+  testWidgets('DioException with NetworkException attached unwraps', (
+    tester,
+  ) async {
     final dioErr = DioException(
       requestOptions: RequestOptions(path: '/x'),
       error: const NetworkException(),

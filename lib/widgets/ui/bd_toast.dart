@@ -45,10 +45,7 @@ void showBdToast(
                 color: fg,
               ),
             ),
-          Text(
-            message,
-            style: TextStyle(fontSize: 13, color: fg, height: 1.4),
-          ),
+          Text(message, style: TextStyle(fontSize: 13, color: fg, height: 1.4)),
         ],
       ),
       action: action,

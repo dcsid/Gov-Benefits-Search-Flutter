@@ -52,14 +52,13 @@ void main() {
     ]);
 
     final container = ProviderContainer(
-      overrides: <Override>[
-        chatStreamProvider.overrideWithValue(scripted),
-      ],
+      overrides: <Override>[chatStreamProvider.overrideWithValue(scripted)],
     );
     addTearDown(container.dispose);
     // Keep the autoDispose'd provider alive for the duration of the test.
     final sub = container.listen<Object?>(
-      chatControllerProvider(null), (_, __) {},
+      chatControllerProvider(null),
+      (_, __) {},
     );
     addTearDown(sub.close);
 
@@ -83,14 +82,13 @@ void main() {
     ]);
 
     final container = ProviderContainer(
-      overrides: <Override>[
-        chatStreamProvider.overrideWithValue(scripted),
-      ],
+      overrides: <Override>[chatStreamProvider.overrideWithValue(scripted)],
     );
     addTearDown(container.dispose);
     // Keep the autoDispose'd provider alive for the duration of the test.
     final sub = container.listen<Object?>(
-      chatControllerProvider(null), (_, __) {},
+      chatControllerProvider(null),
+      (_, __) {},
     );
     addTearDown(sub.close);
 
@@ -111,14 +109,13 @@ void main() {
     ]);
 
     final container = ProviderContainer(
-      overrides: <Override>[
-        chatStreamProvider.overrideWithValue(scripted),
-      ],
+      overrides: <Override>[chatStreamProvider.overrideWithValue(scripted)],
     );
     addTearDown(container.dispose);
     // Keep the autoDispose'd provider alive for the duration of the test.
     final sub = container.listen<Object?>(
-      chatControllerProvider(null), (_, __) {},
+      chatControllerProvider(null),
+      (_, __) {},
     );
     addTearDown(sub.close);
 
@@ -127,11 +124,15 @@ void main() {
 
     await notifier.send('Hi');
     await Future<void>.delayed(const Duration(milliseconds: 60));
-    expect(container.read(chatControllerProvider(null)).value!.messages,
-        isNotEmpty);
+    expect(
+      container.read(chatControllerProvider(null)).value!.messages,
+      isNotEmpty,
+    );
 
     await notifier.reset();
     expect(
-        container.read(chatControllerProvider(null)).value!.messages, isEmpty);
+      container.read(chatControllerProvider(null)).value!.messages,
+      isEmpty,
+    );
   });
 }

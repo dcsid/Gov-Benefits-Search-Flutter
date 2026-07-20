@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BdProgress extends StatelessWidget {
-  const BdProgress({
-    super.key,
-    this.value,
-    this.height = 8,
-  });
+  const BdProgress({super.key, this.value, this.height = 8});
 
   /// 0..1 (null for indeterminate).
   final double? value;

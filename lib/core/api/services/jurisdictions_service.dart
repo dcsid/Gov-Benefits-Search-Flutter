@@ -12,9 +12,10 @@ class JurisdictionsService {
 
   /// List supported state jurisdictions, alphabetised by name.
   Future<List<StateInfo>> listStates() => runRequest(() async {
-        final res = await _dio.get<Object?>(Endpoints.states);
-        return asJsonList(res.data, name: 'states')
-            .map(StateInfo.fromJson)
-            .toList(growable: false);
-      });
+    final res = await _dio.get<Object?>(Endpoints.states);
+    return asJsonList(
+      res.data,
+      name: 'states',
+    ).map(StateInfo.fromJson).toList(growable: false);
+  });
 }

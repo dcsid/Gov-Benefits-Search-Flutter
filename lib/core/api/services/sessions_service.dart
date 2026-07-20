@@ -26,38 +26,28 @@ class SessionsService {
   Future<SessionEnvelope> submitAnswers(
     String sessionId,
     SessionAnswersRequest body,
-  ) =>
-      runRequest(() async {
-        final res = await _dio.post<Object?>(
-          Endpoints.sessionAnswers(sessionId),
-          data: body.toJson(),
-        );
-        return SessionEnvelope.fromJson(
-          asJsonMap(res.data, name: 'submitAnswers'),
-        );
-      });
+  ) => runRequest(() async {
+    final res = await _dio.post<Object?>(
+      Endpoints.sessionAnswers(sessionId),
+      data: body.toJson(),
+    );
+    return SessionEnvelope.fromJson(asJsonMap(res.data, name: 'submitAnswers'));
+  });
 
   /// GET /sessions/{id}/results — current results view.
   Future<SessionResults> getResults(String sessionId) => runRequest(() async {
-        final res = await _dio.get<Object?>(Endpoints.sessionResults(sessionId));
-        return SessionResults.fromJson(
-          asJsonMap(res.data, name: 'sessionResults'),
-        );
-      });
+    final res = await _dio.get<Object?>(Endpoints.sessionResults(sessionId));
+    return SessionResults.fromJson(asJsonMap(res.data, name: 'sessionResults'));
+  });
 
   /// GET /sessions/{id}/plan — narrative plan view.
   Future<SessionPlan> getPlan(String sessionId) => runRequest(() async {
-        final res = await _dio.get<Object?>(Endpoints.sessionPlan(sessionId));
-        return SessionPlan.fromJson(
-          asJsonMap(res.data, name: 'sessionPlan'),
-        );
-      });
+    final res = await _dio.get<Object?>(Endpoints.sessionPlan(sessionId));
+    return SessionPlan.fromJson(asJsonMap(res.data, name: 'sessionPlan'));
+  });
 
   /// POST /sessions/{id}/compare — compare against alternate scenarios.
-  Future<SessionCompare> compare(
-    String sessionId,
-    CompareRequest body,
-  ) =>
+  Future<SessionCompare> compare(String sessionId, CompareRequest body) =>
       runRequest(() async {
         final res = await _dio.post<Object?>(
           Endpoints.sessionCompare(sessionId),

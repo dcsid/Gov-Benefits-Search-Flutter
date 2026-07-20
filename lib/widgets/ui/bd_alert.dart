@@ -23,13 +23,27 @@ class BdAlert extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     final bd = BdColors.of(context);
     final (bg, fg, border) = switch (variant) {
-      BdAlertVariant.defaultV =>
-        (scheme.surface, scheme.onSurface, bd.border),
-      BdAlertVariant.destructive =>
-        (scheme.errorContainer, scheme.error, scheme.error.withValues(alpha: 0.5)),
-      BdAlertVariant.success => (bd.successSoft, bd.success, bd.success.withValues(alpha: 0.4)),
-      BdAlertVariant.warning => (bd.warningSoft, bd.warning, bd.warning.withValues(alpha: 0.5)),
-      BdAlertVariant.info => (bd.infoSoft, bd.info, bd.info.withValues(alpha: 0.4)),
+      BdAlertVariant.defaultV => (scheme.surface, scheme.onSurface, bd.border),
+      BdAlertVariant.destructive => (
+        scheme.errorContainer,
+        scheme.error,
+        scheme.error.withValues(alpha: 0.5),
+      ),
+      BdAlertVariant.success => (
+        bd.successSoft,
+        bd.success,
+        bd.success.withValues(alpha: 0.4),
+      ),
+      BdAlertVariant.warning => (
+        bd.warningSoft,
+        bd.warning,
+        bd.warning.withValues(alpha: 0.5),
+      ),
+      BdAlertVariant.info => (
+        bd.infoSoft,
+        bd.info,
+        bd.info.withValues(alpha: 0.4),
+      ),
     };
     return Container(
       width: double.infinity,

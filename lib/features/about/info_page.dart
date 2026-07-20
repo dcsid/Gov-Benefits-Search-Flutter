@@ -40,10 +40,7 @@ class InfoPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.headlineLarge,
                       ),
                       const SizedBox(height: 12),
-                      Text(
-                        body,
-                        style: Theme.of(context).textTheme.bodyLarge,
-                      ),
+                      Text(body, style: Theme.of(context).textTheme.bodyLarge),
                     ],
                   ),
                 ),

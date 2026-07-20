@@ -50,8 +50,11 @@ class _BdCommandState extends State<BdCommand> {
     final q = _ctl.text.trim().toLowerCase();
     if (q.isEmpty) return widget.items;
     return widget.items.where((it) {
-      final hay =
-          [it.label, it.subtitle ?? '', ...it.keywords].join(' ').toLowerCase();
+      final hay = [
+        it.label,
+        it.subtitle ?? '',
+        ...it.keywords,
+      ].join(' ').toLowerCase();
       return hay.contains(q);
     }).toList();
   }
@@ -100,7 +103,10 @@ class _BdCommandState extends State<BdCommand> {
                     child: Text(
                       widget.emptyText,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 13),
+                      style: TextStyle(
+                        color: scheme.onSurfaceVariant,
+                        fontSize: 13,
+                      ),
                     ),
                   )
                 : ListView.builder(

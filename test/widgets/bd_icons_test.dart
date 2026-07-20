@@ -7,7 +7,9 @@ import '_helpers.dart';
 
 void main() {
   testWidgets('logo mark paints', (tester) async {
-    await tester.pumpWidget(bdHarness(BdIcons.logoMark(size: 24, color: Colors.black)));
+    await tester.pumpWidget(
+      bdHarness(BdIcons.logoMark(size: 24, color: Colors.black)),
+    );
     expect(find.byType(CustomPaint), findsWidgets);
   });
 

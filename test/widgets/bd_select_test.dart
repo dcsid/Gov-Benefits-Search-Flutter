@@ -6,14 +6,18 @@ import '_helpers.dart';
 
 void main() {
   testWidgets('renders selected label', (tester) async {
-    await tester.pumpWidget(bdHarness(BdSelect<String>(
-      value: 'b',
-      items: const [
-        BdSelectItem(value: 'a', label: 'Alpha'),
-        BdSelectItem(value: 'b', label: 'Beta'),
-      ],
-      onChanged: (_) {},
-    )));
+    await tester.pumpWidget(
+      bdHarness(
+        BdSelect<String>(
+          value: 'b',
+          items: const [
+            BdSelectItem(value: 'a', label: 'Alpha'),
+            BdSelectItem(value: 'b', label: 'Beta'),
+          ],
+          onChanged: (_) {},
+        ),
+      ),
+    );
     expect(find.text('Beta'), findsOneWidget);
   });
 }

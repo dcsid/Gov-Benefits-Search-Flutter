@@ -14,7 +14,10 @@ void main() {
     final router = GoRouter(
       initialLocation: '/about',
       routes: [
-        GoRoute(path: '/', builder: (_, __) => const Scaffold(body: Text('home'))),
+        GoRoute(
+          path: '/',
+          builder: (_, __) => const Scaffold(body: Text('home')),
+        ),
         GoRoute(path: '/about', builder: (_, __) => const AboutPage()),
         GoRoute(path: '/privacy', builder: (_, __) => const PrivacyPage()),
         GoRoute(path: '/terms', builder: (_, __) => const TermsPage()),

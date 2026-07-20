@@ -6,7 +6,11 @@ import '../../theme/extensions/bd_colors.dart';
 import 'bd_logo.dart';
 
 class BdFooterLink {
-  const BdFooterLink({required this.label, required this.href, this.external = false});
+  const BdFooterLink({
+    required this.label,
+    required this.href,
+    this.external = false,
+  });
   final String label;
   final String href;
   final bool external;
@@ -114,7 +118,8 @@ class BdFooter extends StatelessWidget {
                   spacing: 32,
                   runSpacing: 24,
                   children: [
-                    for (final col in columns) _Column(column: col, onLinkTap: onLinkTap),
+                    for (final col in columns)
+                      _Column(column: col, onLinkTap: onLinkTap),
                   ],
                 ),
               ),
@@ -166,9 +171,9 @@ class _Column extends StatelessWidget {
       return;
     }
     if (!context.mounted) return;
-    ScaffoldMessenger.maybeOf(context)?.showSnackBar(
-      SnackBar(content: Text('${link.label}: coming soon')),
-    );
+    ScaffoldMessenger.maybeOf(
+      context,
+    )?.showSnackBar(SnackBar(content: Text('${link.label}: coming soon')));
   }
 
   @override
@@ -194,10 +199,7 @@ class _Column extends StatelessWidget {
               onTap: () => _handleTap(context, link),
               child: Text(
                 link.label,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: scheme.onSurfaceVariant,
-                ),
+                style: TextStyle(fontSize: 13, color: scheme.onSurfaceVariant),
               ),
             ),
           ),

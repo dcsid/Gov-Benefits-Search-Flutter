@@ -18,28 +18,26 @@ class ProgramsService {
     String scope = 'both',
     List<String> categories = const <String>[],
     int limit = 40,
-  }) =>
-      runRequest(() async {
-        final res = await _dio.get<Object?>(
-          Endpoints.programs(jurisdictionCode),
-          queryParameters: <String, dynamic>{
-            if (query.isNotEmpty) 'query': query,
-            'scope': scope,
-            if (jurisdictionCode.isNotEmpty) 'state_code': jurisdictionCode,
-            if (categories.isNotEmpty) 'categories': categories.join(','),
-            'limit': limit,
-          },
-        );
-        return asJsonList(res.data, name: 'programs')
-            .map(Program.fromJson)
-            .toList(growable: false);
-      });
+  }) => runRequest(() async {
+    final res = await _dio.get<Object?>(
+      Endpoints.programs(jurisdictionCode),
+      queryParameters: <String, dynamic>{
+        if (query.isNotEmpty) 'query': query,
+        'scope': scope,
+        if (jurisdictionCode.isNotEmpty) 'state_code': jurisdictionCode,
+        if (categories.isNotEmpty) 'categories': categories.join(','),
+        'limit': limit,
+      },
+    );
+    return asJsonList(
+      res.data,
+      name: 'programs',
+    ).map(Program.fromJson).toList(growable: false);
+  });
 
   /// GET /programs/{slug} — fetch a single program detail.
   Future<ProgramDetail> getProgram(String slug) => runRequest(() async {
-        final res = await _dio.get<Object?>(Endpoints.programDetail(slug));
-        return ProgramDetail.fromJson(
-          asJsonMap(res.data, name: 'programDetail'),
-        );
-      });
+    final res = await _dio.get<Object?>(Endpoints.programDetail(slug));
+    return ProgramDetail.fromJson(asJsonMap(res.data, name: 'programDetail'));
+  });
 }

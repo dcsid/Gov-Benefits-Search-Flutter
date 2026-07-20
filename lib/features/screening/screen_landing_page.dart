@@ -28,8 +28,7 @@ class _ScreenLandingPageState extends ConsumerState<ScreenLandingPage> {
     });
     try {
       final svc = ref.read(sessionsServiceProvider);
-      final envelope =
-          await svc.create(const SessionCreateRequest());
+      final envelope = await svc.create(const SessionCreateRequest());
       if (!mounted) return;
       context.go('/screen/${envelope.sessionId}/q');
     } catch (e, st) {
@@ -37,7 +36,8 @@ class _ScreenLandingPageState extends ConsumerState<ScreenLandingPage> {
       showApiError(context, e, stackTrace: st);
       setState(() {
         _starting = false;
-        _error = AppLocalizations.of(context)?.errors_generic ??
+        _error =
+            AppLocalizations.of(context)?.errors_generic ??
             'Something went wrong. Please try again.';
       });
     }
@@ -113,7 +113,8 @@ class _ScreenLandingPageState extends ConsumerState<ScreenLandingPage> {
                                   "You can skip or mark anything as 'I'm not sure'.",
                             ),
                             _Bullet(
-                              text: l10n?.home_trustPrivate ??
+                              text:
+                                  l10n?.home_trustPrivate ??
                                   'Your data is private and never stored.',
                             ),
                           ],
@@ -121,10 +122,7 @@ class _ScreenLandingPageState extends ConsumerState<ScreenLandingPage> {
                       ),
                       if (_error != null) ...<Widget>[
                         const SizedBox(height: 16),
-                        Text(
-                          _error!,
-                          style: TextStyle(color: scheme.error),
-                        ),
+                        Text(_error!, style: TextStyle(color: scheme.error)),
                       ],
                       const SizedBox(height: 24),
                       BdButton(
@@ -167,7 +165,10 @@ class _Bullet extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           Expanded(
-            child: Text(text, style: const TextStyle(fontSize: 14, height: 1.5)),
+            child: Text(
+              text,
+              style: const TextStyle(fontSize: 14, height: 1.5),
+            ),
           ),
         ],
       ),

@@ -145,9 +145,7 @@ class _BdQuestionCardState extends State<BdQuestionCard> {
           const SizedBox(height: 24),
           _renderInput(),
           const SizedBox(height: 16),
-          UnsureButton(
-            onPressed: widget.busy ? null : widget.onUnsure,
-          ),
+          UnsureButton(onPressed: widget.busy ? null : widget.onUnsure),
           const SizedBox(height: 24),
           Row(
             children: <Widget>[

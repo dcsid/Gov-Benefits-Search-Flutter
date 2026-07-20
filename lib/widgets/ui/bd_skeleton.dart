@@ -38,7 +38,8 @@ class _BdSkeletonState extends State<BdSkeleton>
       animation: _ctl,
       builder: (context, _) {
         final t = (_ctl.value - 0.5).abs() * 2;
-        final color = Color.lerp(
+        final color =
+            Color.lerp(
               scheme.surfaceContainerHigh,
               scheme.surfaceContainerHighest,
               t,

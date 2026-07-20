@@ -64,10 +64,7 @@ class _Loaded extends StatelessWidget {
   Widget build(BuildContext context) {
     final docs = program.documents;
     final howTo = program.howToGetBenefit;
-    final sources = [
-      ...program.sources,
-      ...program.dataGatheredFrom,
-    ];
+    final sources = [...program.sources, ...program.dataGatheredFrom];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -110,8 +107,7 @@ class _Header extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     final jurisdictionLabel =
         program.jurisdiction?.level.toUpperCase() ?? 'PROGRAM';
-    final agencyOrCode =
-        program.agency ?? program.jurisdiction?.code ?? '';
+    final agencyOrCode = program.agency ?? program.jurisdiction?.code ?? '';
     return Container(
       padding: const EdgeInsets.only(bottom: 24),
       decoration: BoxDecoration(
@@ -127,17 +123,11 @@ class _Header extends StatelessWidget {
                 variant: BdBadgeVariant.outline,
               ),
               const SizedBox(width: 8),
-              Text(
-                agencyOrCode,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
+              Text(agencyOrCode, style: Theme.of(context).textTheme.bodySmall),
             ],
           ),
           const SizedBox(height: 8),
-          Text(
-            program.name,
-            style: Theme.of(context).textTheme.headlineLarge,
-          ),
+          Text(program.name, style: Theme.of(context).textTheme.headlineLarge),
           if (program.summary != null) ...[
             const SizedBox(height: 8),
             ConstrainedBox(
@@ -254,10 +244,7 @@ class _HowToApply extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'How to apply',
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
+          Text('How to apply', style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 12),
           ...steps.indexed.map((entry) {
             final (idx, step) = entry;
@@ -271,8 +258,9 @@ class _HowToApply extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 12,
-                    backgroundColor:
-                        Theme.of(context).colorScheme.primaryContainer,
+                    backgroundColor: Theme.of(
+                      context,
+                    ).colorScheme.primaryContainer,
                     child: Text(
                       '${idx + 1}',
                       style: const TextStyle(
@@ -340,60 +328,56 @@ class _Documents extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Documents',
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
+          Text('Documents', style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
-          ...documents.map(
-            (d) {
-              final label = (d['label'] ?? d['title'] ?? '').toString();
-              final description = d['description']?.toString();
-              final required = d['required'] == true;
-              return Padding(
-                padding: const EdgeInsets.only(top: 6),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(
-                      Icons.description_outlined,
-                      size: 16,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                    const SizedBox(width: 6),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Text(
-                                label,
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.w600),
-                              ),
-                              if (required) ...[
-                                const SizedBox(width: 6),
-                                const BdBadge(
-                                  label: 'required',
-                                  variant: BdBadgeVariant.destructive,
-                                ),
-                              ],
-                            ],
-                          ),
-                          if (description != null && description.isNotEmpty)
+          ...documents.map((d) {
+            final label = (d['label'] ?? d['title'] ?? '').toString();
+            final description = d['description']?.toString();
+            final required = d['required'] == true;
+            return Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(
+                    Icons.description_outlined,
+                    size: 16,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
                             Text(
-                              description,
-                              style: Theme.of(context).textTheme.bodySmall,
+                              label,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
-                        ],
-                      ),
+                            if (required) ...[
+                              const SizedBox(width: 6),
+                              const BdBadge(
+                                label: 'required',
+                                variant: BdBadgeVariant.destructive,
+                              ),
+                            ],
+                          ],
+                        ),
+                        if (description != null && description.isNotEmpty)
+                          Text(
+                            description,
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                      ],
                     ),
-                  ],
-                ),
-              );
-            },
-          ),
+                  ),
+                ],
+              ),
+            );
+          }),
         ],
       ),
     );

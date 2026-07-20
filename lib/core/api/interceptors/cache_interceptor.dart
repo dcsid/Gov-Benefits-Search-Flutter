@@ -73,7 +73,9 @@ class CacheInterceptor extends Interceptor {
 
   @override
   void onResponse(
-      Response<dynamic> response, ResponseInterceptorHandler handler) {
+    Response<dynamic> response,
+    ResponseInterceptorHandler handler,
+  ) {
     final key = response.requestOptions.extra['__cache_key'] as String?;
     final ttl = response.requestOptions.extra['__cache_ttl'] as Duration?;
     final status = response.statusCode ?? 0;
@@ -94,8 +96,10 @@ class CacheInterceptor extends Interceptor {
     final params = <String, dynamic>{...uri.queryParameters};
     final sortedKeys = params.keys.toList()..sort();
     final canonicalQuery = sortedKeys
-        .map((k) =>
-            '${Uri.encodeQueryComponent(k)}=${Uri.encodeQueryComponent(params[k].toString())}')
+        .map(
+          (k) =>
+              '${Uri.encodeQueryComponent(k)}=${Uri.encodeQueryComponent(params[k].toString())}',
+        )
         .join('&');
     return '${o.method} ${uri.scheme}://${uri.host}:${uri.port}${uri.path}?$canonicalQuery';
   }

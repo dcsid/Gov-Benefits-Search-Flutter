@@ -7,10 +7,8 @@ part 'chat.g.dart';
 
 @freezed
 class ChatMessage with _$ChatMessage {
-  const factory ChatMessage({
-    required String role,
-    required String content,
-  }) = _ChatMessage;
+  const factory ChatMessage({required String role, required String content}) =
+      _ChatMessage;
 
   factory ChatMessage.fromJson(Map<String, dynamic> json) =>
       _$ChatMessageFromJson(json);
@@ -68,8 +66,6 @@ sealed class ChatStreamEvent with _$ChatStreamEvent {
     String? model,
     bool? fallbackUsed,
   }) = ChatStreamDoneEvent;
-  const factory ChatStreamEvent.error({
-    required String message,
-    String? code,
-  }) = ChatStreamErrorEvent;
+  const factory ChatStreamEvent.error({required String message, String? code}) =
+      ChatStreamErrorEvent;
 }

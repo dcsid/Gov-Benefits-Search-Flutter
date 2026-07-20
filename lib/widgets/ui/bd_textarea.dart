@@ -27,7 +27,8 @@ class BdTextarea extends StatelessWidget {
     final bd = BdColors.of(context);
     final scheme = Theme.of(context).colorScheme;
     return TextField(
-      controller: controller ??
+      controller:
+          controller ??
           (value != null ? TextEditingController(text: value) : null),
       onChanged: onChanged,
       enabled: enabled,
@@ -35,7 +36,10 @@ class BdTextarea extends StatelessWidget {
       maxLines: maxLines,
       style: const TextStyle(fontSize: 14),
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 10,
+        ),
         hintText: placeholder,
         hintStyle: TextStyle(color: scheme.onSurfaceVariant),
         filled: true,

@@ -18,19 +18,22 @@ class BdHowItWorks extends StatelessWidget {
         index: '01',
         icon: BdIcons.clipboardList,
         title: 'Answer a few questions',
-        body: "About your household, income, and situation. Skip anything you don't know.",
+        body:
+            "About your household, income, and situation. Skip anything you don't know.",
       ),
       _Step(
         index: '02',
         icon: BdIcons.scrollText,
         title: 'See what you may qualify for',
-        body: 'We match your answers against rules from federal and state programs.',
+        body:
+            'We match your answers against rules from federal and state programs.',
       ),
       _Step(
         index: '03',
         icon: BdIcons.target,
         title: 'Get help applying',
-        body: 'We link you to the official application — we never apply for you.',
+        body:
+            'We link you to the official application — we never apply for you.',
       ),
     ];
 
@@ -79,7 +82,11 @@ class BdHowItWorks extends StatelessWidget {
                                 color: scheme.primary.withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child: Icon(step.icon, size: 20, color: scheme.primary),
+                              child: Icon(
+                                step.icon,
+                                size: 20,
+                                color: scheme.primary,
+                              ),
                             ),
                             Text(
                               step.index,

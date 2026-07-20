@@ -24,10 +24,7 @@ class BdCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       side: BorderSide(color: bd.border),
     );
-    final body = Padding(
-      padding: padding ?? EdgeInsets.zero,
-      child: child,
-    );
+    final body = Padding(padding: padding ?? EdgeInsets.zero, child: child);
     return Material(
       color: scheme.surface,
       shape: shape,

@@ -39,7 +39,8 @@ class BdInput extends StatelessWidget {
     final bd = BdColors.of(context);
     final scheme = Theme.of(context).colorScheme;
     return TextField(
-      controller: controller ??
+      controller:
+          controller ??
           (value != null ? TextEditingController(text: value) : null),
       onChanged: onChanged,
       onSubmitted: onSubmitted,
@@ -52,7 +53,10 @@ class BdInput extends StatelessWidget {
       style: const TextStyle(fontSize: 14),
       decoration: InputDecoration(
         isDense: true,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 10,
+        ),
         hintText: placeholder,
         hintStyle: TextStyle(color: scheme.onSurfaceVariant),
         prefixIcon: prefix,

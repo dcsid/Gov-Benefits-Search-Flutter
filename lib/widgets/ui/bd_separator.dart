@@ -19,7 +19,9 @@ class BdSeparator extends StatelessWidget {
     final bd = BdColors.of(context);
     return Container(
       width: orientation == BdSeparatorOrientation.vertical ? thickness : null,
-      height: orientation == BdSeparatorOrientation.horizontal ? thickness : null,
+      height: orientation == BdSeparatorOrientation.horizontal
+          ? thickness
+          : null,
       color: bd.border,
     );
   }

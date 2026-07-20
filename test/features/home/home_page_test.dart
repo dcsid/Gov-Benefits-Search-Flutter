@@ -23,14 +23,13 @@ Widget _routedHome() {
       ),
     ],
   );
-  return ProviderScope(
-    child: MaterialApp.router(routerConfig: router),
-  );
+  return ProviderScope(child: MaterialApp.router(routerConfig: router));
 }
 
 void main() {
-  testWidgets('HomePage renders hero and how-it-works sections',
-      (tester) async {
+  testWidgets('HomePage renders hero and how-it-works sections', (
+    tester,
+  ) async {
     // BdHeader uses GoRouter for nav and needs a wide enough viewport to lay
     // out logo + nav links + chrome without overflow.
     tester.view.physicalSize = const Size(2000, 3000);

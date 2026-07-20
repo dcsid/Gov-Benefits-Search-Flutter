@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BdLabel extends StatelessWidget {
-  const BdLabel({
-    super.key,
-    required this.text,
-    this.htmlFor,
-  });
+  const BdLabel({super.key, required this.text, this.htmlFor});
 
   final String text;
   final String? htmlFor;
