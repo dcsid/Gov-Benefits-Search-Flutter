@@ -94,10 +94,12 @@ The default JS build is the smaller deploy and the documented default. `--wasm` 
 
 The FastAPI backend that this app talks to lives in the [Gov-Benefits-Search](https://github.com/dcsid/Gov-Benefits-Search) repo — see its README for setup. By default this app expects it at `http://localhost:8000`.
 
+> **Note:** the backend repo is currently private, so external users can't run the backend yet. There is no working backend-free demo mode at the moment either — the `USE_MOCKS` dart-define (`lib/core/env.dart`) is declared but not yet wired to anything, and only the help bot has a mock (`MockHelpService`, applied via a `ProviderScope` override in tests).
+
 ## Project layout
 
 - `lib/app/` — root widget, routing, theme
 - `lib/core/` — env, API client, shared infrastructure
 - `lib/features/` — feature modules (added by follow-up work)
 - `lib/widgets/` — shared widgets
-- `lib/l10n/` — localization (en, es)
+- `lib/l10n/` — localization (ar, en, es, ko, ru, vi, zh)
