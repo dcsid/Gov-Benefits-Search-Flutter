@@ -137,22 +137,22 @@ _$ProgramResultImpl _$$ProgramResultImplFromJson(Map<String, dynamic> json) =>
           (json['documents'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       dataGatheredFrom:
           (json['data_gathered_from'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       howToGetBenefit:
           (json['how_to_get_benefit'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       sources:
           (json['sources'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
     );
 
 Map<String, dynamic> _$$ProgramResultImplToJson(_$ProgramResultImpl instance) =>
@@ -238,22 +238,22 @@ _$SessionPlanImpl _$$SessionPlanImplFromJson(Map<String, dynamic> json) =>
           (json['benefit_stack'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       topMissingFacts:
           (json['top_missing_facts'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       actionPlan:
           (json['action_plan'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       officialSourceHub:
           (json['official_source_hub'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       planningNotes:
           (json['planning_notes'] as List<dynamic>?)
               ?.map((e) => e as String)
@@ -263,7 +263,7 @@ _$SessionPlanImpl _$$SessionPlanImplFromJson(Map<String, dynamic> json) =>
           (json['document_checklist'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
     );
 
 Map<String, dynamic> _$$SessionPlanImplToJson(_$SessionPlanImpl instance) =>
@@ -326,17 +326,17 @@ _$ScenarioComparisonImpl _$$ScenarioComparisonImplFromJson(
       (json['gained_programs'] as List<dynamic>?)
           ?.map((e) => e as Map<String, dynamic>)
           .toList() ??
-      const <Map<String, dynamic>>[],
+      const [],
   improvedPrograms:
       (json['improved_programs'] as List<dynamic>?)
           ?.map((e) => e as Map<String, dynamic>)
           .toList() ??
-      const <Map<String, dynamic>>[],
+      const [],
   lostPrograms:
       (json['lost_programs'] as List<dynamic>?)
           ?.map((e) => e as Map<String, dynamic>)
           .toList() ??
-      const <Map<String, dynamic>>[],
+      const [],
 );
 
 Map<String, dynamic> _$$ScenarioComparisonImplToJson(

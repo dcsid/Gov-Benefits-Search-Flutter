@@ -1179,7 +1179,7 @@ class _$ProgramDetailImpl implements _ProgramDetail {
     this.family,
     this.summary,
     @JsonKey(name: 'apply_url') this.applyUrl,
-    final List<Map<String, dynamic>> documents = const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> documents = const [],
     this.jurisdiction,
     this.agency,
     @JsonKey(name: 'version_label') this.versionLabel,
@@ -1187,8 +1187,7 @@ class _$ProgramDetailImpl implements _ProgramDetail {
     @JsonKey(name: 'data_gathered_from')
     final List<SourceLink> dataGatheredFrom = const <SourceLink>[],
     @JsonKey(name: 'how_to_get_benefit')
-    final List<Map<String, dynamic>> howToGetBenefit =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> howToGetBenefit = const [],
     final List<SourceLink> sources = const <SourceLink>[],
   }) : _documents = documents,
        _rules = rules,

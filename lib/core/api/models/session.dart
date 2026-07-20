@@ -112,14 +112,14 @@ class ProgramResult with _$ProgramResult {
     @JsonKey(name: 'failed_reasons')
     @Default(<String>[])
     List<String> failedReasons,
-    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> documents,
+    @Default([]) List<Map<String, dynamic>> documents,
     @JsonKey(name: 'data_gathered_from')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> dataGatheredFrom,
     @JsonKey(name: 'how_to_get_benefit')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> howToGetBenefit,
-    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> sources,
+    @Default([]) List<Map<String, dynamic>> sources,
   }) = _ProgramResult;
 
   factory ProgramResult.fromJson(Map<String, dynamic> json) =>
@@ -174,22 +174,22 @@ class SessionPlan with _$SessionPlan {
     @Default(<String, dynamic>{}) Map<String, dynamic> profile,
     required PlanOverview overview,
     @JsonKey(name: 'benefit_stack')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> benefitStack,
     @JsonKey(name: 'top_missing_facts')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> topMissingFacts,
     @JsonKey(name: 'action_plan')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> actionPlan,
     @JsonKey(name: 'official_source_hub')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> officialSourceHub,
     @JsonKey(name: 'planning_notes')
     @Default(<String>[])
     List<String> planningNotes,
     @JsonKey(name: 'document_checklist')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> documentChecklist,
   }) = _SessionPlan;
 
@@ -230,13 +230,13 @@ class ScenarioComparison with _$ScenarioComparison {
     Map<String, dynamic> answerOverrides,
     @Default(<String, dynamic>{}) Map<String, dynamic> summary,
     @JsonKey(name: 'gained_programs')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> gainedPrograms,
     @JsonKey(name: 'improved_programs')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> improvedPrograms,
     @JsonKey(name: 'lost_programs')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> lostPrograms,
   }) = _ScenarioComparison;
 

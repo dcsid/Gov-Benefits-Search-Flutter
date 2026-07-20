@@ -1645,14 +1645,12 @@ class _$ProgramResultImpl implements _ProgramResult {
     final List<String> missingFacts = const <String>[],
     @JsonKey(name: 'failed_reasons')
     final List<String> failedReasons = const <String>[],
-    final List<Map<String, dynamic>> documents = const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> documents = const [],
     @JsonKey(name: 'data_gathered_from')
-    final List<Map<String, dynamic>> dataGatheredFrom =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> dataGatheredFrom = const [],
     @JsonKey(name: 'how_to_get_benefit')
-    final List<Map<String, dynamic>> howToGetBenefit =
-        const <Map<String, dynamic>>[],
-    final List<Map<String, dynamic>> sources = const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> howToGetBenefit = const [],
+    final List<Map<String, dynamic>> sources = const [],
   }) : _certaintyBreakdown = certaintyBreakdown,
        _estimatedAmount = estimatedAmount,
        _jurisdiction = jurisdiction,
@@ -2798,22 +2796,17 @@ class _$SessionPlanImpl implements _SessionPlan {
     final Map<String, dynamic> profile = const <String, dynamic>{},
     required this.overview,
     @JsonKey(name: 'benefit_stack')
-    final List<Map<String, dynamic>> benefitStack =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> benefitStack = const [],
     @JsonKey(name: 'top_missing_facts')
-    final List<Map<String, dynamic>> topMissingFacts =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> topMissingFacts = const [],
     @JsonKey(name: 'action_plan')
-    final List<Map<String, dynamic>> actionPlan =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> actionPlan = const [],
     @JsonKey(name: 'official_source_hub')
-    final List<Map<String, dynamic>> officialSourceHub =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> officialSourceHub = const [],
     @JsonKey(name: 'planning_notes')
     final List<String> planningNotes = const <String>[],
     @JsonKey(name: 'document_checklist')
-    final List<Map<String, dynamic>> documentChecklist =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> documentChecklist = const [],
   }) : _profile = profile,
        _benefitStack = benefitStack,
        _topMissingFacts = topMissingFacts,
@@ -3589,14 +3582,11 @@ class _$ScenarioComparisonImpl implements _ScenarioComparison {
     final Map<String, dynamic> answerOverrides = const <String, dynamic>{},
     final Map<String, dynamic> summary = const <String, dynamic>{},
     @JsonKey(name: 'gained_programs')
-    final List<Map<String, dynamic>> gainedPrograms =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> gainedPrograms = const [],
     @JsonKey(name: 'improved_programs')
-    final List<Map<String, dynamic>> improvedPrograms =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> improvedPrograms = const [],
     @JsonKey(name: 'lost_programs')
-    final List<Map<String, dynamic>> lostPrograms =
-        const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> lostPrograms = const [],
   }) : _answerOverrides = answerOverrides,
        _summary = summary,
        _gainedPrograms = gainedPrograms,

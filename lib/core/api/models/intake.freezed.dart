@@ -1415,7 +1415,7 @@ class _$IntakeProbeQuestionImpl implements _IntakeProbeQuestion {
     this.hint,
     @JsonKey(name: 'question_type') this.questionType,
     @JsonKey(name: 'input_type') this.inputType,
-    final List<Map<String, dynamic>> options = const <Map<String, dynamic>>[],
+    final List<Map<String, dynamic>> options = const [],
   }) : _options = options;
 
   factory _$IntakeProbeQuestionImpl.fromJson(Map<String, dynamic> json) =>

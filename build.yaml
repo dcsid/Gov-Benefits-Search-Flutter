@@ -1,6 +1,12 @@
 targets:
   $default:
     builders:
+      freezed:
+        options:
+          # freezed 2.x's built-in formatter throws FormatterException under
+          # Dart 3.11's tall-style dart_style; skip it — `dart format .` covers
+          # the tree anyway.
+          format: false
       json_serializable:
         options:
           # Recurse into nested freezed/JsonSerializable types when emitting

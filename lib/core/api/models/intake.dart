@@ -84,7 +84,7 @@ class IntakeProbeQuestion with _$IntakeProbeQuestion {
     String? hint,
     @JsonKey(name: 'question_type') String? questionType,
     @JsonKey(name: 'input_type') String? inputType,
-    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> options,
+    @Default([]) List<Map<String, dynamic>> options,
   }) = _IntakeProbeQuestion;
 
   factory IntakeProbeQuestion.fromJson(Map<String, dynamic> json) =>

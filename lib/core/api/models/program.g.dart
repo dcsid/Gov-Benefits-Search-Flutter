@@ -89,7 +89,7 @@ _$ProgramDetailImpl _$$ProgramDetailImplFromJson(Map<String, dynamic> json) =>
           (json['documents'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       jurisdiction: json['jurisdiction'] == null
           ? null
           : Jurisdiction.fromJson(json['jurisdiction'] as Map<String, dynamic>),
@@ -109,7 +109,7 @@ _$ProgramDetailImpl _$$ProgramDetailImplFromJson(Map<String, dynamic> json) =>
           (json['how_to_get_benefit'] as List<dynamic>?)
               ?.map((e) => e as Map<String, dynamic>)
               .toList() ??
-          const <Map<String, dynamic>>[],
+          const [],
       sources:
           (json['sources'] as List<dynamic>?)
               ?.map((e) => SourceLink.fromJson(e as Map<String, dynamic>))

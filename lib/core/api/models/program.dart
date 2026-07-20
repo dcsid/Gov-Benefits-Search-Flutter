@@ -67,7 +67,7 @@ class ProgramDetail with _$ProgramDetail {
     String? family,
     String? summary,
     @JsonKey(name: 'apply_url') String? applyUrl,
-    @Default(<Map<String, dynamic>>[]) List<Map<String, dynamic>> documents,
+    @Default([]) List<Map<String, dynamic>> documents,
     Jurisdiction? jurisdiction,
     String? agency,
     @JsonKey(name: 'version_label') String? versionLabel,
@@ -76,7 +76,7 @@ class ProgramDetail with _$ProgramDetail {
     @Default(<SourceLink>[])
     List<SourceLink> dataGatheredFrom,
     @JsonKey(name: 'how_to_get_benefit')
-    @Default(<Map<String, dynamic>>[])
+    @Default([])
     List<Map<String, dynamic>> howToGetBenefit,
     @Default(<SourceLink>[]) List<SourceLink> sources,
   }) = _ProgramDetail;

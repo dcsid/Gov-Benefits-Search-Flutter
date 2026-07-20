@@ -117,7 +117,7 @@ _$IntakeProbeQuestionImpl _$$IntakeProbeQuestionImplFromJson(
       (json['options'] as List<dynamic>?)
           ?.map((e) => e as Map<String, dynamic>)
           .toList() ??
-      const <Map<String, dynamic>>[],
+      const [],
 );
 
 Map<String, dynamic> _$$IntakeProbeQuestionImplToJson(
