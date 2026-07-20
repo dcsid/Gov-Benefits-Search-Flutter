@@ -56,8 +56,9 @@ class _QuestionPageState extends ConsumerState<QuestionPage> {
         if (saved is DateTime) return saved;
         return DateTime.tryParse(saved.toString());
       case QuestionInput.multiselect:
-        if (saved is List)
+        if (saved is List) {
           return List<String>.from(saved.map((e) => e.toString()));
+        }
         return <String>[];
       case QuestionInput.text:
       case QuestionInput.select:
